@@ -12,11 +12,11 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
 
-        $categ = ['name' => 'Necklace'];
+        $categ = ['name' => 'Necklaces', 'Bracelets', 'Earrings', 'Rings', 'Others'];
 
-        foreach ($categ as $categ) {
-            DB::table('categories')->insert([
-                'name' => 'Necklace'
+        foreach ($categ as $name) {
+            DB::table('hdm_categories')->insert([
+                'name' => $name
 
             ]);
         }
