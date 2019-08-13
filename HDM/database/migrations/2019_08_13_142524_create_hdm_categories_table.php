@@ -14,7 +14,8 @@ class CreateHdmCategoriesTable extends Migration
     public function up()
     {
         Schema::create('hdm_categories', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('category_id');
+            $table->string('name');
             $table->timestamps();
         });
     }

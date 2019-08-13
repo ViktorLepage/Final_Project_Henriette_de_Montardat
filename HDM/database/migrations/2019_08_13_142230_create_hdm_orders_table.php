@@ -14,7 +14,10 @@ class CreateHdmOrdersTable extends Migration
     public function up()
     {
         Schema::create('hdm_orders', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('order_id');
+            $table->foreign('userID')->references('user_id')->on('hdm_user');
+            $table->date('date');
+            $table->integer('total');
             $table->timestamps();
         });
     }

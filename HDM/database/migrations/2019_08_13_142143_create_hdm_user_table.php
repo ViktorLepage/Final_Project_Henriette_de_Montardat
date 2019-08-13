@@ -14,8 +14,16 @@ class CreateHdmUserTable extends Migration
     public function up()
     {
         Schema::create('hdm_user', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+            $table->bigIncrements('user_id');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email');
+            $table->string('password');
+            $table->string('address_1');
+            $table->string('address_2');
+            $table->string('post_code');
+            $table->string('country');
+            $table->string('phone_number');
         });
     }
 

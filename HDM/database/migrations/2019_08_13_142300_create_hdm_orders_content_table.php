@@ -14,7 +14,11 @@ class CreateHdmOrdersContentTable extends Migration
     public function up()
     {
         Schema::create('hdm_orders_content', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('orderID', 'productID');
+            $table->foreign('orderID')->references('order_id')->on('hdm_order');
+            $table->foreign('productID')->references('product_id')->on('hdm_product');
+            $table->integer('quantity');
+            $table->integer('price');
             $table->timestamps();
         });
     }

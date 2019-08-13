@@ -14,7 +14,9 @@ class CreateHdmAdminTable extends Migration
     public function up()
     {
         Schema::create('hdm_admin', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('admin_id');
+            $table->string('email');
+            $table->string('password');
             $table->timestamps();
         });
     }
