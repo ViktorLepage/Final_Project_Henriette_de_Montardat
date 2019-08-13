@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/home', 'homeController');
+Route::get('/logreg', 'logRegController');
+Route::get('/myaccount', 'myAccountController');
+Route::get('/contact', 'contactController');
+Route::get('/boutique', 'productController');
+Route::get('/collection', 'productController');
+Route::get('/hdmadmin', 'productController');
