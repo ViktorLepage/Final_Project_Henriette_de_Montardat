@@ -1,3 +1,3 @@
 <?php echo 'hello2';
 
-Mondag
+echo 'Mondag';
