@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/home', 'homeController');
-Route::get('/logreg', 'logRegController');
-Route::get('/myaccount', 'myAccountController');
-Route::get('/contact', 'contactController');
-Route::get('/boutique', 'productController');
-Route::get('/collection', 'productController');
-Route::get('/hdmadmin', 'productController');
+
+Route::resource('/home', 'homeController');
+Route::resource('/logreg', 'logRegController');
+Route::resource('/myaccount', 'myAccountController');
+Route::resource('/contact', 'contactController');
+Route::resource('/boutique', 'productController');
+Route::resource('/collection', 'productController');
+Route::resource('/hdmadmin', 'productController');
