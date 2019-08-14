@@ -13,6 +13,10 @@ div{
     margin:20px;
     padding: 5px;
 }
+a{
+    /* text-decoration: none; */
+    color: black;
+}
 </style>
 
 <header class="header">
@@ -22,7 +26,7 @@ div{
 
 @foreach($products as $product)
 <div>
-<h3><strong>{{$product->product_name}}</strong></h3>
+    <h3><strong><a href="#">{{$product->product_name}}</a></strong></h3>
     <img src="{{$product->img}}" alt="one_ring" srcset="" height="100px" width="100px">
     <p>{{$product ->product_type}}</p>
 </div>
