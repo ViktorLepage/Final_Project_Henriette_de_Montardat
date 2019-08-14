@@ -23,8 +23,8 @@ Route::resource('/hdmadmin', 'productController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/homelogin', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/homelogin', 'HomeController@index')->name('home');
