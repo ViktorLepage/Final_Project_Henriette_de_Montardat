@@ -21,6 +21,6 @@ Route::resource('/boutique', 'productController');
 Route::resource('/collection', 'productController');
 Route::resource('/hdmadmin', 'productController');
 
-//Auth::routes();
+Auth::routes();
 
-//Route::get('/homelogin', 'loginsignupController@index');
+Route::get('/auth/login', 'loginsignupController@index');
