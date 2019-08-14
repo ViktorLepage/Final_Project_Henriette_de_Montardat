@@ -13,7 +13,7 @@ class logRegController extends Controller
      */
     public function index()
     {
-        //
+        return view('logreg');
     }
 
     /**
