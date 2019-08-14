@@ -1,0 +1,11 @@
+.page-footer{
+    background-color: blueviolet;
+}
+
+footer .footerOne{
+    display: flex;
+   margin: auto;
+   
+}
+
+
