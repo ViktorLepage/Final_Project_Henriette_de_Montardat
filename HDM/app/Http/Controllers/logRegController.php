@@ -71,6 +71,10 @@ class logRegController extends Controller
         //
     }
 
+    public function createUSer(){}
+
+    public function loginUser(){}
+
     /**
      * Remove the specified resource from storage.
      *
@@ -81,4 +85,6 @@ class logRegController extends Controller
     {
         //
     }
+
+
 }

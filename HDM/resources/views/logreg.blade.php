@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,8 @@
     <title>Document</title>
 </head>
 <body>
+
+<!--extends('header');-->
     <header></header>
     <main>
      <section id="loginForm">
@@ -50,3 +54,4 @@
     <footer></footer>
 </body>
 </html>
+<!--extends('footer');-->
