@@ -24,6 +24,8 @@ class CreateHdmUserTable extends Migration
             $table->string('post_code');
             $table->string('country');
             $table->string('phone_number');
+            $table->string('remember_token');
+            $table->date('updated_at');
         });
     }
 
