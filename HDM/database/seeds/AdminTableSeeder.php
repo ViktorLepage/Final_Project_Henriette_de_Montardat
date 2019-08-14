@@ -11,6 +11,9 @@ class AdminTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('hdm_admin')->insert([
+            'email' => 'example@mail.com',
+            'password' => Str::random(10),
+        ]);
     }
 }

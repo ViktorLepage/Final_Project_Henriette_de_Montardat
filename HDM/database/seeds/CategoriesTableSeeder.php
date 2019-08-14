@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 
 class CategoriesTableSeeder extends Seeder
+
 {
     /**
      * Run the database seeds.
@@ -20,5 +21,6 @@ class CategoriesTableSeeder extends Seeder
 
             ]);
         }
+        //$this->call(CategoriesTableSeeder);
     }
 }

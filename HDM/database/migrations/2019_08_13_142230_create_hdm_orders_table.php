@@ -18,7 +18,7 @@ class CreateHdmOrdersTable extends Migration
             $table->integer('userID');
             $table->foreign('userID')->references('user_id')->on('hdm_user');
             $table->date('date');
-            $table->integer('total');
+            $table->integer('total_price');
             $table->timestamps();
         });
     }
