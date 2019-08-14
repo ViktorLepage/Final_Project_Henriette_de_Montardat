@@ -24,3 +24,7 @@ Route::resource('/hdmadmin', 'productController');
 Auth::routes();
 
 Route::get('/auth/login', 'loginsignupController@index');
+
+
+//! JUST FABRIZIO TESTING, I WILL REMOVE IT DO NOT WORRY :)
+Route::resource('/adminCollection', 'AdminProdController');
