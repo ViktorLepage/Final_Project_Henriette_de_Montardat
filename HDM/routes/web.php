@@ -23,4 +23,4 @@ Route::resource('/hdmadmin', 'productController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/auth/login', 'loginsignupController@index');
