@@ -17,7 +17,7 @@ class ProductTableSeeder extends Seeder
                 'product_name' => Str::random(10),
                 'price' => rand(30, 150),
                 'img' => Str::random(5),
-                'categoryID' => rand(1, 6),
+                'categoryID' => rand(1, 5),
             ]);
         }
     }
