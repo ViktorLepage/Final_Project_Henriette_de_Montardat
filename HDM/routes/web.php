@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', function () {
+    return 'Main page';
+});
 Route::resource('/home', 'homeController');
 Route::resource('/logreg', 'logRegController');
 Route::resource('/myaccount', 'myAccountController');
@@ -18,3 +20,11 @@ Route::resource('/contact', 'contactController');
 Route::resource('/boutique', 'productController');
 Route::resource('/collection', 'productController');
 Route::resource('/hdmadmin', 'productController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
