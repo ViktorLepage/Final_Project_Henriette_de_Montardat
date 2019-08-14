@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<!--extends('header');
+<!--extends('header');-->
     <header></header>
     <main>
      <section id="loginForm">
@@ -54,4 +54,4 @@
     <footer></footer>
 </body>
 </html>
-<!--extends('footer');
+<!--extends('footer');-->
