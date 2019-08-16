@@ -15,15 +15,18 @@ class CreateHdmUserTable extends Migration
     {
         Schema::create('hdm_user', function (Blueprint $table) {
             $table->bigIncrements('user_id');
-            $table->string('first_name');
-            $table->string('last_name');
+            $table->string('name');
+            $table->string('surname');
             $table->string('email');
             $table->string('password');
-            $table->string('address_1');
-            $table->string('address_2');
-            $table->string('post_code');
-            $table->string('country');
-            $table->string('phone_number');
+            $table->string('address_1')->nullable();
+            $table->string('address_2')->nullable();
+            $table->string('post_code')->nullable();
+            $table->string('country')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('remember_token')->nullable();
+            $table->date('created_at')->nullable();
+            $table->date('updated_at')->nullable();
         });
     }
 

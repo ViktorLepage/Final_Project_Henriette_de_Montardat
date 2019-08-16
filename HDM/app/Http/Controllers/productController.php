@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use Illuminate\Support\Facades\Auth;
 
 class productController extends Controller
 {
@@ -14,8 +15,10 @@ class productController extends Controller
      */
     public function index()
     {
-        $products = Product::All();
-        return view('collection', ['products' => $products]);
+        if (Auth::check()) {
+            $products = Product::All();
+            return view('collection', ['products' => $products]);
+        }
     }
 
     /**

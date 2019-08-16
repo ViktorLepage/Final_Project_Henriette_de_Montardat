@@ -1,0 +1,15 @@
+
+.bg-light{
+    background-color: white !important;
+    justify-content: flex-end !important ;
+    color: green;
+   
+   
+}
+
+.navbar-expand-lg .navbar-collapse{
+    justify-content: flex-end !important ;
+}
+.navbar{
+    justify-content: flex-end !important ;
+}
