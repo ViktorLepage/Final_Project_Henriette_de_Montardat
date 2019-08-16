@@ -15,10 +15,12 @@ class productController extends Controller
      */
     public function index()
     {
-        if (Auth::check()) {
+        /*if (Auth::check()) {
             $products = Product::All();
             return view('collection', ['products' => $products]);
-        }
+        }*/
+        $products = Product::All();
+        return view('collection', ['products' => $products]);
     }
 
     /**

@@ -91,6 +91,7 @@
     <p>{{$product ->product_type}}</p>
 </div>
 </div>
+@endforeach
 
 
 
