@@ -30,5 +30,6 @@
 
 
     <footer>
-        <h1 class="footer">FOOTER</h1>
+        <h1 class="footer">FOOTER!!</h1>
+        <p><img src="..\public\uploads\folder_1\folder_2\948ce199cb9d3734a909c963717effae.jpg" alt="gg"></p>
     </footer>

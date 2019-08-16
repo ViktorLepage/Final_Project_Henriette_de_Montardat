@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\Auth;
+use Auth;
 
 class HomeController extends Controller
 {
+    protected $guard = 'admin';
     /**
      * Create a new controller instance.
      *
@@ -25,4 +28,8 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    /*public function test(){
+        $gg = Auth::guard('admin')->user()->id;
+        var_dump($gg);
+    }*/
 }

@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $table = 'hdm_products';
-    protected $primaryKey = 'product_id';
+    protected $table = 'products';
+    protected $primaryKey = 'id';
 
     /*
     public function scopeSelectAll()

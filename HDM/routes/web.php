@@ -28,3 +28,5 @@ Route::get('/auth/login', 'loginsignupController@index');
 
 //! JUST FABRIZIO TESTING, I WILL REMOVE IT DO NOT WORRY :)
 Route::resource('/adminCollection', 'AdminProdController');
+
+Route::get('/test', 'homeController@test');
