@@ -14,10 +14,27 @@ class myAccountController extends Controller
      */
     public function index()
     {
-        if (Auth::check()) {
-            echo 'user logged in';
-            return view('myaccount');
-        }
+
+        // return view('myaccount');
+        // if (isset($_POST['submit']))
+        //     session(['submits' => '$a = $a+1']);
+
+        // echo '<pre>';
+        // var_dump(Request()->session());
+        // echo '</pre>';
+        // $input = Request()->all();
+        // if (null !== (Request()->input('submit'))) {
+        //     session(['submits' => '$a = $a+1']);
+        // }
+        // echo '<pre>';
+        // var_dump(Request()->session());
+        // echo '</pre>';
+        // return view('myaccount');
+
+        // if (Auth::check()) {
+        //     echo 'user logged in';
+        //     return view('myaccount');
+        // }
     }
 
     /**

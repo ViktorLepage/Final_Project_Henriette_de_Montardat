@@ -11,7 +11,11 @@
 </head>
 
 <body>
-    <p class="titre_homepage"> Le petit monde d'Henriette de Montardat (titre) </p>
+    <form action="{{ action('myAccountController@index') }}" Method="POST">
+        @csrf
+        <input type="submit" name="submit" value="submit">
+    </form>
+    {{-- <p class="titre_homepage"> Le petit monde d'Henriette de Montardat (titre) </p>
 
     <p class="paragraphe_homepage"> Mes années d'expérience au service de la femme , des femmes, dans la haute
         joaillerie m'ont amené à créer Henriette de Montardat. </p>
@@ -27,7 +31,7 @@
 
     <p class="paragraphe_homepage"> Je vous attends dans mon univers. </p>
 
-    <p class="signature_homepage"> Sophie Rouxel </p>
+    <p class="signature_homepage"> Sophie Rouxel </p> --}}
 
 
 </body>

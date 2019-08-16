@@ -1,15 +1,13 @@
+#footerOne {
+    display: flex;
 
-
-#footerOne{
-   display: flex;
-   
-  justify-content: flex-end;
-   background-color: blueviolet;
-  align-items: left;   
-  padding: 10px; 
+    justify-content: flex-end;
+    background-color: blueviolet;
+    align-items: left;
+    padding: 10px;
 }
 
-#socialMedia{
+#socialMedia {
     background-color: black;
     color: white;
     justify-content: space-between;
@@ -18,23 +16,16 @@
     padding: 5px;
 }
 
-#footerOne{
-   background-color:  #F1F9FF;
-
+#footerOne {
+    background-color: #f1f9ff;
 }
-.fa-facebook-f{
+.fa-facebook-f {
     margin: 10px;
 }
 
-#social{
+#social {
     margin-right: 20px;
 }
-#contact{
+#contact {
     margin-right: 20px;
 }
-
-
-
-
-
-
