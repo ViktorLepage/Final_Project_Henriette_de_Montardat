@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 35994eaea5a446f8239de1e14d5035ba12237d44
 
 class HomeController extends Controller
 {

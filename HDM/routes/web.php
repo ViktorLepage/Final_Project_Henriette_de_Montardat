@@ -20,6 +20,13 @@ Route::resource('/boutique', 'productController');
 Route::resource('/collection', 'productController');
 Route::resource('/hdmadmin', 'productController');
 
+Route::get('/mmm', function()
+{
+    //return Response::view('layouts/mainTemplate');
+    return Response::view('collection');
+});
+
+
 Auth::routes();
 
 Route::get('/auth/login', 'loginsignupController@index');
@@ -27,3 +34,8 @@ Route::get('/auth/login', 'loginsignupController@index');
 
 //! JUST FABRIZIO TESTING, I WILL REMOVE IT DO NOT WORRY :)
 Route::resource('/adminCollection', 'AdminProdController');
+
+
+
+
+
