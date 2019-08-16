@@ -14,7 +14,6 @@ Route::get('/', function () {
     return 'Main page';
 });
 Route::resource('/home', 'homeController');
-Route::resource('/logreg', 'logRegController');
 Route::resource('/myaccount', 'myAccountController');
 Route::resource('/contact', 'contactController');
 Route::resource('/boutique', 'productController');
