@@ -2,21 +2,24 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
+
+
+
 
 <!--extends('header');-->
-    <header></header>
-    <main>
-     <section id="loginForm">
-         <label for="login">Login</label>
-        <form action="" method="post" name="login"><br>
-        @csrf
+<body>
+   @include('Layouts/headerTemplate')
+           <main>
+            <section id="loginForm">
+                <label for="login">Login</label>
+                <form action="" method="post" name="login"><br>
+                    @csrf
             <label for="loginPassword">Email</label>
             <input type="email" name="loginEmail" id="loginEmail" value="Email"><br>
             <label for="loginPassword">Password</label>
@@ -27,11 +30,11 @@
      </section>
      <br>
      <section id="signupForm">
-            <label for="signup">Create Account</label>
-        <form action="" method="post" name="signup">
-        @csrf
-            <input type="text" name="signupFirstName" id="signupFirstName" value="First Name"><br>
-            <input type="text" name="signupLastName" id="signupLastName" value="Last Name"><br>
+         <label for="signup">Create Account</label>
+         <form action="" method="post" name="signup">
+             @csrf
+             <input type="text" name="signupFirstName" id="signupFirstName" value="First Name"><br>
+             <input type="text" name="signupLastName" id="signupLastName" value="Last Name"><br>
             <input type="email" name="signupEmail" id="signupEmail" value="Email"><br>
             <input type="password" name="signupPassword" id="signupPassword" value="Password"><br>
             <input type="password" name="signupPasswordConfirm" id="signupPasswordConfirm" value="Confirm Passord"><br>
@@ -48,10 +51,10 @@
         </form>
      </section>
      <section>
-     <a href="">Forget password</a>
-     </section>
+         <a href="">Forget password</a>
+        </section>
     </main>
-    <footer></footer>
+    @include('Layouts/footerTemplate')
 </body>
 </html>
 <!--extends('footer');-->

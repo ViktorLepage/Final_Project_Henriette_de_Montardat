@@ -1,4 +1,4 @@
-@extends('layouts.mainTemplate')
+@extends('layouts.app')
 
 @section('content')
 <div class="forms">

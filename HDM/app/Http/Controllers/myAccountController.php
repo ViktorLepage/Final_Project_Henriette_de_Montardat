@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class myAccountController extends Controller
 {
@@ -13,7 +14,10 @@ class myAccountController extends Controller
      */
     public function index()
     {
-        //
+        if (Auth::check()) {
+            echo 'user logged in';
+            return view('myaccount');
+        }
     }
 
     /**

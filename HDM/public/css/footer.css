@@ -1,11 +1,40 @@
-.page-footer{
-    background-color: blueviolet;
+
+
+#footerOne{
+   display: flex;
+   
+  justify-content: flex-end;
+   background-color: blueviolet;
+  align-items: left;   
+  padding: 10px; 
 }
 
-footer .footerOne{
+#socialMedia{
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
     display: flex;
-   margin: auto;
-   
+    padding: 5px;
 }
+
+#footerOne{
+   background-color:  #F1F9FF;
+
+}
+.fa-facebook-f{
+    margin: 10px;
+}
+
+#social{
+    margin-right: 20px;
+}
+#contact{
+    margin-right: 20px;
+}
+
+
+
+
 
 
