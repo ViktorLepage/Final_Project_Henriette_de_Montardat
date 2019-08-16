@@ -1,12 +1,12 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel="stylesheet" href="{{asset('css/footer.css')}}">
 <footer>
     
-    <section class="footreSection">
-        <div class="footerOne">
-            <div class="contact">
+    <section id="footreSection">
+        <div id="footerOne">
+            <div id="contact">
                 
                 <p>
                     07 88 99 90 90
@@ -16,7 +16,7 @@
 
             </div>
 
-            <div>
+            <div id="orderClass">
                 <a href="#">CONTACTEZ NOUS</a>
                 <br>
                 <a href="#">COMMANDE & PAIEMENT</a>
@@ -26,13 +26,13 @@
 
         </div>
 
-        <div class="socialMedia">
+        <div id="socialMedia">
             <div>
                 © henriettedemontardat
             </div>
 
-            <div>
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
+            <div id="social">
+                <i class="fab fa-facebook-f"></i>
                     <i class="fab fa-instagram"></i>
             </div>
         </div>

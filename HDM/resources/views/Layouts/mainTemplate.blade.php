@@ -5,7 +5,8 @@
 </head>
 <body>
 @include('Layouts/headerTemplate')
-@include('Layouts/footerTemplate')
 
+
+@include('Layouts/footerTemplate')
 </body>
 </html>
