@@ -4,24 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class logRegController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        // $this->middleware('auth');
-    }
-
-
     public function index()
     {
-        return view('logreg');
+        //
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -77,12 +70,6 @@ class logRegController extends Controller
     {
         //
     }
-
-    public function createUSer()
-    { }
-
-    public function loginUser()
-    { }
 
     /**
      * Remove the specified resource from storage.
