@@ -31,12 +31,15 @@ class HomeController extends Controller
         // session(['product' => 'mytype of ring']);
 
         //---DUMPS THE CURRENT SESSION INFO--//(GOKDAG)
-        echo '<pre>';
-        var_dump(Request()->session());
-        echo '</pre>';
+        // echo '<pre>';
+        // var_dump(Request()->session());
+        // echo '</pre>';
 
-        //---RESETS THE CURRENT SESSION. IT WILL BE USED FOR LOGOUT FEATURE--//(GOKDAG)
+        //---RESETS THE CURRENT SESSION--//(GOKDAG)
         // session()->flush();
+
+        //---LOGS OUT THE USER---//(GOKDAG)
+        // Auth::logout();
 
         //---ATTENTION!!! DUMPS ALL THE SESSION INFO AND ENTERS INTO INFINITE LOOP--//(GOKDAG)
         // echo '<pre>';

@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Product;
 
 class CartController extends Controller
 {
@@ -13,7 +13,15 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        //---RETRIEVES "THE ADD BUTTON INFO" THROUGH SESSION AND STORES IT TO A VARIABLE---//(GOKDAG)
+        $data = Request()->session()->get('cart[]');
+
+        //---LOOPS THROUGH SESSION CART INFO (WHICH IS ONLY PRODUCT IDs...) FINDS THEM IN DB AND SENDS THEM TO THE VIEW---//(GOKDAG)
+        $cartItems=array();
+        foreach ($data as $key => $value) {
+            $cartItems [] = Product::find($value);
+        }
+        return view('cart', ['cart' => $cartItems]);
     }
 
     /**

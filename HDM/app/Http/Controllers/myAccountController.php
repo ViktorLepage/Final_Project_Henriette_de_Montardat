@@ -14,27 +14,7 @@ class myAccountController extends Controller
      */
     public function index()
     {
-
-        // return view('myaccount');
-        // if (isset($_POST['submit']))
-        //     session(['submits' => '$a = $a+1']);
-
-        // echo '<pre>';
-        // var_dump(Request()->session());
-        // echo '</pre>';
-        // $input = Request()->all();
-        // if (null !== (Request()->input('submit'))) {
-        //     session(['submits' => '$a = $a+1']);
-        // }
-        // echo '<pre>';
-        // var_dump(Request()->session());
-        // echo '</pre>';
-        // return view('myaccount');
-
-        // if (Auth::check()) {
-        //     echo 'user logged in';
-        //     return view('myaccount');
-        // }
+        return view('myaccount');
     }
 
     /**
@@ -80,10 +60,10 @@ class myAccountController extends Controller
         // var_dump(Auth::user());
         // echo '</pre>';
 
-        session(['product' => 'mytype of ring']);
-        echo '<pre>';
-        var_dump ($request->session());
-        echo '</pre>';
+        // session(['product' => 'mytype of ring']);
+        // echo '<pre>';
+        // var_dump ($request->session());
+        // echo '</pre>';
 
         // echo '<pre>';
         // echo $request;

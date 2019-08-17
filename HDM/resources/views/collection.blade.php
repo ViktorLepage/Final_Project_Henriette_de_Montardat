@@ -1,3 +1,19 @@
+
+
+<!-- !!!!!! PLEASE DO NOT ERASE I AM USING THIS FOR TESTING. TANKS :) (GOKDAG) !!!!! -->
+<!-- @foreach($products as $product)
+        <p>{{$product->product_name}}</p>
+        <form action="" method="GET">
+        @csrf
+        <input name="addToCart" value="{{$product->id}}" type="hidden">
+        <button type="submit">add</button>
+        </form>
+@endforeach -->
+
+
+
+
+
 <style>
 
 .header{

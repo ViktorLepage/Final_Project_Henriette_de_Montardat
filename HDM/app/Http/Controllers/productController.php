@@ -15,12 +15,29 @@ class productController extends Controller
      */
     public function index()
     {
+        //---CHECKS IF THE USER IS LOGGED IN IF SO RETURNS THE VIEW---//(GOKDAG)
         /*if (Auth::check()) {
             $products = Product::All();
             return view('collection', ['products' => $products]);
         }*/
+
+        //---DISPLAYS THE BUTTON VALUE WHERE THE PRODUCT ID IS STORED---//(GOKDAG)
+        // echo (Request()->addToCart);
+
+        //---ERASES ALL MANUALLY STORED DATA FROM SESSION---//(GOKDAG)
+        // session()->flush();
+
+        //---WHEN THE ADD BUTTON IS CLICKED, IT SAVES THE PRODUCT ID INTO THE SESSION---//(GOKDAG)
+        $itemToCart = (Request()->addToCart);
+        if ($itemToCart ==! null) {
+            Request()->session()->push('cart[]', $itemToCart );
+            return redirect('/collection');
+
+        }
+
         $products = Product::All();
         return view('collection', ['products' => $products]);
+
     }
 
     /**
