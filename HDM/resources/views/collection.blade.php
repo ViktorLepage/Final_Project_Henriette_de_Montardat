@@ -43,22 +43,22 @@ img {
     padding-bottom: 5px;
 }
 
-.button {
-    background-color: #403ead;
-    border: none;
-    color: white;
-    padding: 8px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 2px 22px;
-    cursor: pointer;
-    border-radius: 30%;
+.button1 {
+  height: 40px;
+  width: 150px;
+  border: 2px solid #403ead;
+  margin: 20px 20px 20px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .button2:hover {
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 
@@ -98,7 +98,7 @@ img {
                     <form action="" method="GET">
                       @csrf
                       <input name="addToCart" value="{{$product->id}}" type="hidden">
-                     <button class ="button button2" type="submit">add</button>
+                     <button class ="button1 button2" type="submit">add</button>
                     </form>
                 </li>
             @endforeach
