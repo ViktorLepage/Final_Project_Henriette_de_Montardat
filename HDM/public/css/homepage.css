@@ -1,0 +1,46 @@
+/* General settings applying for all the page*/
+* {
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+
+#style_homepage {
+    height: 800px;
+    width: 650px;
+    background-image: url('/images/homepagebackground4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+.titre_homepage,
+.paragraphe_homepage,
+.signature_homepage {
+    text-align: center;
+    width: 550px;
+    margin: 20px auto;
+    font-size: 25px;
+}
+
+/* Police */
+
+.titre_homepage {
+    text-transform: uppercase;
+    font-family: 'Ubuntu', cursive;
+}
+.paragraphe_homepage {
+    font-family: 'Lora', serif;
+}
+.signature_homepage {
+    font-family: 'Ubuntu', cursive;
+}
+
+/* Text in black */
+
+#style_homepage p {
+    color: #000000;
+}

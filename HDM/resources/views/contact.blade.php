@@ -13,32 +13,32 @@
   </head>
   <body>
     <h1 class="pt-5">CONTACT</h1>
-    <form class="d-flex justify-content-center">
-
+    <form action="/contact" method="POST" class="d-flex justify-content-center">
+        @csrf
         <div class="form-row">
             <div class="form-group col-md-6">
                 <div class="d-flex align-items-center" >
                     <i class="fas fa-user  pb-4"></i>
                     <div class="form-group pb-4">
-                        <input type="text" class="form-control border-0 rounded-0 focus" id="inputName" aria-describedby="nameHelp" placeholder="votre prénom">
+                        <input name="inputFirstName" type="text" class="form-control border-0 rounded-0 focus" id="inputFirstName" aria-describedby="nameHelp" placeholder="votre prénom">
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user pb-4"></i>
                     <div class="form-group pb-4">
-                        <input type="text" class="form-control border-0 rounded-0" id="inputLastName" aria-describedby="lastNameHelp" placeholder="votre nom">
+                        <input name="inputLastName" type="text" class="form-control border-0 rounded-0" id="inputLastName" aria-describedby="lastNameHelp" placeholder="votre nom">
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user pb-4"></i>
                     <div class="form-group pb-4">
-                        <input type="email" class="form-control border-0 rounded-0" id="inputEmail" aria-describedby="emailHelp" placeholder="email">
+                        <input name="inputEmail" type="email" class="form-control border-0 rounded-0" id="inputEmail" aria-describedby="emailHelp" placeholder="email">
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user"></i>
                     <div class="form-group">
-                        <input type="text" class="form-control border-0 rounded-0" id="inputSubject" placeholder="Sujet">
+                        <input name="inputSubject" type="text" class="form-control border-0 rounded-0" id="inputSubject" placeholder="Sujet">
                     </div>
                 </div>
             </div>
@@ -47,11 +47,13 @@
                     <textarea class="form-control rounded-0 " name="inputTextArea" id="inputText" cols="35" rows="7" placeholder="Ecrivez-ici.."></textarea>
                 </div>
                 <div class="d-flex justify-content-end" id="submitButton" >
-                    <button type="submit" class="btn border border-dark rounded-0 " >ENVOYER</button>
+                    <button name= "contactSend" type="submit" class="btn border border-dark rounded-0 " >ENVOYER</button>
                 </div>
             </div>
         </div>
+
     </form>
+    {{ $email->content }}
 
 
 
