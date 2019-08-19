@@ -1,7 +1,5 @@
 
 
-<<<<<<< HEAD
-=======
 <!-- !!!!!! PLEASE DO NOT ERASE... I AM USING THIS FOR TESTING. TANKS :) (GOKDAG) !!!!! -->
 <!-- @foreach($products as $product)
         <p>{{$product->product_name}}</p> -->
@@ -12,7 +10,6 @@
         <button type="submit">add</button>
         </form>
 @endforeach -->
->>>>>>> 4df95d85c2ede9d5ea7c1d420fcaf3c0266cec29
 
 <style>
 
@@ -42,20 +39,6 @@
 }
 
 </style>
-
-
-
-<!-- !!!!!! PLEASE DO NOT ERASE I AM USING THIS FOR TESTING. TANKS :) (GOKDAG) !!!!! -->
-<!-- @foreach($products as $product)
-        <p>{{$product->product_name}}</p>
-        <form action="" method="GET">
-        @csrf
-        <input name="addToCart" value="{{$product->product_id}}" type="hidden">
-        <button type="submit">add</button>
-        </form>
-@endforeach
--->
-
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -82,27 +65,17 @@ $products = $request->session()->pull('products', $products );
 <div id="carousel-inner" class="carousel-inner" role="listbox">
 <p>Coup de coeur</p>
     @foreach($products as $product)
-<<<<<<< HEAD
-        <div id="carousel-item" class="carousel-item {{ $loop->first ? 'active' : '' }}">
-        <form action="" method="GET">
-            <p><img  height="100px" width="100px" id="carousel-image"   src="{{ URL::asset($product->image)}}" ></p>
-            <p>{{$product ->product_type}}</p>
-            <p>{{$product->product_name}}</p>
-            <p>{{$product->price}}</p>
-            <p>{{$product->product_id}}</p>
-            @csrf
-        <input name="addToCart" value="{{$product->product_id}}" type="hidden">
-        <button type="submit">add</button>
-        </form>
-        </div>
-=======
     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-        <img  id="carousel-image"  class="d-block w-50" src="{{ URL::asset($product->image)}}" >
+        <img  height="200px" id="carousel-image" src="{{ URL::asset($product->image)}}" >
         <p>{{$product ->product_type}}</p>
         <p>{{$product->product_name}}</p>
         <p>{{$product->image}}</p>
+        <form action="" method="GET">
+        @csrf
+        <input name="addToCart" value="{{$product->id}}" type="hidden">
+        <button type="submit">add</button>
+        </form>
     </div>
->>>>>>> 4df95d85c2ede9d5ea7c1d420fcaf3c0266cec29
     @endforeach
 </div>
 
@@ -120,12 +93,9 @@ $products = $request->session()->pull('products', $products );
 <footer>
     <h1 class="footer">FOOTER</h1>
 </footer>
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> 4df95d85c2ede9d5ea7c1d420fcaf3c0266cec29
