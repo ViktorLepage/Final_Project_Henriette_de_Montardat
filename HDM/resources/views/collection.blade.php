@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+@include('Layouts/headerTemplate')
+
     <title>Collection</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -91,4 +93,9 @@
             </ul>
         </div>
     </div>
+
 </body>
+@include('Layouts/footerTemplate')
+
+
+

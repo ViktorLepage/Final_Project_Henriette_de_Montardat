@@ -3,11 +3,11 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel="stylesheet" href="{{asset('/css/footer.css')}}">
 <footer>
-    
+
     <section id="footreSection">
         <div id="footerOne">
             <div id="contact">
-                
+
                 <p>
                     07 88 99 90 90
                     <br>
