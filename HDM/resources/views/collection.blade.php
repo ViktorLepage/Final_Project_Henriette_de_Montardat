@@ -1,18 +1,5 @@
 
 
-<!-- !!!!!! PLEASE DO NOT ERASE I AM USING THIS FOR TESTING. TANKS :) (GOKDAG) !!!!! -->
-<!-- @foreach($products as $product)
-        <p>{{$product->product_name}}</p>
-        <form action="" method="GET">
-        @csrf
-        <input name="addToCart" value="{{$product->id}}" type="hidden">
-        <button type="submit">add</button>
-        </form>
-@endforeach -->
-
-
-
-
 
 <style>
 
@@ -25,23 +12,9 @@
     bottom:0px;
 }
 
-.carousel-inner > .item {
-  height: 100vh;
-}
-
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  max-height: 800px;
-  width: auto;
-}
-
 #carouselExampleControls {
     background-color : grey;
+
 }
 
 #carousel-image
@@ -49,13 +22,26 @@
         border-style: dotted dashed solid double;
     }
 
-#carouselExampleControls{
-    display: flex;
-    align-items: center;
+#carousel-inner{
+    text-align: center;
+
+
 }
 
 </style>
 
+
+
+<!-- !!!!!! PLEASE DO NOT ERASE I AM USING THIS FOR TESTING. TANKS :) (GOKDAG) !!!!! -->
+<!-- @foreach($products as $product)
+        <p>{{$product->product_name}}</p>
+        <form action="" method="GET">
+        @csrf
+        <input name="addToCart" value="{{$product->product_id}}" type="hidden">
+        <button type="submit">add</button>
+        </form>
+@endforeach
+-->
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -69,53 +55,46 @@
 </header>
 <!-- Carousel -->
 <!-- Indicatiors -->
- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+$products = $request->session()->pull('products', $products );
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
  <ol class="carousel-indicators">
     @foreach($products as $product)
         <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}"></li>
     @endforeach
 </ol>
+
 <!-- Content -->
+
 <div id="carousel-inner" class="carousel-inner" role="listbox">
+<p>Coup de coeur</p>
     @foreach($products as $product)
-    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-        <img  id="carousel-image"  class="d-block w-50" src="{{ URL::asset($product->img)}}" >
-        <p>{{$product ->product_type}}</p>
-        <p>{{$product->product_name}}</p>
-        <p>{{$product->img}}</p>
-    </div>
+        <div id="carousel-item" class="carousel-item {{ $loop->first ? 'active' : '' }}">
+        <form action="" method="GET">
+            <p><img  height="100px" width="100px" id="carousel-image"   src="{{ URL::asset($product->image)}}" ></p>
+            <p>{{$product ->product_type}}</p>
+            <p>{{$product->product_name}}</p>
+            <p>{{$product->price}}</p>
+            <p>{{$product->product_id}}</p>
+            @csrf
+        <input name="addToCart" value="{{$product->product_id}}" type="hidden">
+        <button type="submit">add</button>
+        </form>
+        </div>
     @endforeach
 </div>
+
 <!-- Left arrow -->
 <a id="carouselController" class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <p>------</p>
   <span class="sr-only">Previous</span>
 </a>
 <!-- Right arrow -->
 <a id="carouselController" class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <p>------</p>
   <span class="sr-only">Next</span>
 </a>
-
-
-@foreach($products as $product)
-<div>
-    <h3><strong>{{$product->product_name}}</strong></h3>
-<img src="{{$product->image}}" alt="one_ring" srcset="" height="100px" width="100px">
-    <p>{{$product ->product_type}}</p>
-</div>
-</div>
-@endforeach
-
-
-
-
-
 
 <footer>
     <h1 class="footer">FOOTER</h1>
 </footer>
-
-
