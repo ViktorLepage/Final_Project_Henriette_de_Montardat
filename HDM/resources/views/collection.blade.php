@@ -1,18 +1,15 @@
 
 
-<!-- !!!!!! PLEASE DO NOT ERASE I AM USING THIS FOR TESTING. TANKS :) (GOKDAG) !!!!! -->
+<!-- !!!!!! PLEASE DO NOT ERASE... I AM USING THIS FOR TESTING. TANKS :) (GOKDAG) !!!!! -->
 <!-- @foreach($products as $product)
-        <p>{{$product->product_name}}</p>
-        <form action="" method="GET">
+        <p>{{$product->product_name}}</p> -->
+        <!-- //---THIS FORM IS FOR "ADD TO CART" BUTTON -->
+        <!-- <form action="" method="GET">
         @csrf
         <input name="addToCart" value="{{$product->id}}" type="hidden">
         <button type="submit">add</button>
         </form>
 @endforeach -->
-
-
-
-
 
 <style>
 
@@ -79,10 +76,10 @@
 <div id="carousel-inner" class="carousel-inner" role="listbox">
     @foreach($products as $product)
     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-        <img  id="carousel-image"  class="d-block w-50" src="{{ URL::asset($product->img)}}" >
+        <img  id="carousel-image"  class="d-block w-50" src="{{ URL::asset($product->image)}}" >
         <p>{{$product ->product_type}}</p>
         <p>{{$product->product_name}}</p>
-        <p>{{$product->img}}</p>
+        <p>{{$product->image}}</p>
     </div>
     @endforeach
 </div>
@@ -117,5 +114,9 @@
 <footer>
     <h1 class="footer">FOOTER</h1>
 </footer>
+
+
+
+
 
 
