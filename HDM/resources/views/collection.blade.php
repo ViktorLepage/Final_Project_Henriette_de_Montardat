@@ -1,5 +1,18 @@
 
 
+<<<<<<< HEAD
+=======
+<!-- !!!!!! PLEASE DO NOT ERASE... I AM USING THIS FOR TESTING. TANKS :) (GOKDAG) !!!!! -->
+<!-- @foreach($products as $product)
+        <p>{{$product->product_name}}</p> -->
+        <!-- //---THIS FORM IS FOR "ADD TO CART" BUTTON -->
+        <!-- <form action="" method="GET">
+        @csrf
+        <input name="addToCart" value="{{$product->id}}" type="hidden">
+        <button type="submit">add</button>
+        </form>
+@endforeach -->
+>>>>>>> 4df95d85c2ede9d5ea7c1d420fcaf3c0266cec29
 
 <style>
 
@@ -69,6 +82,7 @@ $products = $request->session()->pull('products', $products );
 <div id="carousel-inner" class="carousel-inner" role="listbox">
 <p>Coup de coeur</p>
     @foreach($products as $product)
+<<<<<<< HEAD
         <div id="carousel-item" class="carousel-item {{ $loop->first ? 'active' : '' }}">
         <form action="" method="GET">
             <p><img  height="100px" width="100px" id="carousel-image"   src="{{ URL::asset($product->image)}}" ></p>
@@ -81,6 +95,14 @@ $products = $request->session()->pull('products', $products );
         <button type="submit">add</button>
         </form>
         </div>
+=======
+    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+        <img  id="carousel-image"  class="d-block w-50" src="{{ URL::asset($product->image)}}" >
+        <p>{{$product ->product_type}}</p>
+        <p>{{$product->product_name}}</p>
+        <p>{{$product->image}}</p>
+    </div>
+>>>>>>> 4df95d85c2ede9d5ea7c1d420fcaf3c0266cec29
     @endforeach
 </div>
 
@@ -98,3 +120,12 @@ $products = $request->session()->pull('products', $products );
 <footer>
     <h1 class="footer">FOOTER</h1>
 </footer>
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> 4df95d85c2ede9d5ea7c1d420fcaf3c0266cec29
