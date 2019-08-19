@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class contactController extends Controller
 {
@@ -34,7 +35,9 @@ class contactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contact = Input::all();
+        var_dump($contact);
+
     }
 
     /**
