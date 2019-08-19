@@ -14,14 +14,14 @@
     <nav   class="  d-flex justify-content-between navbar navbar-expand-lg navbar-light wg-light">
       <div class="col-md-6" > 
         
-        <div class=" d-flex p-4" id="logo">
+        <div class="p-2" id="logo">
           <img src="images/Henriette-Logo.jpg" alt="logo">
         </div>
 
       </div>
-      <div class=" d-flex p-4">
+      <div class="p-2">
 
-        <div class=" d-flex justify-content-end">
+        <div class="d-flex justify-content-end">
   
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@
                         <div class="collapse navbar-collapse" id="navbarText">
                           <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                              <a class="nav-link" href="#">Paged'acceuil <span class="sr-only">(current)</span></a>
+                              <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="#">Collections</a>
