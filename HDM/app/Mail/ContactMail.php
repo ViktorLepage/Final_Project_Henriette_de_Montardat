@@ -4,6 +4,7 @@ namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -31,9 +32,9 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('New Contact Email')
-                    ->from('')
-                    ->to('')
-                    ->view('')
+        return $this->subject('New Contact Mail')
+                    ->from('fit4codingdiamonds@gmail.com')
+                    ->to('gokdag.goktepe@gmail.com')
+                    ->view('email.contactmail');
     }
 }

@@ -53,7 +53,7 @@
         </div>
 
     </form>
-    {{ $email->content }}
+    
 
 
 
