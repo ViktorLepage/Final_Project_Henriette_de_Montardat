@@ -14,27 +14,7 @@ class myAccountController extends Controller
      */
     public function index()
     {
-
-        // return view('myaccount');
-        // if (isset($_POST['submit']))
-        //     session(['submits' => '$a = $a+1']);
-
-        // echo '<pre>';
-        // var_dump(Request()->session());
-        // echo '</pre>';
-        // $input = Request()->all();
-        // if (null !== (Request()->input('submit'))) {
-        //     session(['submits' => '$a = $a+1']);
-        // }
-        // echo '<pre>';
-        // var_dump(Request()->session());
-        // echo '</pre>';
-        // return view('myaccount');
-
-        // if (Auth::check()) {
-        //     echo 'user logged in';
-        //     return view('myaccount');
-        // }
+        return view('myaccount');
     }
 
     /**
@@ -55,7 +35,40 @@ class myAccountController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //---DUMPS THE WHOLE HTTP REQUEST OBJECT---(GOKDAG)
+        // echo '<pre>';
+        // var_dump($request);
+        // echo '</pre>';
+
+        //---DUMPS THE SESSION INFO OF A USER---//(GOKDAG)
+        // echo '<pre>';
+        // var_dump(Request()->session());
+        // echo '</pre>';
+
+        //---FIRST CHECKS IF THE USER LOGGED IN---//(GOKDAG)
+        // if (Auth::check())
+        // {
+        //     echo 'user logged in <br>';
+        //     //---Displays the user name of the current session---//(GOKDAG)
+        //     echo '<pre>';
+        //     echo Auth::user()->name;
+        //     echo '</pre>';
+
+        // }
+        // ---DUMPS THE WHOLE 'USER' STATIC INFO OF THE CURRENT SESSION---//(GOKDAG)
+        // echo '<pre>';
+        // var_dump(Auth::user());
+        // echo '</pre>';
+
+        // session(['product' => 'mytype of ring']);
+        // echo '<pre>';
+        // var_dump ($request->session());
+        // echo '</pre>';
+
+        // echo '<pre>';
+        // echo $request;
+        // echo '</pre>';
+
     }
 
     /**

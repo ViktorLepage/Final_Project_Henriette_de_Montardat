@@ -19,6 +19,7 @@ Route::resource('/contact', 'contactController');
 Route::resource('/boutique', 'productController');
 Route::resource('/collection', 'productController');
 Route::resource('/hdmadmin', 'productController');
+Route::resource('/cart', 'CartController');
 
 Route::get('/mmm', function()
 {
