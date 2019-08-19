@@ -1,15 +1,29 @@
-
+*:not(input){
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+main{
+    padding-top: 0;
+}
 .bg-light{
     background-color: white !important;
     justify-content: flex-end !important ;
-    color: green;
-   
-   
+     
+}
+#logo img{
+    justify-content: flex-start;
+    margin: auto;
+    width: 100px !important;
+    height: 100px !important;
+}
+#logo {
+    justify-content: flex-start;
+    margin:auto ;    
+    justify-content: left;
 }
 
-.navbar-expand-lg .navbar-collapse{
-    justify-content: flex-end !important ;
-}
-.navbar{
-    justify-content: flex-end !important ;
+header{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15;
 }

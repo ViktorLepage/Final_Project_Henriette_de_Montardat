@@ -1,101 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Collection</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet"  href="css/lightslider.css"/>
+    <style>
+    	ul{
+			list-style: none outside none;
+		    padding-left: 0;
+            margin: 0;
+		}
+        .mainslider {
+            margin-bottom: 60px;
+
+        }
+		.content-slider li{
+		    background-color: #ed3020;
+		    text-align: center;
+		    color: #FFF;
+		}
+		.content-slider h3 {
+		    margin: 0;
+		    padding: 70px 0;
+		}
+		.mainslider{
+            width: 800px;
+            margin:auto;
+            padding-top:10%;
 
 
-<!-- !!!!!! PLEASE DO NOT ERASE... I AM USING THIS FOR TESTING. TANKS :) (GOKDAG) !!!!! -->
-<!-- @foreach($products as $product)
-        <p>{{$product->product_name}}</p> -->
-        <!-- //---THIS FORM IS FOR "ADD TO CART" BUTTON -->
-        <!-- <form action="" method="GET">
-        @csrf
-        <input name="addToCart" value="{{$product->id}}" type="hidden">
-        <button type="submit">add</button>
-        </form>
-@endforeach -->
 
-<style>
+        }
 
-.header{
-    position: sticky;
-    top:0;
-}
-.footer{
-    position: sticky;
-    bottom:0px;
-}
+        img {
+            width:200px;
+            height:200px;
+        }
 
-#carouselExampleControls {
-    background-color : grey;
+        .itemcard{
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
 
-}
+        .item{
 
-#carousel-image
-    {
-        border-style: dotted dashed solid double;
-    }
-
-#carousel-inner{
-    text-align: center;
+        }
 
 
-}
-
-</style>
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/lightslider.js"></script>
+    <script>
+    	 $(document).ready(function() {
+			$("#content-slider").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+            $('#image-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:9,
+                slideMargin: 0,
+                speed:500,
+                auto:true,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }
+            });
+		});
+    </script>
 </head>
-
-<header class="header">
-    <h1>HEADER</h1>
-</header>
-<!-- Carousel -->
-<!-- Indicatiors -->
-$products = $request->session()->pull('products', $products );
-
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
- <ol class="carousel-indicators">
-    @foreach($products as $product)
-        <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}"></li>
-    @endforeach
-</ol>
-
-<!-- Content -->
-
-<div id="carousel-inner" class="carousel-inner" role="listbox">
-<p>Coup de coeur</p>
-    @foreach($products as $product)
-    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-        <img  height="200px" id="carousel-image" src="{{ URL::asset($product->image)}}" >
-        <p>{{$product ->product_type}}</p>
-        <p>{{$product->product_name}}</p>
-        <p>{{$product->image}}</p>
-        <form action="" method="GET">
-        @csrf
-        <input name="addToCart" value="{{$product->id}}" type="hidden">
-        <button type="submit">add</button>
-        </form>
+<body>
+	<div class="mainslider">
+        <div class="item" id="item">
+            <ul id="content-slider" class="content-slider">
+            @foreach($products as $product)
+                <li class="itemcard">
+                    <img  id="carousel-image" src="{{ URL::asset($product->image)}}" >
+                    <p>{{$product->product_name}}</p>
+                    <form action="" method="GET">
+                      @csrf
+                      <input name="addToCart" value="{{$product->id}}" type="hidden">
+                     <button type="submit">add</button>
+                    </form>
+                </li>
+            @endforeach
+            </ul>
+        </div>
     </div>
-    @endforeach
-</div>
-
-<!-- Left arrow -->
-<a id="carouselController" class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="sr-only">Previous</span>
-</a>
-<!-- Right arrow -->
-<a id="carouselController" class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="sr-only">Next</span>
-</a>
-
-<footer>
-    <h1 class="footer">FOOTER</h1>
-</footer>
-
-
-
-
-
-
+</body>
