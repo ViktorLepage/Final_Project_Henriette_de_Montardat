@@ -16,7 +16,7 @@ Route::get('/', function () {
 Route::resource('/home', 'homeController');
 Route::resource('/myaccount', 'myAccountController');
 Route::resource('/contact', 'contactController');
-Route::resource('/boutique', 'productController');
+Route::resource('/boutique', 'boutiqueController');
 Route::resource('/collection', 'productController');
 Route::resource('/hdmadmin', 'productController');
 Route::resource('/cart', 'CartController');

@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
-use Illuminate\Support\Facades\Auth;
-
-class productController extends Controller
+class boutiqueController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +13,7 @@ class productController extends Controller
      */
     public function index()
     {
-        //---CHECKS IF THE USER IS LOGGED IN IF SO RETURNS THE VIEW---//(GOKDAG)
+         //---CHECKS IF THE USER IS LOGGED IN IF SO RETURNS THE VIEW---//(GOKDAG)
         /*if (Auth::check()) {
             $products = Product::All();
             return view('collection', ['products' => $products]);
@@ -31,11 +29,11 @@ class productController extends Controller
         $itemToCart = (Request()->addToCart);
         if ($itemToCart ==! null) {
             Request()->session()->push('cart[]', $itemToCart );
-            return redirect('/collection');
+            return redirect('/boutique');
         }
 
         $products = Product::All();
-        return view('collection', ['products' => $products]);
+        return view('boutique', ['products' => $products]);
     }
 
     /**
