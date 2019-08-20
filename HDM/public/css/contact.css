@@ -14,6 +14,34 @@
 {
     border-bottom: 1px solid black !important;
 }
+#inputPassword
+{
+    border-bottom: 1px solid black !important;
+}
+#inputCountry
+{
+    border-bottom: 1px solid black !important;
+}
+#inputCountry
+{
+    border-bottom: 1px solid black !important;
+}
+#inputPostCode
+{
+    border-bottom: 1px solid black !important;
+}
+#inputCity
+{
+    border-bottom: 1px solid black !important;
+}
+#inputAddress
+{
+    border-bottom: 1px solid black !important;
+}
+#inputPhone
+{
+    border-bottom: 1px solid black !important;
+}
 h1{
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -32,6 +60,13 @@ input{
 
 #submitButton{
     padding-left: 20rem;
+    padding-right: 0;
+    padding-top: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+#updateButton{
+    padding-left: 15rem;
     padding-right: 0;
     padding-top: 1.3rem;
     font-family: Arial, Helvetica, sans-serif;
