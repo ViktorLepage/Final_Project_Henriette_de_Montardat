@@ -20,6 +20,8 @@ class ContactMail extends Mailable
      *
      * @return void
      */
+
+    //---CREATES AN INSTANCE TO SEND TO THE CONTACTMAIL.BLADE.PHP --- //(GOKDAG)
     public function __construct(Request $request)
     {
         $this->email = $request;
@@ -30,6 +32,8 @@ class ContactMail extends Mailable
      *
      * @return $this
      */
+
+    //---BULDS THE EMAIL INSTANCE IN ORDER TO BE SENT BY USER THROUGH CONTACT FORM---//(GOKDAG)
     public function build()
     {
         return $this->subject('New Contact Mail')

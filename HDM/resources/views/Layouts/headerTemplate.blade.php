@@ -27,12 +27,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Connection') }}</a>
                             </li>
-                            <li class="nav-item">
-                                <a class ="nav-link" href="{{ URL::to('logout') }}">Logout</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class ="nav-link" href="/myaccount">My Account</a>
-                            </li>
+                            <!-- IF USER LOGGED IN THESE ITEMS ARE DISPLAYED (GOKDAG) -->
+                            @if(Auth::check())
+                                <li class="nav-item">
+                                    <a class ="nav-link" href="{{ URL::to('logout') }}">Logout</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class ="nav-link" href="/myaccount">My Account</a>
+                                </li>
+                            @endif
                             <li class="nav-item">
                                 <a class ="nav-link" href="/cart">Panier</a>
                             </li>
