@@ -96,7 +96,7 @@ console.log("hello");
 
 */
 
-
+/*
 let registerName = document.getElementById("registerName");
 registerName.addEventListener("keyPress", function(){
    //gather
@@ -116,3 +116,5 @@ registerName.addEventListener("keyPress", function(){
 });
 
 console.log("helloooooooo")
+
+*/
