@@ -37,3 +37,5 @@ Route::get('/auth/login', 'loginsignupController@index');
 Route::resource('/adminCollection', 'AdminProdController');
 
 Route::get('/test', 'homeController@test');
+
+Route::get('logout', array('uses' => 'homeController@doLogout'));
