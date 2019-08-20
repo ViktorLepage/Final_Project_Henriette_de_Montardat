@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Mail;
 
 class contactController extends Controller
 {
@@ -34,7 +37,9 @@ class contactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Mail::send(new ContactMail($request));
+        return redirect('/contact');
+
     }
 
     /**

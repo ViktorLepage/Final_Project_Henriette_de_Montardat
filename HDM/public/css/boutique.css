@@ -1,0 +1,49 @@
+
+#carousel-image{
+    border-style: dotted dashed solid double;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+#carousel-inner{
+    text-align: center;
+}
+.carousel-item{
+    width: 500px;
+    height: 380px;
+}
+
+#carouselController{
+    background-color : #403ead;
+    height : 50%;
+}
+
+.carousel-item img{
+    height: 200px;
+}
+
+.carousel-control-prev-icon{
+    background-color : #403ead;
+}
+
+.button1 {
+  height: 40px;
+  width: 150px;
+  border: 2px solid #403ead;
+  margin: 20px 20px 20px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button {
+  display: inline-flex;
+
+}

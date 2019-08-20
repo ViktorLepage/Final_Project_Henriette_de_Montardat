@@ -11,35 +11,9 @@
         </form>
 @endforeach -->
 
-<style>
 
-.header{
-    position: sticky;
-    top:0;
-}
-.footer{
-    position: sticky;
-    bottom:0px;
-}
-
-#carouselExampleControls {
-    background-color : grey;
-
-}
-
-#carousel-image
-    {
-        border-style: dotted dashed solid double;
-    }
-
-#carousel-inner{
-    text-align: center;
-
-
-}
-
-</style>
 <head>
+    <link rel="stylesheet"  href="css/boutique.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -47,11 +21,10 @@
 </head>
 
 <header class="header">
-    <h1>HEADER</h1>
+@include('Layouts/headerTemplate')
 </header>
 <!-- Carousel -->
 <!-- Indicatiors -->
-
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
  <ol class="carousel-indicators">
@@ -61,19 +34,18 @@
 </ol>
 
 <!-- Content -->
-
 <div id="carousel-inner" class="carousel-inner" role="listbox">
 <p>Coup de coeur</p>
     @foreach($products as $product)
     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
         <img   id="carousel-image" src="{{ URL::asset($product->image)}}" >
-        <p>{{$product ->product_type}}</p>
-        <p>{{$product->product_name}}</p>
-        <p>{{$product->image}}</p>
+         <p>{{$product ->product_type}}</p>
+         <p>{{$product->product_name}}</p>
+         <p>{{$product->image}}</p>
         <form action="" method="GET">
         @csrf
         <input name="addToCart" value="{{$product->id}}" type="hidden">
-        <button type="submit">add</button>
+        <button class="button1 button2" type="submit">add</button>
         </form>
     </div>
     @endforeach
@@ -89,9 +61,8 @@
   <span class="carousel-control-next-icon" aria-hidden="true"></span>
   <span class="sr-only">Next</span>
 </a>
-
 <footer>
-    <h1 class="footer">FOOTER</h1>
+@include('Layouts/footerTemplate')
 </footer>
 
 
