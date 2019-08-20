@@ -19,7 +19,7 @@ class UserTableSeeder extends Seeder
                 'email' => 'ex' . $i . 'ample' . $i . '@mail.com',
                 'password' => Str::random(6),
                 'address_1' => Str::random(5),
-                'address_2' => Str::random(5),
+                'city' => Str::random(5),
                 'post_code' => Str::random(5),
                 'country' => Str::random(5),
                 'phone_number' => rand(12345678, 643292),

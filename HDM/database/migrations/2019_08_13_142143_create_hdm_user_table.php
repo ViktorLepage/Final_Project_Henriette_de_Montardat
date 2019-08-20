@@ -20,7 +20,7 @@ class CreateHdmUserTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('address_1')->nullable();
-            $table->string('address_2')->nullable();
+            $table->string('city')->nullable();
             $table->string('post_code')->nullable();
             $table->string('country')->nullable();
             $table->string('phone_number')->nullable();
