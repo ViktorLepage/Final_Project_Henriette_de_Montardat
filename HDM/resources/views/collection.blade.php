@@ -41,12 +41,18 @@
             @foreach($products as $product)
                 <li class="itemcard">
                     <img  id="carousel-image" src="{{ URL::asset($product->image)}}" >
-                    <p>{{$product->product_name}}</p>
-                <form action="/admin/product/{{$product->id}}/edit" method="GET">
-                      @csrf
-                      <input name="addToCart" value="{{$product->id}}" type="hidden">
-                     <button class ="button1 button2" type="submit">edit</button>
-                    </form>
+                    <div id="itemcarddiv">
+                        <div>
+                            <form action="/admin/product/{{$product->id}}/edit" method="GET">
+                                @csrf
+                                <input name="addToCart" value="{{$product->id}}" type="hidden">
+                                <button class ="button1 button2" type="submit">edit</button>
+                            </form>
+                        </div>
+                        <div>
+                            <p>{{$product->product_name}}</p>
+                        </div>
+                    </div>
                 </li>
             @endforeach
             </ul>
