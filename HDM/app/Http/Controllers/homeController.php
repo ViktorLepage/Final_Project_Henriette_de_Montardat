@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 
 class HomeController extends Controller
 {
-    protected $guard = 'admin';
+    //! protected $guard = 'admin'; DO NOT ERASE PLEASE JUST TEST (FABRIZIO :) )
     /**
      * Create a new controller instance.
      *
@@ -48,9 +49,9 @@ class HomeController extends Controller
 
         //---CHECKS IF AN AUTHENTICATED USER IS LOGGED AND DISPLAYS MESSAGE---//(GOKDAG)
         // if (Auth::check()) {
-            //     echo 'user logged in';
-            //     return view('home');
-            // }
+        //     echo 'user logged in';
+        //     return view('home');
+        // }
 
         //---DUMPS THE CURRENT USER INFO---//(GOKDAG)
         // echo '<pre>';
