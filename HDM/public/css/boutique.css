@@ -13,7 +13,7 @@
 }
 
 #carouselController{
-    background-color : #403ead;
+
     height : 50%;
 }
 
@@ -78,6 +78,20 @@
 #productnameprice{
     display: flex;
     justify-content: space-between;
-
-
 }
+/*
+#carouselController{
+    background:none !important ;
+}
+*/
+.carousel-control-prev-icon{
+    color: black;
+    border-radius: 50%;
+}
+
+.carousel-control-next-icon
+{
+    color: black;
+    border-radius: 50%;
+}
+
