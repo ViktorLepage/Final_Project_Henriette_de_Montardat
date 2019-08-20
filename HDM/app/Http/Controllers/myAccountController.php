@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Product;
+use App\User;
 
 class myAccountController extends Controller
 {
@@ -81,8 +81,8 @@ class myAccountController extends Controller
      */
     public function show($id)
     {
-        $theUser= Auth::user();
-        
+        $theUser = Auth::user();
+        $infos = ['infos' => $theUser];
     }
 
     /**
