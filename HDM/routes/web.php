@@ -36,3 +36,5 @@ Route::get('/auth/login', 'loginsignupController@index');
 Route::resource('/adminCollection', 'AdminProdController');
 //Route::post('/myaccount', 'myAccountController@update');
 Route::get('/test', 'homeController@test');
+
+Route::get('logout', array('uses' => 'homeController@doLogout'));

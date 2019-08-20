@@ -65,4 +65,9 @@ class HomeController extends Controller
         $gg = Auth::guard('admin')->user()->id;
         var_dump($gg);
     }*/
+    public function doLogout()
+    {
+        Auth::logout(); // log the user out of our application
+        return redirect('/login'); // redirect the user to the login screen
+    }
 }
