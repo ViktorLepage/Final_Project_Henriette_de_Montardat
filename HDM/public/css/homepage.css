@@ -5,7 +5,7 @@
 }
 
 #style_homepage {
-    height: 800px;
+    height: 68vh;
     width: 650px;
     background-image: url('/images/homepagebackground4.jpg');
     background-repeat: no-repeat;
@@ -15,6 +15,7 @@
     justify-content: center;
     align-content: center;
     margin: auto;
+    margin-bottom: 5vh;
 }
 
 .titre_homepage,
