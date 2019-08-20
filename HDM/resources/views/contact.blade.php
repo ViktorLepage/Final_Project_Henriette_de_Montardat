@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    @include('Layouts/headerTemplate')
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -13,8 +13,10 @@
     <title>Contact</title>
   </head>
   <body>
+
+    <header> @include('Layouts/headerTemplate')</header>
     <h1 class="pt-5">CONTACT</h1>
-    <form action="/contact" method="POST" class="d-flex justify-content-center" id="theForm">
+    <form id="theForm" action="/contact" method="POST" class="d-flex justify-content-center">
         @csrf
         <div class="form-row">
             <div class="form-group col-md-6">
@@ -54,6 +56,8 @@
         </div>
 
     </form>
+
+
 
 
 
