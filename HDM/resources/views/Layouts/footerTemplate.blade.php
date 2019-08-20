@@ -21,7 +21,7 @@
                 <br>
                 <a href="#">COMMANDE & PAIEMENT</a>
 
-
+                
             </div>
 
         </div>
