@@ -14,7 +14,7 @@
   </head>
   <body>
     <h1 class="pt-5">CONTACT</h1>
-    <form action="/contact" method="POST" class="d-flex justify-content-center">
+    <form action="/contact" method="POST" class="d-flex justify-content-center" id="theForm">
         @csrf
         <div class="form-row">
             <div class="form-group col-md-6">
@@ -54,7 +54,7 @@
         </div>
 
     </form>
-    
+
 
 
 
