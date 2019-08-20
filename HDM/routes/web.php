@@ -21,8 +21,7 @@ Route::resource('/collection', 'productController');
 Route::resource('/hdmadmin', 'productController');
 Route::resource('/cart', 'CartController');
 
-Route::get('/mmm', function()
-{
+Route::get('/mmm', function () {
     //return Response::view('layouts/mainTemplate');
     return Response::view('collection');
 });
@@ -35,5 +34,5 @@ Route::get('/auth/login', 'loginsignupController@index');
 
 //! JUST FABRIZIO TESTING, I WILL REMOVE IT DO NOT WORRY :)
 Route::resource('/adminCollection', 'AdminProdController');
-
+//Route::post('/myaccount', 'myAccountController@update');
 Route::get('/test', 'homeController@test');

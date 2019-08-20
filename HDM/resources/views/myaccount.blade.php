@@ -23,31 +23,31 @@
                 <div class="d-flex align-items-center" >
                     <i class="fas fa-user  pb-4"></i>
                     <div class="form-group pb-4">
-                    <input name="inputFirstName" type="text" class="form-control border-0 rounded-0 focus" id="inputFirstName" aria-describedby="nameHelp" placeholder="votre prénom" value="{{Auth::user()['name']}}">
+                    <input name="name" type="text" class="form-control border-0 rounded-0 focus" id="inputFirstName" aria-describedby="nameHelp" placeholder="votre prénom" value="{{Auth::user()['name']}}">
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user pb-4"></i>
                     <div class="form-group pb-4">
-                        <input name="inputLastName" type="text" class="form-control border-0 rounded-0" id="inputLastName" aria-describedby="lastNameHelp" placeholder="votre nom" value="{{Auth::user()['surname']}}">
+                        <input name="surname" type="text" class="form-control border-0 rounded-0" id="inputLastName" aria-describedby="lastNameHelp" placeholder="votre nom" value="{{Auth::user()['surname']}}">
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user pb-4"></i>
                     <div class="form-group pb-4">
-                        <input name="inputEmail" type="email" class="form-control border-0 rounded-0" id="inputEmail" aria-describedby="emailHelp" placeholder="email" value="{{Auth::user()['email']}}">
+                        <input name="email" type="email" class="form-control border-0 rounded-0" id="inputEmail" aria-describedby="emailHelp" placeholder="email" value="{{Auth::user()['email']}}">
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user pb-4"></i>
                     <div class="form-group pb-4">
-                        <input name="inputPassword" type="password" class="form-control border-0 rounded-0" id="inputPassword" placeholder="password" >
+                        <input name="password" type="password" class="form-control border-0 rounded-0" id="inputPassword" placeholder="password" >
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user"></i>
                     <div class="form-group">
-                        <input name="inputCountry" type="text" class="form-control border-0 rounded-0" id="inputCountry" placeholder="Country"value="{{Auth::user()['country']}}">
+                        <input name="country" type="text" class="form-control border-0 rounded-0" id="inputCountry" placeholder="Country"value="{{Auth::user()['country']}}">
                     </div>
                 </div>
 
@@ -57,25 +57,25 @@
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user pb-4"></i>
                     <div class="form-group pb-4">
-                        <input name="inputPostCode" type="text" class="form-control border-0 rounded-0" id="inputPostCode" placeholder="Post Code" value="{{Auth::user()['post_code']}}">
+                        <input name="post_code" type="text" class="form-control border-0 rounded-0" id="inputPostCode" placeholder="Post Code" value="{{Auth::user()['post_code']}}">
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user pb-4"></i>
                     <div class="form-group pb-4">
-                        <input name="inputCity" type="text" class="form-control border-0 rounded-0" id="inputCity" placeholder="City" value="{{Auth::user()['city']}}">
+                        <input name="city" type="text" class="form-control border-0 rounded-0" id="inputCity" placeholder="City" value="{{Auth::user()['city']}}">
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user pb-4"></i>
                     <div class="form-group pb-4">
-                        <input name="inputAddress" type="text" class="form-control border-0 rounded-0" id="inputAddress" placeholder="Adress"value="{{Auth::user()['address_1']}}">
+                        <input name="address_1" type="text" class="form-control border-0 rounded-0" id="inputAddress" placeholder="Adress"value="{{Auth::user()['address_1']}}">
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user"></i>
                     <div class="form-group">
-                        <input name="inputPhone" type="text" class="form-control border-0 rounded-0" id="inputPhone" placeholder="phone"value="{{Auth::user()['phone_number']}}">
+                        <input name="phone_number" type="text" class="form-control border-0 rounded-0" id="inputPhone" placeholder="phone"value="{{Auth::user()['phone_number']}}">
                     </div>
                 </div>
                 <div class="d-flex justify-content-end" id="updateButton" >
