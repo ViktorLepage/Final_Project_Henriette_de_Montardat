@@ -39,14 +39,9 @@ img {
     padding-bottom: 5px;
 }
 
-#itemcarddiv{
-    /*
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    */
-    /*For the new collection page*/
+.row{
 
+    margin-bottom: 50px;
 }
 
 .button1 {
