@@ -81,7 +81,8 @@ class myAccountController extends Controller
      */
     public function show($id)
     {
-        // $theUser=
+        $theUser= Auth::user();
+        
     }
 
     /**
