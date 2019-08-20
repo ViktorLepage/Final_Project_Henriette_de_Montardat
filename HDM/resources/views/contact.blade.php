@@ -12,8 +12,10 @@
     <title>Contact</title>
   </head>
   <body>
+
+    <header> @include('Layouts/headerTemplate')</header>
     <h1 class="pt-5">CONTACT</h1>
-    <form class="d-flex justify-content-center">
+    <form id="theForm" class="d-flex justify-content-center">
 
         <div class="form-row">
             <div class="form-group col-md-6">
@@ -52,6 +54,8 @@
             </div>
         </div>
     </form>
+
+    <footer>@include('Layouts/footerTemplate')</footer>
 
 
 
