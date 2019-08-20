@@ -39,14 +39,22 @@
     @foreach($products as $product)
     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
         <img   id="carousel-image" src="{{ URL::asset($product->image)}}" >
-         <p>{{$product ->product_type}}</p>
-         <p>{{$product->product_name}}</p>
-         <p>{{$product->image}}</p>
-        <form action="" method="GET">
-        @csrf
-        <input name="addToCart" value="{{$product->id}}" type="hidden">
-        <button class="button1 button2" type="submit">add</button>
-        </form>
+        <div id="boutiqueDetailsButton">
+            <div id="boutiqueButton">
+                <form action="" method="GET">
+                @csrf
+                <input name="addToCart" value="{{$product->id}}" type="hidden">
+                <button class="button1 button2" type="submit">add</button>
+                </form>
+            </div>
+            <div id="boutiqueDeails">
+                <div id="producttype"><p>{{$product ->product_type}}</p></div>
+                <div id="productnameprice">
+                    <div><p>{{$product->product_name}}</p></div> <div><p>${{$product->price}}</p></div>
+
+                </div>
+            </div>
+        </div>
     </div>
     @endforeach
 </div>
