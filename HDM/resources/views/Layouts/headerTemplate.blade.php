@@ -37,13 +37,10 @@
                               <a class="nav-link" href="/collection">Collections</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="/boutique">Coup de coeur</a>
+                              <a class="nav-link" href="/boutique">Boutique</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Connection') }}</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Nouveau compte</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="/contact">CONTACT</a>

@@ -39,26 +39,34 @@
     @foreach($products as $product)
     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
         <img   id="carousel-image" src="{{ URL::asset($product->image)}}" >
-         <p>{{$product ->product_type}}</p>
-         <p>{{$product->product_name}}</p>
-         <p>{{$product->image}}</p>
-        <form action="" method="GET">
-        @csrf
-        <input name="addToCart" value="{{$product->id}}" type="hidden">
-        <button class="button1 button2" type="submit">add</button>
-        </form>
+        <div id="boutiqueDetailsButton">
+            <div id="boutiqueButton">
+                <form action="" method="GET">
+                @csrf
+                <input name="addToCart" value="{{$product->id}}" type="hidden">
+                <button class="button1 button2" type="submit">add</button>
+                </form>
+            </div>
+            <div id="boutiqueDeails">
+                <div id="producttype"><p>{{$product ->product_type}}</p></div>
+                <div id="productnameprice">
+                    <div><p>{{$product->product_name}}</p></div> <div><p>${{$product->price}}</p></div>
+
+                </div>
+            </div>
+        </div>
     </div>
     @endforeach
 </div>
 
 <!-- Left arrow -->
-<a id="carouselController" class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<a id="carouselController" class="carousel-control-prev " href="#carouselExampleControls" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon bg-dark round-3" aria-hidden="true"></span>
   <span class="sr-only">Previous</span>
 </a>
 <!-- Right arrow -->
 <a id="carouselController" class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="carousel-control-next-icon bg-dark round-3" aria-hidden="true"></span>
   <span class="sr-only">Next</span>
 </a>
 <footer>
