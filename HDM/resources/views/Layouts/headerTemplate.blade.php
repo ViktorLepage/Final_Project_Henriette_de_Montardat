@@ -48,6 +48,9 @@
                                 <a class ="nav-link" href="/myaccount">My Account</a>
                             </li>
                             <li class="nav-item">
+                                <a class ="nav-link" href="/cart">Panier</a>
+                            </li>
+                            <li class="nav-item">
                               <a class="nav-link" href="/contact">CONTACT</a>
                             </li>
 
