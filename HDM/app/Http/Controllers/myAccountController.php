@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Product;
+use App\User;
 
 class myAccountController extends Controller
 {
@@ -26,7 +26,7 @@ class myAccountController extends Controller
      */
     public function create()
     {
-        //
+        Auth::User();
     }
 
     /**
@@ -37,6 +37,20 @@ class myAccountController extends Controller
      */
     public function store(Request $request)
     {
+
+
+        $user = Auth::user();
+        $user->name = $request->name;
+        $user->surname = $request->surname;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->address_1 = $request->address_1;
+        $user->city = $request->city;
+        $user->post_code = $request->post_code;
+        $user->country = $request->country;
+        $user->phone_number = $request->phone_number;
+        $user->save();
+        return view('/myaccount');
         //---DUMPS THE WHOLE HTTP REQUEST OBJECT---(GOKDAG)
         // echo '<pre>';
         // var_dump($request);
@@ -81,8 +95,8 @@ class myAccountController extends Controller
      */
     public function show($id)
     {
-        $theUser= Auth::user();
-        
+        $theUser = Auth::user();
+        //$infos = ['infos' => $theUser];
     }
 
     /**
@@ -103,7 +117,7 @@ class myAccountController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
     }

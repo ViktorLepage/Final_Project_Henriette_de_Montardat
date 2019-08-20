@@ -13,7 +13,6 @@
 }
 
 #carouselController{
-
     height : 50%;
 }
 
@@ -26,15 +25,11 @@
 }
 
 .button1 {
-
-
-
   height: 25px;
   width: 80px;
   border: 2px solid #403ead;
   margin-top: 20px;
   margin-bottom: 20px;
-
   text-transform: uppercase;
   text-decoration: none;
   font-size: .8em;
@@ -43,10 +38,6 @@
   justify-content: center;
   overflow: hidden;
   background-color: white;
-
-
-
-
 }
 
 .button2:hover {
@@ -87,11 +78,13 @@
 .carousel-control-prev-icon{
     color: black;
     border-radius: 50%;
+    padding: 25px;
 }
 
 .carousel-control-next-icon
 {
     color: black;
     border-radius: 50%;
+    padding: 25px;
 }
 
