@@ -37,6 +37,11 @@ header {
     font-size: 15;
     height: 20vh;
 }
+/*
+@font-face {
+    font-family: OptimusPrinceps;
+    src: url('{{ public_path('fonts/Tilda_Script_S.otf') }}');
+}
 
 
 @keyframes logo_opacity {
