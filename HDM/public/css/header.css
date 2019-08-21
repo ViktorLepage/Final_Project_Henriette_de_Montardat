@@ -43,7 +43,7 @@ header {
     src: url('{{ public_path('fonts/Tilda_Script_S.otf') }}');
 }
 
-
+*/
 @keyframes logo_opacity {
     from {
         opacity: 0;
