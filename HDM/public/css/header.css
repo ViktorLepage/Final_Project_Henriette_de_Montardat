@@ -32,11 +32,14 @@ header {
         sans-serif;
     font-size: 15;
     height: 20vh;
+<<<<<<< HEAD
 }
 /*
 @font-face {
     font-family: OptimusPrinceps;
     src: url('{{ public_path('fonts/Tilda_Script_S.otf') }}');
+=======
+>>>>>>> parent of 9d8aba3... Fonts
 }
 */
 @keyframes logo_opacity {
