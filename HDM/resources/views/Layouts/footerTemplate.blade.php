@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel="stylesheet" href="{{asset('/css/footer.css')}}">
@@ -23,8 +22,8 @@
                 © henriettedemontardat
             </div>
             <div id="social">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-instagram"></i>
+                <a href="https://www.facebook.com/henriettedemontardat/"><i class="fab fa-facebook-f"></i> </a>
+                <a href="https://www.instagram.com/henriettedemontardat/?hl=fr"><i class="fab fa-instagram"></i> </a>
             </div>
         </div>
     </section>
