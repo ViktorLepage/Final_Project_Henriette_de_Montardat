@@ -1,4 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <link rel="stylesheet"  href="css/cart.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -13,6 +19,8 @@
 
 
 
+</body>
+</html>
 <!-- LOOPS THROUGH THE COLLECTION OF QUERY RESULTS AND SHOWS SELECTED ITEMS OF THE USER (GOKDAG) -->
 
 <!-- If the cart is not empty show the added items. (GOKDAG) -->
@@ -21,11 +29,11 @@
     <div class="container">
         @foreach($cart as $eachCart=>$value)
             <div class="container mr-0">
-                <div class="row" style="width:125vh">
-                    <div class="col-4 shadow p-3 mb-5 bg-white rounded" style="width:48%;">
+                <div class="row">
+                    <div class="col-4 shadow p-3 mb-5 bg-white rounded">
                         <img height="150px" width="150px" src="{{$value->image}}" alt="product image">
                     </div>
-                    <div class="col-8 border-top border-bottom border-dark pl-5 rightCart " style="width:48%;">
+                    <div class="col-8 border-top border-bottom border-dark pl-5 rightCart position-relative">
                         <div class="d-flex justify-content-between">
                             <p>{{$value->product_name}}</p>
                             <p>€ {{$value->price}}</p>
@@ -33,6 +41,13 @@
                         </div>
                         <div>
                             <p>{{$value->product_type}}</p>
+                        </div>
+                        <div class="position-absolute removeButton">
+                                <form action="" method="GET">
+                                @csrf
+                                <input name="addToCart" value="{{$value->id}}" type="hidden">
+                                <button class="button1 button2" type="submit">remove</button>
+                                </form>
                         </div>
                     </div>
                 </div>

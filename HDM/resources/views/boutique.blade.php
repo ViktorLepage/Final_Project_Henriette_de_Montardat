@@ -55,8 +55,8 @@
                             <div id="boutiqueDeails">
                                 <div id="producttype"><p>{{$product ->product_type}}</p></div>
                                 <div id="productnameprice">
-                                    <div><p>{{$product->product_name}}</p></div> <div><p>${{$product->price}}</p></div>
-
+                                    <div><p>{{$product->product_name}}</p></div>
+                                    <div><p>&euro;{{$product->price}}</p></div>
                                 </div>
                             </div>
                         </div>

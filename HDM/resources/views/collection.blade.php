@@ -13,19 +13,19 @@
 <div id="pageContainer">
     <div id="contentWrap">
 <div id="container-fluid" class="container-fluid">
-  <div  class="row">
+  <div class="row">
 
     @foreach($products as $product)
-        <div id="cards" class="col-md-4">
+        <div id="cards" class="col-6">
             <img height="150" id="carousel-image" src="{{ URL::asset($product->image)}}" >
-        <div id="itemcarddiv">
-            <div>
-                <form action="/admin/product/{{$product->id}}/edit" method="GET">
-                    @csrf
-                    <input name="addToCart" value="{{$product->id}}" type="hidden">
-                    <button class ="button1 button2" type="submit">edit</button>
-                </form>
-            </div>
+            <div id="itemcarddiv">
+                <div>
+                    <form action="/admin/product/{{$product->id}}/edit" method="GET">
+                        @csrf
+                        <input name="addToCart" value="{{$product->id}}" type="hidden">
+                        <button class ="button1 button2" type="submit">edit</button>
+                    </form>
+                </div>
             <div>
               <p>{{$product->product_name}}</p>
             </div>
