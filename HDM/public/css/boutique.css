@@ -58,8 +58,6 @@
     justify-content: flex-end;
 }
 
-#boutiqueDetails {
-}
 
 #producttype {
     display: flex;
@@ -74,11 +72,7 @@
     justify-content: space-between;
     border-bottom: 1px solid #403ead;
 }
-/*
-#carouselController{
-    background:none !important ;
-}
-*/
+
 .carousel-control-prev-icon {
     color: black;
     border-radius: 50%;

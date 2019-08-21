@@ -6,24 +6,25 @@
 
 .cardtitle {
     font-size: 25px;
-    font-family: 'Ubuntu', cursive;
+    /*font-family: 'Ubuntu', cursive;*/
 }
 
 .cardheader {
     text-transform: uppercase;
-    font-family: 'Ubuntu', cursive;
+    /*font-family: 'Ubuntu', cursive;*/
     font-size: 30px;
     border-bottom: 15px;
     text-align: center;
 }
 
 .cardtext {
-    font-family: 'Lora', serif;
+   /* font-family: 'Lora', serif;*/
 }
 
 #pageContainer {
     position: relative;
-    min-height: 100vh;
+    min-height: 150vh;
+
 }
 #contentWrap {
     padding-bottom: 2.5rem;
@@ -35,11 +36,9 @@
     height: 2.5rem;
 }
 
-/*
+/* Victor previous code 
+
 #style_homepage {
-
-
-
     height: 68vh;
     width: 650px;
     background-image: url('/images/homepagebackground4.jpg');
@@ -55,7 +54,6 @@
     background-size: contain;
     padding-left: 20%;
     padding-right: 20%;
-
 }
 
 .titre_homepage,
