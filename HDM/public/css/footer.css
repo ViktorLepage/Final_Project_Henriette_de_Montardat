@@ -16,6 +16,7 @@
     background-color: blueviolet;
     align-items: left;
     padding: 10px;
+    background-color: #f1f9ff;
 }
 
 #socialMedia {
@@ -27,9 +28,6 @@
     padding: 5px;
 }
 
-#footerOne {
-    background-color: #f1f9ff;
-}
 .fa-facebook-f {
     margin: 10px;
 }
@@ -46,7 +44,11 @@ footer {
         sans-serif;
     font-size: 15;
     width: 100%;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
+}
+
+.row {
+    justify-content: center;
 }
