@@ -46,6 +46,7 @@
 @include('Layouts/footerTemplate')
 </footer>
 </div>
+
 </body>
 
 

@@ -24,11 +24,15 @@ main {
     animation-duration: 1s;
     animation-fill-mode: forwards; /* keep the end state */
     position: relative;
+    justify-content: left;
+        justify-content: flex-start;
+
 }
 #logo {
     justify-content: flex-start;
     margin: auto;
     justify-content: left;
+    
 }
 
 header {
@@ -36,23 +40,21 @@ header {
         sans-serif;
     font-size: 15;
     height: 20vh;
-<<<<<<< HEAD
 }
 /*
 @font-face {
     font-family: OptimusPrinceps;
     src: url('{{ public_path('fonts/Tilda_Script_S.otf') }}');
-=======
->>>>>>> parent of 9d8aba3... Fonts
 }
+
 */
 @keyframes logo_opacity {
     from {
         opacity: 0;
-        left: 0px;
+        right: 0px;
     }
     to {
         opacity: 1;
-        left: 100px;
+        right: 30px;
     }
 }

@@ -1,17 +1,14 @@
-.container
-{
+.container {
     width: 60vw !important;
     margin-left: 10rem !important;
-
 }
 
 /* .rightCart
 {
     height: 32vh;
 } */
-.cartTotal
-{
-    margin-right: 10vw;
+.cartTotal {
+    margin-right: 10vh;
     text-align: end;
 }
 
@@ -27,7 +24,8 @@
     bottom: 0;
     width: 100%;
     height: 2.5rem;
-.removeButton{
+}
+.removeButton {
     bottom: 0 !important;
     right: 0 !important;
 }
