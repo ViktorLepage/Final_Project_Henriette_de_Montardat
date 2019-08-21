@@ -23,41 +23,43 @@
 <!-- LOOPS THROUGH THE COLLECTION OF QUERY RESULTS AND SHOWS SELECTED ITEMS OF THE USER (GOKDAG) -->
 
 <!-- If the cart is not empty show the added items. (GOKDAG) -->
-@if($cart !== null)
-    <?php $total=0; ?>
-    <div class="container">
-        @foreach($cart as $eachCart=>$value)
-            <div class="container mr-0">
-                <div class="row">
-                    <div class="col-4 shadow p-3 mb-5 bg-white rounded">
-                        <img height="150px" width="150px" src="{{$value->image}}" alt="product image">
-                    </div>
-                    <div class="col-8 border-top border-bottom border-dark pl-5 rightCart position-relative">
-                        <div class="d-flex justify-content-between">
-                            <p>{{$value->product_name}}</p>
-                            <p>€ {{$value->price}}</p>
-                            <?php $total  += $value->price;?>
+    @if($cart !== null)
+        <?php $total=0; ?>
+        <div class="container">
+            @foreach($cart as $eachCart=>$value)
+                <div class="container mr-0">
+                    <div class="row">
+                        <div class="col-4 shadow p-3 mb-5 bg-white rounded">
+                            <img height="150px" width="150px" src="{{$value->image}}" alt="product image">
                         </div>
-                        <div>
-                            <p>{{$value->product_type}}</p>
-                        </div>
-                        <div class="position-absolute removeButton">
-                                <form action="" method="GET">
-                                @csrf
-                                <input name="removeFromCart" value="{{$value->id}}" type="hidden">
-                                <button class="button1 button2" type="submit">remove</button>
-                                </form>
+                        <div class="col-8 border-top border-bottom border-dark pl-5 rightCart position-relative">
+                            <div class="d-flex justify-content-between">
+                                <p>{{$value->product_name}}</p>
+                                <p>€ {{$value->price}}</p>
+                                <?php $total  += $value->price;?>
+                            </div>
+                            <div>
+                                <p>{{$value->product_type}}</p>
+                            </div>
+                            <div class="position-absolute removeButton">
+                                    <form action="" method="POST">
+                                    @csrf
+                                    <input name="removeFromCart" value="{{$value->id}}" type="hidden">
+                                    <button class="button1 button2" type="submit">remove</button>
+                                    </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
-          <p class="cartTotal">TOTAL:<?php echo ' € ' . $total ; ?></p>
-    </div>
+            @endforeach
+            <p class="cartTotal">TOTAL:<?php echo ' € ' . $total ; ?></p>
+        </div>
 
-@endif
+    @elseif($cart == null)
+        <h2>There is nothing to show</h2>
+    @endif
 
-    </div>
+</div>
 <footer id="footer">
 @include('Layouts/footerTemplate')
 </footer>
