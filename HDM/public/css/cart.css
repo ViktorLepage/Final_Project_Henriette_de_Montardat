@@ -1,9 +1,16 @@
 .container
 {
+    width: 60vh !important;
     margin-left: 10rem !important;
+
 }
 
 .rightCart
 {
     height: 32vh;
+}
+.cartTotal
+{
+    margin-right: 10vw;
+    text-align: end;
 }
