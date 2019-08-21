@@ -1,90 +1,91 @@
 * {
     box-sizing: border-box;
     transition-duration: 0.3s;
-  }
-                
-#registerForm{
+}
+
+#registerForm {
     height: 30vh !important;
-   justify-content: flex-end !important;
-    
+    justify-content: flex-end !important;
 }
 
-#registerCard{
+#registerCard {
     height: 30vh !important;
-    border:0px !important;
+    border: 0px !important;
 }
 
-#loginCard{
-    border:0px !important;
+#loginCard {
+    border: 0px !important;
 }
-#loginForm{
+#loginForm {
     height: 30vh !important;
 }
 
-
-#cardHeader{
-    border:0px !important;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#cardHeader {
+    border: 0px !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
     font-size: 25;
     background-color: white;
 }
 
-#formDiv{
-    border:0px !important;
-    
+#formDiv {
+    border: 0px !important;
+
     background-color: white;
 }
 
+#email {
+    border-bottom: 1px solid black !important;
+}
+#password {
+    border-bottom: 1px solid black !important;
+}
+#registerEmail {
+    border-bottom: 1px solid black !important;
+}
+#registerPassword {
+    border-bottom: 1px solid black !important;
+}
+#password-confirm {
+    border-bottom: 1px solid black !important;
+}
 
-#email{
-    border-bottom: 1px solid black !important;
-}
-#password{
-    border-bottom: 1px solid black !important;
-}
-#registerEmail{
-    border-bottom: 1px solid black !important;
-}
-#registerPassword{
-    border-bottom: 1px solid black !important;
-}
-#password-confirm{
-    border-bottom: 1px solid black !important;
-}
-
-
-#loginConatiner{
+#loginConatiner {
     border-right: 1px solid black !important;
 }
-#registerContainer{
+#registerContainer {
     border-left: 1px solid black !important;
 }
 
-
-
-
+#pageContainer {
+    position: relative;
+    min-height: 100vh;
+}
+#contentWrap {
+    padding-bottom: 2.5rem;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
 
 @media only screen and (max-width: 768px) {
-
-    #formDiv{
+    #formDiv {
         display: block;
         height: 85vh;
     }
-    .container{
-
+    .container {
         margin-bottom: 50px;
     }
-   
-  }
+}
 @media only screen and (max-width: 320px) {
-
-    #loginForm{
+    #loginForm {
         display: block;
         height: 85vh;
     }
-    .container{
-
+    .container {
         margin: 50px;
     }
-   
-  }
+}
