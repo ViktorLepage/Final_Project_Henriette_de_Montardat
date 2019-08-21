@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+
+*:not(input) {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
 #footerOne {
     display: flex;
 
@@ -30,11 +41,12 @@
     margin-right: 20px;
 }
 
-footer{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height: 15vh;
+footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
     font-size: 15;
     width: 100%;
-
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
-
