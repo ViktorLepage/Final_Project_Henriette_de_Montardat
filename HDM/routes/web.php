@@ -37,4 +37,6 @@ Route::resource('/adminCollection', 'AdminProdController');
 //Route::post('/myaccount', 'myAccountController@update');
 Route::get('/test', 'homeController@test');
 
+
+//---LOGICAL ROUTE (WITH NO ACTUAL BLADE PAGE) FOR REDIRECTING THE LOGUT LINK TO HOME CONTROLLER'S doLOGOUT FUCNTION FOR LOGGING OUT---//(GOKDAG)
 Route::get('logout', array('uses' => 'homeController@doLogout'));

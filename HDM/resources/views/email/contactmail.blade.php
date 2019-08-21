@@ -1,3 +1,4 @@
+<!-- EMAIL LAYOUT FOR CONTACT FORM (GOKDAG) -->
 <p>First Name: {{ $email->inputFirstName }}</p>
 <p>Last Name: {{ $email->inputLastName }}</p>
 <p>Email Address: {{ $email->inputEmail }}</p>

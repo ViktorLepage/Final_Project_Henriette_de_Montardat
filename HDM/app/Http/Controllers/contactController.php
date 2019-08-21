@@ -35,10 +35,13 @@ class contactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    //---IF THERE IS EMAIL ADDRESS AND MESSAGE CONTENT CONTACT FORM INPUTS ARE COLLECTED AND "SEND COMMAND" IS EXECUTED---//(GOKDAG)
     public function store(Request $request)
     {
-        Mail::send(new ContactMail($request));
-        return redirect('/contact');
+        if($request->inputEmail !== null && $request->inputTextArea !== null )
+            Mail::send(new ContactMail($request));
+            return redirect('/contact');
 
     }
 

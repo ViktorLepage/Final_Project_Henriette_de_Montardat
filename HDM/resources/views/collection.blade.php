@@ -11,11 +11,11 @@
 </head>
 <body>
 
-<div id="container" class="container">
+<div id="container-fluid" class="container-fluid">
   <div  class="row">
 
     @foreach($products as $product)
-        <div id="cards" class="col">
+        <div id="cards" class="col-md-4">
             <img height="150" id="carousel-image" src="{{ URL::asset($product->image)}}" >
         <div id="itemcarddiv">
             <div>

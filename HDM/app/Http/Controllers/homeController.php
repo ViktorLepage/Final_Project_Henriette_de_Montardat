@@ -28,26 +28,26 @@ class HomeController extends Controller
 
     public function index()
     {
-        //---ADDS A NEW KEY-VALUE PAIR TO THE CURRENT SESSION---//(GOKDAG)
+        //--- JUST AN EXAMPLE USEFUL TO KEEP IT HERE; ADDS A NEW KEY-VALUE PAIR TO THE CURRENT SESSION---//(GOKDAG)
         // session(['product' => 'mytype of ring']);
 
-        //---DUMPS THE CURRENT SESSION INFO--//(GOKDAG)
+        //---  JUST AN EXAMPLE USEFUL TO KEEP IT HERE; DUMPS THE CURRENT SESSION INFO--//(GOKDAG)
         // echo '<pre>';
         // var_dump(Request()->session());
         // echo '</pre>';
 
-        //---RESETS THE CURRENT SESSION--//(GOKDAG)
+        //---  JUST AN EXAMPLE USEFUL TO KEEP IT HERE; RESETS THE CURRENT SESSION--//(GOKDAG)
         // session()->flush();
 
-        //---LOGS OUT THE USER---//(GOKDAG)
+        //---  JUST AN EXAMPLE USEFUL TO KEEP IT HERE; LOGS OUT THE USER---//(GOKDAG)
         // Auth::logout();
 
-        //---ATTENTION!!! DUMPS ALL THE SESSION INFO AND ENTERS INTO INFINITE LOOP--//(GOKDAG)
+        //---  JUST AN EXAMPLE USEFUL TO KEEP IT HERE; ATTENTION!!! DUMPS ALL THE SESSION INFO AND ENTERS INTO INFINITE LOOP--//(GOKDAG)
         // echo '<pre>';
         // var_dump(session());
         // echo '</pre>';
 
-        //---CHECKS IF AN AUTHENTICATED USER IS LOGGED AND DISPLAYS MESSAGE---//(GOKDAG)
+        //---  JUST AN EXAMPLE USEFUL TO KEEP IT HERE; CHECKS IF AN AUTHENTICATED USER IS LOGGED AND DISPLAYS MESSAGE---//(GOKDAG)
         // if (Auth::check()) {
         //     echo 'user logged in';
         //     return view('home');
@@ -65,9 +65,12 @@ class HomeController extends Controller
         $gg = Auth::guard('admin')->user()->id;
         var_dump($gg);
     }*/
+
+    //---LOGOUT FUNCTION FOR USER LOGUT---//(GOKDAG)
     public function doLogout()
     {
-        Auth::logout(); // log the user out of our application
-        return redirect('/login'); // redirect the user to the login screen
+        Auth::logout(); // log the user out of our application (GOKDAG)
+        session()->flush(); // Erase the session info of the user (GOKDAG)
+        return redirect('/login'); // redirect the user to the login screen (GOKDAG)
     }
 }

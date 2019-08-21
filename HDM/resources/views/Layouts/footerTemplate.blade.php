@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{asset('/css/footer.css')}}">
 <footer>
 
-    <section id="footreSection">
+    <section id="footerSection">
         <div id="footerOne">
             <div id="contact">
 
@@ -21,7 +21,7 @@
                 <br>
                 <a href="#">COMMANDE & PAIEMENT</a>
 
-                
+
             </div>
 
         </div>

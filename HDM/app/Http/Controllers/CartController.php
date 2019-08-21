@@ -18,10 +18,15 @@ class CartController extends Controller
 
         //---LOOPS THROUGH SESSION CART INFO (WHICH IS ONLY PRODUCT IDs...) FINDS THEM IN DB AND SENDS THEM TO THE VIEW---//(GOKDAG)
         $cartItems=array();
-        foreach ($data as $key => $value) {
-            $cartItems [] = Product::find($value);
+        //---If Statement checks if the data value is not empty if so proceeds accordingly (GOKDAG)
+        if ($data !== null) {
+            foreach ($data as $key => $value) {
+                $cartItems [] = Product::find($value);
+            }
+            return view('cart', ['cart' => $cartItems]);
+        }else{
+            return view('cart', ['cart' => $cartItems]);
         }
-        return view('cart', ['cart' => $cartItems]);
     }
 
     /**
