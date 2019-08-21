@@ -24,11 +24,13 @@
                             <li class="nav-item">
                               <a class="nav-link" href="/boutique">Boutique</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Connection') }}</a>
-                            </li>
-                            <!-- IF USER LOGGED IN THESE ITEMS ARE DISPLAYED (GOKDAG) -->
+                            @if(Auth::check() == false)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Connection') }}</a>
+                                </li>
+                            @endif
                             @if(Auth::check())
+                                    <!-- IF USER LOGGED IN THESE ITEMS ARE DISPLAYED (GOKDAG) -->
                                 <li class="nav-item">
                                     <a class ="nav-link" href="{{ URL::to('logout') }}">Logout</a>
                                 </li>
