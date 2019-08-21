@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+
 *:not(input) {
     margin: 0;
     border: 0;
@@ -34,13 +39,6 @@ header {
     */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',  sans-serif;
     font-size: 15;
-    height: 20vh;
-
-
-}
-
-@font-face {
-
 }
 
 @keyframes logo_opacity {
