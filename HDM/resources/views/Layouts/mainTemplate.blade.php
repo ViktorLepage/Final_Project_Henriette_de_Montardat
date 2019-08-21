@@ -20,7 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <style>
 body{
-    height: 100vh;
+    height: 80vh;
 }
 </style>
 
