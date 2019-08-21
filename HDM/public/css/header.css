@@ -10,10 +10,12 @@ body{
 main {
     padding-top: 0;
 }
+
 .bg-light {
     background-color: white !important;
-    justify-content: flex-end !important ;
+    justify-content: flex-end !important;
 }
+
 #logo img {
     opacity: 0;
     justify-content: flex-start;
@@ -32,7 +34,7 @@ main {
     justify-content: flex-start;
     margin: auto;
     justify-content: left;
-    
+
 }
 
 header {
