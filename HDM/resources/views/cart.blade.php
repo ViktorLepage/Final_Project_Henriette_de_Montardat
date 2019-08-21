@@ -45,7 +45,7 @@
                         <div class="position-absolute removeButton">
                                 <form action="" method="GET">
                                 @csrf
-                                <input name="addToCart" value="{{$value->id}}" type="hidden">
+                                <input name="removeFromCart" value="{{$value->id}}" type="hidden">
                                 <button class="button1 button2" type="submit">remove</button>
                                 </form>
                         </div>

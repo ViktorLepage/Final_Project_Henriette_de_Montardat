@@ -14,7 +14,12 @@ class CartController extends Controller
     public function index()
     {
         //---RETRIEVES "THE ADD BUTTON INFO" THROUGH SESSION AND STORES IT TO A VARIABLE---//(GOKDAG)
+        $item = (Request()->removeFromCart);
         $data = Request()->session()->get('cart[]');
+        if ($item !== null) {
+            $cartItem = Request()->session()->pull('cart[]', $item );
+            $item = null;
+        }
 
         //---LOOPS THROUGH SESSION CART INFO (WHICH IS ONLY PRODUCT IDs...) FINDS THEM IN DB AND SENDS THEM TO THE VIEW---//(GOKDAG)
         $cartItems=array();
