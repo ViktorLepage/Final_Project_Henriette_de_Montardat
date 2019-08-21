@@ -7,7 +7,7 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 <div id="formDiv" class="forms">
-        <div class="container">
+        <div id="loginConatiner" class="container">
                 <div id="loginForm"  class="row justify-content-center">
                     <div id="formDiv"class="col-md-8">
                         <div id="loginCard" class="card">
@@ -18,10 +18,9 @@
                                     @csrf
 
                                     <div class="form-group row">
-                                        <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
                             
-                                        <div id="logInDiv" class="col-md-6">
-                                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                        <div id="logInDiv" class="form-group  col-md-10 ">
+                                            <input id="email" placeholder="E-Mail Address"  type="email" class="form-control border-0 rounded-0  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
@@ -32,10 +31,9 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
-                                        <div class="col-md-6">
-                                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                        <div class="col-md-10">
+                                            <input id="password" placeholder="Password" type="password" class="form-control border-0 rounded-0 @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
@@ -58,8 +56,8 @@
                                     </div>
 
                                     <div class="form-group row mb-0">
-                                        <div class="col-md-8 offset-md-4">
-                                            <button id="loginSubmit" type="submit" class="btn btn-primary">
+                                        <div class="col-md-6 offset-md-4">
+                                            <button id="loginSubmit" type="submit" class=" col-md-8 btn border border-dark rounded-0 ">
                                                 {{ __('Login') }}
                                             </button>
 
@@ -85,7 +83,7 @@
 
 
 
-            <div class="container">
+            <div id="registerContainer" class="container">
                 <div  id="registerForm" class="row justify-content-center">
                     <div id="formDiv" class="col-md-8">
                         <div id="registerCard" class="card">
@@ -99,10 +97,9 @@
                                     @csrf
 
                                     <div class="form-group row">
-                                        <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
-                                        <div class="col-md-6">
-                                            <input id="registerEmail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                        <div class="col-md-10">
+                                            <input id="registerEmail" placeholder="E-Mail Address" type="email" class="form-control border-0 rounded-0 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
@@ -113,10 +110,9 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
                                             <!--  registerPassword -->
-                                        <div class="col-md-6">
-                                            <input id="registerPassword" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                        <div class="col-md-10">
+                                            <input id="registerPassword" placeholder="Password" type="password" class="form-control border-0 rounded-0 @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
@@ -127,16 +123,15 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="registerPassword-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
-                                        <div class="col-md-6">
-                                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                        <div class="col-md-10">
+                                            <input id="password-confirm" placeholder="Confirm Password" type="password" class="form-control border-0 rounded-0" name="password_confirmation" required autocomplete="new-password">
                                         </div>
                                     </div>
 
                                     <div class="form-group row mb-0">
-                                        <div class="col-md-6 offset-md-4">
-                                            <button id="registerSubmit" type="submit" class="btn btn-primary">
+                                        <div class="col-md-6 offset-md-5">
+                                            <button id="registerSubmit" type="submit" class="col-md-8 btn broder border-dark rounded-0">
                                                 {{ __('Register') }}
                                             </button>
                                         </div>

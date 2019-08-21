@@ -5,8 +5,10 @@
                 
 #registerForm{
     height: 30vh !important;
+   justify-content: flex-end !important;
     
 }
+
 #registerCard{
     height: 30vh !important;
     border:0px !important;
@@ -32,6 +34,32 @@
     
     background-color: white;
 }
+
+
+#email{
+    border-bottom: 1px solid black !important;
+}
+#password{
+    border-bottom: 1px solid black !important;
+}
+#registerEmail{
+    border-bottom: 1px solid black !important;
+}
+#registerPassword{
+    border-bottom: 1px solid black !important;
+}
+#password-confirm{
+    border-bottom: 1px solid black !important;
+}
+
+
+#loginConatiner{
+    border-right: 1px solid black !important;
+}
+#registerContainer{
+    border-left: 1px solid black !important;
+}
+
 
 
 
