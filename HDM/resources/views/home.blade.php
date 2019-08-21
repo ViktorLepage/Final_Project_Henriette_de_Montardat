@@ -39,6 +39,10 @@
 -->
 
 </div>
+
+
+</div>
+
 <footer>
 @include('layouts/footerTemplate')
 </footer>
