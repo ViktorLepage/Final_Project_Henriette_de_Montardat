@@ -38,12 +38,12 @@
                         <input name="email" type="email" class="form-control border-0 rounded-0" id="inputEmail" aria-describedby="emailHelp" placeholder="email" value="{{Auth::user()['email']}}">
                     </div>
                 </div>
-                <div class="d-flex align-items-center">
+                <!-- <div class="d-flex align-items-center">
                     <i class="fas fa-user pb-4"></i>
                     <div class="form-group pb-4">
                         <input name="password" type="password" class="form-control border-0 rounded-0" id="inputPassword" placeholder="password" >
                     </div>
-                </div>
+                </div> -->
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user"></i>
                     <div class="form-group">

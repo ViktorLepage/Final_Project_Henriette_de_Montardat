@@ -39,7 +39,7 @@ class contactController extends Controller
     //---IF THERE IS EMAIL ADDRESS AND MESSAGE CONTENT CONTACT FORM INPUTS ARE COLLECTED AND "SEND COMMAND" IS EXECUTED---//(GOKDAG)
     public function store(Request $request)
     {
-        if($request->inputTextArea !== null && $request->inputTextArea !== null )
+        if($request->inputEmail !== null && $request->inputTextArea !== null )
             Mail::send(new ContactMail($request));
             return redirect('/contact');
 

@@ -43,7 +43,7 @@ class myAccountController extends Controller
         $user->name = $request->name;
         $user->surname = $request->surname;
         $user->email = $request->email;
-        $user->password = $request->password;
+        // $user->password = $request->password;
         $user->address_1 = $request->address_1;
         $user->city = $request->city;
         $user->post_code = $request->post_code;
