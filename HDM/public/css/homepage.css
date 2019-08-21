@@ -4,7 +4,29 @@
     transition-duration: 0.3s;
 }
 
+.cardtitle{
+    font-size: 25px;
+    font-family: 'Ubuntu', cursive;
+}
+
+.cardheader{
+    text-transform: uppercase;
+    font-family: 'Ubuntu', cursive;
+    font-size: 30px;
+    border-bottom: 15px;
+    text-align: center;
+}
+
+.cardtext{
+    font-family: 'Lora', serif;
+}
+
+
+ /*
 #style_homepage {
+
+
+
     height: 68vh;
     width: 650px;
     background-image: url('/images/homepagebackground4.jpg');
@@ -16,6 +38,11 @@
     align-content: center;
     margin: auto;
     margin-bottom: 5vh;
+    background: url('/images/homepagebackground4.jpg')no-repeat center center;
+    background-size: contain;
+    padding-left: 20%;
+    padding-right: 20%;
+
 }
 
 .titre_homepage,
@@ -26,8 +53,6 @@
     margin: 20px auto;
     font-size: 25px;
 }
-
-/* Police */
 
 .titre_homepage {
     text-transform: uppercase;
@@ -40,8 +65,11 @@
     font-family: 'Ubuntu', cursive;
 }
 
-/* Text in black */
-
 #style_homepage p {
     color: #000000;
 }
+
+    div:first-child{
+    font-size: 27px;
+}
+*/
