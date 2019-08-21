@@ -78,6 +78,20 @@ img {
     box-shadow: -2px 4px 13px 0px rgba(0, 0, 0, 0.75);
 }
 
+#pageContainer {
+    position: relative;
+    min-height: 100vh;
+}
+#contentWrap {
+    padding-bottom: 2.5rem;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
 /*@media only screen and (max-width: 767px) {
     #cards {
         display: flex;

@@ -1,72 +1,72 @@
-
-#carousel-image{
+#carousel-image {
     border-style: dotted dashed solid double;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 
-#carousel-inner{
+#carousel-inner {
     text-align: center;
 }
-.carousel-item{
+.carousel-item {
     width: 500px;
     height: 380px;
 }
 
-#carouselController{
-    height : 50%;
+#carouselController {
+    height: 50%;
 }
 
-.carousel-item img{
+.carousel-item img {
     height: 200px;
 }
 
-.carousel-control-prev-icon{
-    background-color : #403ead;
+.carousel-control-prev-icon {
+    background-color: #403ead;
 }
 
 .button1 {
-  height: 25px;
-  width: 80px;
-  border: 2px solid #403ead;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: .8em;
-  letter-spacing: 1.5px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-color: white;
+    height: 25px;
+    width: 80px;
+    border: 2px solid #403ead;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: white;
 }
 
 .button2:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .button {
-  display: inline-flex;
-
+    display: inline-flex;
 }
 
-#boutiqueDetailsButton{
+#boutiqueDetailsButton {
     margin-left: 40%;
     margin-right: 40%;
 }
 
-#boutiqueButton{
+#boutiqueButton {
     display: flex;
     justify-content: flex-end;
 }
 
-#boutiqueDeails{}
+#boutiqueDeails {
+}
 
-#producttype{
+#producttype {
     display: flex;
     justify-content: flex-start;
 }
 
-#productnameprice{
+#productnameprice {
     display: flex;
     justify-content: space-between;
 }
@@ -75,16 +75,28 @@
     background:none !important ;
 }
 */
-.carousel-control-prev-icon{
+.carousel-control-prev-icon {
     color: black;
     border-radius: 50%;
     padding: 25px;
 }
 
-.carousel-control-next-icon
-{
+.carousel-control-next-icon {
     color: black;
     border-radius: 50%;
     padding: 25px;
 }
 
+#pageContainer {
+    position: relative;
+    min-height: 100vh;
+}
+#contentWrap {
+    padding-bottom: 2.5rem;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}

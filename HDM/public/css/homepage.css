@@ -4,12 +4,12 @@
     transition-duration: 0.3s;
 }
 
-.cardtitle{
+.cardtitle {
     font-size: 25px;
     font-family: 'Ubuntu', cursive;
 }
 
-.cardheader{
+.cardheader {
     text-transform: uppercase;
     font-family: 'Ubuntu', cursive;
     font-size: 30px;
@@ -17,12 +17,25 @@
     text-align: center;
 }
 
-.cardtext{
+.cardtext {
     font-family: 'Lora', serif;
 }
 
+#pageContainer {
+    position: relative;
+    min-height: 100vh;
+}
+#contentWrap {
+    padding-bottom: 2.5rem;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
 
- /*
+/*
 #style_homepage {
 
 

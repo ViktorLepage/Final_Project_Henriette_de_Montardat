@@ -1,71 +1,63 @@
-#inputFirstName
-{
+#inputFirstName {
     border-bottom: 1px solid black !important;
 }
-#inputLastName
-{
+#inputLastName {
     border-bottom: 1px solid black !important;
 }
-#inputEmail
-{
+#inputEmail {
     border-bottom: 1px solid black !important;
 }
-#inputSubject
-{
+#inputSubject {
     border-bottom: 1px solid black !important;
 }
-#inputPassword
-{
+#inputPassword {
     border-bottom: 1px solid black !important;
 }
-#inputCountry
-{
+#inputCountry {
     border-bottom: 1px solid black !important;
 }
-#inputCountry
-{
+#inputCountry {
     border-bottom: 1px solid black !important;
 }
-#inputPostCode
-{
+#inputPostCode {
     border-bottom: 1px solid black !important;
 }
-#inputCity
-{
+#inputCity {
     border-bottom: 1px solid black !important;
 }
-#inputAddress
-{
+#inputAddress {
     border-bottom: 1px solid black !important;
 }
-#inputPhone
-{
+#inputPhone {
     border-bottom: 1px solid black !important;
 }
-h1{
+h1 {
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
     font-size: 25px;
     padding-bottom: 2rem;
-
 }
-.form-group{
+.form-group {
     width: 20rem;
 }
-input{
+input {
     font-family: Arial, Helvetica, sans-serif !important;
     font-size: 14px !important;
 }
-.form-control:focus{ box-shadow: none; -webkit-box-shadow: none;}
+.form-control:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
 
-#submitButton{
+#submitButton {
     padding-left: 20rem;
     padding-right: 0;
     padding-top: 1.3rem;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
-#updateButton{
+#updateButton {
     padding-left: 15rem;
     padding-right: 0;
     padding-top: 1.3rem;
@@ -73,4 +65,16 @@ input{
     font-size: 15px;
 }
 
-
+#pageContainer {
+    position: relative;
+    min-height: 100vh;
+}
+#contentWrap {
+    padding-bottom: 2.5rem;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}

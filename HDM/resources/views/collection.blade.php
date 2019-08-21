@@ -10,7 +10,8 @@
     <link rel="stylesheet"  href="css/collection.css"/>
 </head>
 <body>
-
+<div id="pageContainer">
+    <div id="contentWrap">
 <div id="container-fluid" class="container-fluid">
   <div  class="row">
 
@@ -40,12 +41,13 @@
 
 
 
-
-
-
-
-</body>
+</div>
+<footer id="footer">
 @include('Layouts/footerTemplate')
+</footer>
+</div>
+</body>
+
 
 
 
