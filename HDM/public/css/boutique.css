@@ -27,7 +27,7 @@
 .button1 {
   height: 25px;
   width: 80px;
-  border: 2px solid #403ead;
+  border: 1px solid #403ead;
   margin-top: 20px;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -46,7 +46,6 @@
 
 .button {
   display: inline-flex;
-
 }
 
 #boutiqueDetailsButton{
@@ -64,11 +63,15 @@
 #producttype{
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #403ead;
+    text-transform: uppercase;
 }
 
 #productnameprice{
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #403ead;
 }
 /*
 #carouselController{
