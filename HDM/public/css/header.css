@@ -3,6 +3,10 @@
     border: 0;
     padding: 0;
 }
+body{
+    font-family: 'Ubuntu', cursive !important;
+}
+
 main {
     padding-top: 0;
 }
