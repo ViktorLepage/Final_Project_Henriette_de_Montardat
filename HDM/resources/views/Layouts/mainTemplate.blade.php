@@ -19,20 +19,33 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <style>
-body{
-    height: 80vh;
+#pageContainer{
+    position: relative;
+    min-height: 100vh;
+}
+#contentWrap{
+    padding-bottom: 2.5rem;
+}
+#footer{
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }
 </style>
 
 </head>
 
 <body>
+
+    <div id="pageContainer">
+        <div id="contentWrap">
 <header>@include('Layouts/headerTemplate')</header>
-<section>
+</div>
 
 
-</section>
-<footer>@include('Layouts/footerTemplate')</footer>
+<footer id="footer">@include('Layouts/footerTemplate')</footer>
+</div>
 </body>
 
 </html>
