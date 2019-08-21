@@ -16,28 +16,31 @@
 
 <!-- If the cart is not empty show the added items. (GOKDAG) -->
 @if($cart !== null)
-    @foreach($cart as $eachCart=>$value)
-        <div class="container mr-0">
-            <div class="row" style="width:125vh">
-                <div class="col-4 shadow p-3 mb-5 bg-white rounded" style="width:48%;">
-                    <img height="300px" width="300px" src="{{$value->image}}" alt="product image">
-                </div>
-                <div class="col-8 border-top border-bottom border-dark pl-5 rightCart " style="width:48%;">
-                    <div class="d-flex justify-content-between">
-                        <p>{{$value->product_name}}</p>
-                        <p>€ {{$value->price}}</p>
+    <?php $total=0; ?>
+    <div class="container">
+        @foreach($cart as $eachCart=>$value)
+            <div class="container mr-0">
+                <div class="row" style="width:125vh">
+                    <div class="col-4 shadow p-3 mb-5 bg-white rounded" style="width:48%;">
+                        <img height="150px" width="150px" src="{{$value->image}}" alt="product image">
                     </div>
-                    <div>
-                        <p>{{$value->product_type}}</p>
+                    <div class="col-8 border-top border-bottom border-dark pl-5 rightCart " style="width:48%;">
+                        <div class="d-flex justify-content-between">
+                            <p>{{$value->product_name}}</p>
+                            <p>€ {{$value->price}}</p>
+                            <?php $total  += $value->price;?>
+                        </div>
+                        <div>
+                            <p>{{$value->product_type}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-        </div>
-
-    @endforeach
+        @endforeach
+    </div>
+    <p class="cartTotal">TOTAL:<?php echo ' € ' . $total ; ?></p>
 @endif
 
-<footer>
+<!-- <footer>
 @include('Layouts/footerTemplate')
-</footer>
+</footer> -->
