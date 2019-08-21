@@ -18,11 +18,21 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<style>
+body{
+    height: 100vh;
+}
+</style>
+
 </head>
+
 <body>
-@include('Layouts/headerTemplate')
+<header>@include('Layouts/headerTemplate')</header>
+<section>
 
 
-@include('Layouts/footerTemplate')
+</section>
+<footer>@include('Layouts/footerTemplate')</footer>
 </body>
+
 </html>
