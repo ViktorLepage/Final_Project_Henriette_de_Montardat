@@ -3,8 +3,12 @@
     border: 0;
     padding: 0;
 }
+html {
+    height: 100%;
+}
+
 body {
-    font-family: "Ubuntu", cursive !important;
+    font-family: 'Ubuntu', cursive !important;
 }
 
 main {
@@ -37,18 +41,20 @@ main {
 }
 
 header {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
         sans-serif;
     font-size: 15;
     height: 20vh;
 }
-/*
+
 @font-face {
     font-family: OptimusPrinceps;
-    src: url('{{ public_path('fonts/Tilda_Script_S.otf') }}');
+    src: url('https://fonts.googleapis.com/css?family=Satisfy&display=swapt');
+    src: url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+    src: url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 }
 
-*/
+
 @keyframes logo_opacity {
     from {
         opacity: 0;
@@ -68,14 +74,12 @@ header {
         z-index: 10;
         background-color: white;
         direction: rtl;
-}
     }
+
     .p-1 {
         position: absolute;
         top: 0.3rem;
         left: 0.3rem;
-        z-index: 10;
         background-color: white;
-        direction: rtl;
     }
 }

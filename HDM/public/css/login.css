@@ -16,9 +16,11 @@
 #loginCard {
     border: 0px !important;
 }
+/*
 #loginForm {
     height: 30vh !important;
 }
+*/
 
 #cardHeader {
     border: 0px !important;
@@ -51,6 +53,7 @@
 
 #loginConatiner {
     border-right: 1px solid black !important;
+    height: 60vh;
 }
 #registerContainer {
     border-left: 1px solid black !important;
@@ -58,12 +61,14 @@
 
 #pageContainer {
     position: relative;
-    min-height: 100vh;
+    min-height: 50rem;
 }
+
 #contentWrap {
     padding-bottom: 2.5rem;
+
 }
-#footer {
+footer {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -73,7 +78,7 @@
 @media only screen and (max-width: 768px) {
     #formDiv {
         display: block;
-        height: 85vh;
+        height: 45vh;
     }
     .container {
         margin-bottom: 50px;

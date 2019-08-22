@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    @include('Layouts/headerTemplate')
-
     <title>Collection</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <link rel="stylesheet" href="{{asset('css/collection.css')}}">
 </head>
+
 <body>
+@include('Layouts/headerTemplate')
 <div id="pageContainer">
     <div id="contentWrap">
 <div id="container-fluid" class="container-fluid">
@@ -23,8 +23,10 @@
                     <form action="/admin/product/{{$product->id}}/edit" method="GET">
                         @csrf
                         <input name="addToCart" value="{{$product->id}}" type="hidden">
-                        <button class ="button1 button2" type="submit">edit</button>
-                    </form>
+                        @if(Auth::check())
+                          <button class ="button1 button2" type="submit">edit</button>
+                    @endif
+                        </form>
                 </div>
             <div>
               <p>{{$product->product_name}}</p>
@@ -36,18 +38,10 @@
     </div>
 </div>
 
-
-
-
-
-
 </div>
-<footer id="footer">
-@include('Layouts/footerTemplate')
-</footer>
-</div>
-
+@include('layouts/footerTemplate')
 </body>
+</html>
 
 
 

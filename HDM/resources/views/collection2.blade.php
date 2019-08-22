@@ -35,6 +35,8 @@
     </script>
 </head>
 <body>
+        <div id="pageContainer">
+                <div id="contentWrap">
 	<div class="mainslider">
         <div class="item" id="item">
             <ul id="content-slider" class="content-slider">
@@ -46,7 +48,9 @@
                             <form action="/admin/product/{{$product->id}}/edit" method="GET">
                                 @csrf
                                 <input name="addToCart" value="{{$product->id}}" type="hidden">
+                                @if(Auth::check())
                                 <button class ="button1 button2" type="submit">edit</button>
+                                @endif
                             </form>
                         </div>
                         <div>
@@ -59,8 +63,12 @@
         </div>
     </div>
 
-</body>
+</div>
 @include('Layouts/footerTemplate')
+</div>
+
+</body>
+
 
 
 
