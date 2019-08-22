@@ -28,7 +28,7 @@ class boutiqueController extends Controller
         //---WHEN THE ADD BUTTON IS CLICKED, IT SAVES THE PRODUCT ID INTO THE SESSION---//(GOKDAG)
         $itemToCart = (Request()->addToCart);
         if ($itemToCart ==! null) {
-            Request()->session()->push('cart[]', $itemToCart );
+            Request()->session()->push('basket', $itemToCart );
             return redirect('/boutique');
         }
 

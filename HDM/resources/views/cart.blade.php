@@ -1,3 +1,4 @@
+<?php var_dump(session()->get('basket'));?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,11 +47,11 @@
                     </div>
                 </div>
             @endforeach
-            <p class="cartTotal">TOTAL:<?php echo ' € ' . $total ; ?></p>
+            @if ($cart == null)
+                <h2>There is nothing to show</h2>
+                <p class="cartTotal">TOTAL:<?php echo ' € ' . $total ; ?></p>
+            @endif
         </div>
-
-    @elseif($cart == null)
-        <h2>There is nothing to show</h2>
     @endif
 
 </div>

@@ -14,7 +14,7 @@ class CartController extends Controller
     public function index()
     {
         //---RETRIEVES "THE ADD BUTTON INFO" THROUGH SESSION AND STORES IT TO A VARIABLE---//(GOKDAG)
-        $data = Request()->session()->get('cart[]');
+        $data = Request()->session()->get('basket');
 
         //---LOOPS THROUGH SESSION CART INFO (WHICH IS ONLY PRODUCT IDs...) FINDS THEM IN DB AND SENDS THEM TO THE VIEW---//(GOKDAG)
         $cartItems=array();
@@ -49,26 +49,22 @@ class CartController extends Controller
     public function store(Request $request)
     {
         $item = ($request->removeFromCart);
-        $data = $request->session()->get('cart[]');
-        // // var_dump($item);
-        // // if ($item !== null) {
-        // //     Request()->session()->forget('cart[]'.$item );
-        // //     return redirect('/cart');
-        // // }
-        // // $cartData = Request()->session()->get('cart[]');
+        $data = $request->session()->get('basket');
 
         foreach ($data as $key => $value)
         {
             if ($value == $item)
             {
-                unset($data [$key]);
+                $request->session()->pull('basket.'.$key);
+                break;
+
             }
         }
-        // put back in session array without deleted item
-        $request->session()->push('cart[]',$data);
+
         $cartItems=array();
+        $data = $request->session()->get('basket');
         // //then you can redirect or whatever you need
-        var_dump($data);
+        // var_dump($newData);
         // return redirect('/cart');
         if ($data !== null) {
             foreach ($data as $key => $value) {
