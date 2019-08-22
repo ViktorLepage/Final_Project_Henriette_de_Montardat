@@ -1,3 +1,4 @@
+<?php var_dump(session()->get('basket'));?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

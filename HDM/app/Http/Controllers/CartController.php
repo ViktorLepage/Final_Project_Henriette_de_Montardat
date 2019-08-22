@@ -56,6 +56,7 @@ class CartController extends Controller
             if ($value == $item)
             {
                 $request->session()->pull('basket.'.$key);
+                break;
 
             }
         }
