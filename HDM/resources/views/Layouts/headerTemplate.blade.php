@@ -2,7 +2,7 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel="stylesheet" href="{{asset('css/header.css')}}">
 <header>
-    <nav class="  d-flex justify-content-between navbar navbar-expand-lg navbar-light wg-light">
+    <nav class="d-flex justify-content-between navbar navbar-expand-lg navbar-light wg-light">
         <div class="col-md-6">
             <div class="p-1" id="logo">
                 <img src="images/Henriette-Logo.jpg" alt="logo">

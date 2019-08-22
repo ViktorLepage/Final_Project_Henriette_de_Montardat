@@ -53,7 +53,9 @@ input {
 }
 
 #submitButton {
+    /*
     padding-left: 20rem;
+    */
     padding-right: 0;
     padding-top: 1.3rem;
     /*font-family: Arial, Helvetica, sans-serif;*/
@@ -69,8 +71,11 @@ input {
 
 #pageContainer {
     position: relative;
+    /*
     min-height: 100vh;
+    */
 }
+/*
 #contentWrap {
     padding-bottom: 2.5rem;
 }
@@ -79,4 +84,10 @@ input {
     bottom: 0;
     width: 100%;
     height: 2.5rem;
+}
+*/
+
+
+@media screen and (max-width: 768px) {
+
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    @include('Layouts/headerTemplate')
+
 
     <title>Collection</title>
     <meta charset="utf-8">
@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="{{asset('css/collection.css')}}">
 </head>
+
 <body>
+@include('Layouts/headerTemplate')
 <div id="pageContainer">
     <div id="contentWrap">
 <div id="container-fluid" class="container-fluid">
@@ -36,18 +38,10 @@
     </div>
 </div>
 
-
-
-
-
-
 </div>
-<footer id="footer">
-@include('Layouts/footerTemplate')
-</footer>
-</div>
-
+@include('layouts/footerTemplate')
 </body>
+</html>
 
 
 

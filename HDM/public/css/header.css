@@ -5,6 +5,7 @@
 }
 body {
     font-family: "Ubuntu", cursive !important;
+    height: 100%;
 }
 
 main {
@@ -60,7 +61,7 @@ header {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     .p-2 {
         position: absolute;
         top: 0.3rem;
@@ -69,13 +70,13 @@ header {
         background-color: white;
         direction: rtl;
 }
-    }
+
     .p-1 {
         position: absolute;
         top: 0.3rem;
         left: 0.3rem;
-        z-index: 10;
         background-color: white;
+        z-index: 10;
         direction: rtl;
     }
 }
