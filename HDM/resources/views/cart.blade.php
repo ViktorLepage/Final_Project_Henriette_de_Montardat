@@ -24,10 +24,10 @@
             @foreach($cart as $eachCart=>$value)
                 <div class="container mr-0">
                     <div class="row">
-                        <div class="col-4 shadow p-3 mb-5 bg-white rounded">
+                        <div class="col-3 shadow  mb-5 bg-white rounded">
                             <img height="150px" width="150px" src="{{$value->image}}" alt="product image">
                         </div>
-                        <div class="col-8 border-top border-bottom border-dark pl-5 rightCart position-relative">
+                        <div class="col-8 border-top border-bottom border-dark rightCart position-relative">
                             <div class="d-flex justify-content-between">
                                 <p>{{$value->product_name}}</p>
                                 <p>€ {{$value->price}}</p>
@@ -41,7 +41,7 @@
                                     @csrf
                                     <input name="removeFromCart" value="{{$value->id}}" type="hidden">
                                     @if(Auth::check())
-                                    <button class="button1 button2" type="submit">remove</button>
+                                    <button type="submit">remove</button>
                                     @endif
                                     </form>
                             </div>

@@ -1,14 +1,14 @@
-.container {
+/* .container {
     width: 60vw !important;
     margin-left: 10rem !important;
-}
+} */
 
 /* .rightCart
 {
     height: 32vh;
 } */
 .cartTotal {
-    margin-right: 10vh;
+    /* margin-right: 10vh; */
     text-align: end;
 }
 
@@ -28,4 +28,19 @@ footer {
 .removeButton {
     bottom: 0 !important;
     right: 0 !important;
+    padding: 1vh;
+}
+
+.rightCart
+{
+    height: 25vh;
+}
+button
+{
+    background-color: lightcoral !important;
+    color: white;
+    width: 6vw;
+}
+button:hover {
+    background-color: darkred !important;
 }
