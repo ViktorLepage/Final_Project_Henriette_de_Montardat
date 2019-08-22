@@ -53,7 +53,7 @@ class myAccountController extends Controller
         return view('/myaccount');
 
 
-        //! $pdo = new PDO('mysql:host=localhost;dbname=hdmdb;charset=utf8', 'root', ''); (FABRIZIO TESTING)
+        //$pdo = new PDO('mysql:host=localhost;dbname=hdmdb;charset=utf8', 'root', ''); //(FABRIZIO TESTING)
 
         /*$insert = $pdo->prepare('UPDATE hdm_users (brand, model, rel_year, color) VALUES(?, ?, ?, ?)');
 		$insert->bindValue(1, $_POST['name']);
@@ -65,20 +65,22 @@ class myAccountController extends Controller
 		$insert->bindValue(4, $_POST['address_1']);
         $insert->bindValue(4, $_POST['phone_number']);*/
 
-        /* //! FABRIZIO TESTING AJAX CALLS DO NOT ERASE PLEASE
-		$name=$_POST['name'];
-		$surname=$_POST['surname'];
-		$email=$_POST['email'];
-		$country=$_POST['country'];
-		$post_code=$_POST['post_code'];
-		$city=$_POST['city'];
-		$address_1=$_POST['address_1'];
-		$phone_number=$_POST['phone_number'];
-        $pdo->prepare("UPDATE hdm_users SET name='$name', surname='$surname', email='$email', country='$country', post_code='$post_code', city='$city', address_1='$address_1', phone_number='$phone_number' ");
-		if ($insert->execute()) {
-			echo 'Car successfully added !';
-		} else {
-            echo 'Error inserting into the DB';}*/
+        /*
+        //! FABRIZIO TESTING AJAX CALLS DO NOT ERASE PLEASE
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $email = $_POST['email'];
+        $country = $_POST['country'];
+        $post_code = $_POST['post_code'];
+        $city = $_POST['city'];
+        $address_1 = $_POST['address_1'];
+        $phone_number = $_POST['phone_number'];
+        $insert = $pdo->prepare("UPDATE hdm_users SET name='$name', surname='$surname', email='$email', country='$country', post_code='$post_code', city='$city', address_1='$address_1', phone_number='$phone_number' ");
+        if ($insert->execute()) {
+            echo 'Car successfully added !';
+        } else {
+            echo 'Error inserting into the DB';
+        }*/
 
         //---DUMPS THE WHOLE HTTP REQUEST OBJECT---(GOKDAG)
         // echo '<pre>';
