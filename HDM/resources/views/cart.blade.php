@@ -25,7 +25,7 @@
                 <div class="container mr-0">
                     <div class="row">
                         <div class="col-3 shadow  mb-5 bg-white rounded mobilepicturecart">
-                            <img height="150px" width="150px" src="{{$value->image}}" alt="product image">
+                            <img id="myImg" height="150px" width="150px" src="{{$value->image}}" alt="product image">
                         </div>
                         <div class="col-8 border-top border-bottom border-dark rightCart position-relative">
                             <div class="d-flex justify-content-between">
@@ -60,4 +60,32 @@
 </div>
 @include('Layouts/footerTemplate')
 </div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+let img = document.getElementById("myImg");
+let modalImg = document.getElementById("img01");
+let captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+
+}
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
 </body>
+
+
