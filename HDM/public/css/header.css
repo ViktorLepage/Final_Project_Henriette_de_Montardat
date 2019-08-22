@@ -3,9 +3,12 @@
     border: 0;
     padding: 0;
 }
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Ubuntu', cursive !important;
-    height: 100%;
 }
 
 main {
@@ -76,7 +79,5 @@ header {
         top: 0.3rem;
         left: 0.3rem;
         background-color: white;
-        z-index: 10;
-        direction: rtl;
     }
 }
