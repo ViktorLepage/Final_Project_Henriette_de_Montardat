@@ -47,7 +47,9 @@
                                 <form action="" method="GET">
                                 @csrf
                                 <input name="addToCart" value="{{$product->id}}" type="hidden">
+                                @if(Auth::check())
                                 <button class="button1 button2" type="submit">add</button>
+                                @endif
                                 </form>
                             </div>
                             <div id="boutiqueDeails">

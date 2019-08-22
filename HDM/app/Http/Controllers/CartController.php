@@ -13,13 +13,13 @@ class CartController extends Controller
      */
     public function index()
     {
-        //---RETRIEVES "THE ADD BUTTON INFO" THROUGH SESSION AND STORES IT TO A VARIABLE---//(GOKDAG)
+        //*---RETRIEVES "THE ADD BUTTON INFO" THROUGH SESSION AND STORES IT TO A VARIABLE---//(GOKDAG)
         $data = Request()->session()->get('basket');
 
-        //---LOOPS THROUGH SESSION CART INFO (WHICH IS ONLY PRODUCT IDs...) FINDS THEM IN DB AND SENDS THEM TO THE VIEW---//(GOKDAG)
+        //*---LOOPS THROUGH SESSION CART INFO (WHICH IS ONLY PRODUCT IDs...) FINDS THEM IN DB AND SENDS THEM TO THE VIEW---//(GOKDAG)
         $cartItems=array();
-        //---If Statement checks if the data value is not empty if so proceeds accordingly (GOKDAG)
-        // var_dump($data);
+        //*---If Statement checks if the data value is not empty if so proceeds accordingly (GOKDAG)
+        //* var_dump($data);
         if ($data !== null) {
             foreach ($data as $key => $value) {
                 $cartItems [] = Product::find($value);
