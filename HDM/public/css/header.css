@@ -46,13 +46,15 @@ header {
     font-size: 15;
     height: 20vh;
 }
-/*
+
 @font-face {
     font-family: OptimusPrinceps;
-    src: url('{{ public_path('fonts/Tilda_Script_S.otf') }}');
+    src: url('https://fonts.googleapis.com/css?family=Satisfy&display=swapt');
+    src: url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+    src: url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 }
 
-*/
+
 @keyframes logo_opacity {
     from {
         opacity: 0;
@@ -64,7 +66,7 @@ header {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
     .p-2 {
         position: absolute;
         top: 0.3rem;

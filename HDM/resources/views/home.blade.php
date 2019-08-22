@@ -3,9 +3,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
-<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
 
 <head>
     <meta charset="UTF-8">
@@ -18,7 +16,6 @@
     @include('layouts/headerTemplate')
     <div id="pageContainer">
         <div id="contentWrap">
-
             <div class="card mx-auto mb-5" id="photo">
                 <img class="card-img-top" src="/images/homepagebackground4.jpg" alt="Card image">
                 <div class="card-img-overlay">
@@ -46,16 +43,6 @@
 
                 </div>
             </div>
-            <!--
-<div id="style_homepage">
-            <div><p class="titre_homepage"> Le petit monde d'Henriette de Montardat </p></div>
-            <div><p class="paragraphe_homepage">Mes années d'expérience au service de la femme, des femmes, dans la haute joaillerie m'ont amené à créer Henriette de Montardat. Je crée, développe, commercialise des bijoux & accessoires & propose tous les mois des coups de cœur sous forme de collection capsule en quantité limitée. Je transforme vos bijoux de famille en pièce artistique, unique & moderne. Mes créations se veulent comme des porte bonheur, des talismans portés avec joie, fierté & élégance. Je vous attends dans mon univers. </p></div>
-            <div><p class="signature_homepage"> Sophie Rouxel </p></div>
-
-</div>
--->
-
-
 </div>
 </div>
 @include('layouts/footerTemplate')
