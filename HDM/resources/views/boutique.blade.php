@@ -46,13 +46,13 @@
                         <img   id="carousel-image" src="{{ URL::asset($product->image)}}" >
                         <div id="boutiqueDetailsButton">
                             <div id="boutiqueButton">
-                                <form action="" method="GET">
-                                @csrf
-                                <input name="addToCart" value="{{$product->id}}" type="hidden">
                                 @if(Auth::check())
-                                <button class="button1 button2" type="submit">add</button>
+                                    <form action="" method="GET">
+                                    @csrf
+                                    <input name="addToCart" value="{{$product->id}}" type="hidden">
+                                    <button class="button1 button2" type="submit">add</button>
+                                    </form>
                                 @endif
-                                </form>
                             </div>
                             <div id="boutiqueDeails">
                                 <div id="producttype"><p>{{$product ->product_type}}</p></div>
