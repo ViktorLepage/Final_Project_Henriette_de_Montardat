@@ -3,9 +3,13 @@
     border: 0;
     padding: 0;
 }
+html{
+    height: 100%;
+}
+
 body {
     font-family: "Ubuntu", cursive !important;
-    height: 100%;
+
 }
 
 main {
