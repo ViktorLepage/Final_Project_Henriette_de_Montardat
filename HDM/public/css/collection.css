@@ -39,8 +39,9 @@ img {
 }
 
 .row {
-    margin-bottom: 150px;
+    margin-bottom: 2.5rem;
 }
+
 
 .button1 {
     height: 25px;
@@ -82,17 +83,21 @@ img {
 
 #pageContainer {
     position: relative;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
 }
+/*
 #contentWrap {
     padding-bottom: 2.5rem;
 }
+*/
+/*
 #footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 2.5rem;
 }
+*/
 
 /*@media only screen and (max-width: 767px) {
     #cards {

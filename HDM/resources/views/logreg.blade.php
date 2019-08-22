@@ -14,7 +14,8 @@
 
 <!--extends('header');-->
 <body>
-   @include('Layouts/headerTemplate')
+@include('Layouts/headerTemplate')
+
            <main>
             <section id="loginForm">
                 <label for="login">Login</label>
@@ -54,7 +55,7 @@
          <a href="">Forget password</a>
         </section>
     </main>
-    @include('Layouts/footerTemplate')
+    @include('layouts/footerTemplate')
 </body>
 </html>
 <!--extends('footer');-->
