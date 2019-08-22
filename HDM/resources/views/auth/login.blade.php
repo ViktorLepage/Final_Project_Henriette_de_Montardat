@@ -213,11 +213,11 @@ $(function(){
         event.preventDefault();
         console.log("click !");
 
-        let mailRegister=$("#registerPassword");
+        let passRegister=$("#registerPassword");
 
-        let mailValue=mailRegister.val();
+        let passValue=passRegister.val();
 
-        if (mailValue <= 0) {
+        if (passValue.length <= 0) {
             $('#registerPassword').attr('style', 'border: 1px solid red !important');
             //feed back
         } else {
@@ -227,7 +227,7 @@ $(function(){
         
         
         
-        console.log(mailValue);
+        console.log(passValue);
 
         
        
@@ -239,11 +239,11 @@ $(function(){
         event.preventDefault();
         console.log("click !");
 
-        let mailRegister=$("#password-confirm");
+        let passCofirmation=$("#password-confirm");
 
-        let mailValue=mailRegister.val();
+        let confirmationValue=passCofirmation.val();
 
-        if (mailValue <= 0) {
+        if (confirmationValue <= 0) {
             $('#password-confirm').attr('style', 'border: 1px solid red !important');
             //feed back
         } else {
@@ -253,7 +253,7 @@ $(function(){
         
         
         
-        console.log(mailValue);
+        console.log(confirmationValue);
 
         
        
