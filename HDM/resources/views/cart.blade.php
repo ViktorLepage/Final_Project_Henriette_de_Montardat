@@ -1,4 +1,4 @@
-<?php var_dump(session()->get('basket'));?>
+<?php // var_dump(session()->get('basket'));?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +40,9 @@
                                     <form action="" method="POST">
                                     @csrf
                                     <input name="removeFromCart" value="{{$value->id}}" type="hidden">
+                                    @if(Auth::check())
                                     <button class="button1 button2" type="submit">remove</button>
+                                    @endif
                                     </form>
                             </div>
                         </div>
@@ -49,7 +51,8 @@
             @endforeach
             @if ($cart == null)
                 <h2>There is nothing to show</h2>
-                <p class="cartTotal">TOTAL:<?php echo ' € ' . $total ; ?></p>
+            @else
+                <h2 class="cartTotal">TOTAL:<?php echo ' € ' . $total ; ?></h2>
             @endif
         </div>
     @endif

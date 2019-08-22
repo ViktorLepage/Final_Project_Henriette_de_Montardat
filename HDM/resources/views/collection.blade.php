@@ -23,8 +23,10 @@
                     <form action="/admin/product/{{$product->id}}/edit" method="GET">
                         @csrf
                         <input name="addToCart" value="{{$product->id}}" type="hidden">
-                        <button class ="button1 button2" type="submit">edit</button>
-                    </form>
+                        @if(Auth::check())
+                          <button class ="button1 button2" type="submit">edit</button>
+                    @endif
+                        </form>
                 </div>
             <div>
               <p>{{$product->product_name}}</p>
