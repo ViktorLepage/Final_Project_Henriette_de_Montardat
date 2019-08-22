@@ -33,6 +33,7 @@ main {
     justify-content: flex-start;
     margin: auto;
     justify-content: left;
+    direction: rtl;
 }
 
 header {
@@ -64,10 +65,17 @@ header {
         position: absolute;
         top: 0.3rem;
         right: 0.3rem;
+        z-index: 10;
+        background-color: white;
+        direction: rtl;
+}
     }
     .p-1 {
         position: absolute;
         top: 0.3rem;
         left: 0.3rem;
+        z-index: 10;
+        background-color: white;
+        direction: rtl;
     }
 }
