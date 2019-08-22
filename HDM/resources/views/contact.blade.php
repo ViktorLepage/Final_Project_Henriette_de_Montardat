@@ -60,10 +60,13 @@
                 </div>
             </form>
     </div>
+    @include('Layouts/footerTemplate')
     </div>
-</body>
 
-@include('Layouts/footerTemplate')
+
+
+
+</body>
 </html>
 
 

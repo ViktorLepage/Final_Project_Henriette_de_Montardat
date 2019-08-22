@@ -80,6 +80,7 @@
 
 </div>
 @include('Layouts/footerTemplate')
+</div>
 </body>
 </html>
 

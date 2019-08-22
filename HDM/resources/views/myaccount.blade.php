@@ -87,14 +87,11 @@
 
     </form>
     </div>
+    @include('Layouts/footerTemplate')
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-</div>
-
-</div>
-@include('Layouts/footerTemplate')
 </body>
 </html>
 
