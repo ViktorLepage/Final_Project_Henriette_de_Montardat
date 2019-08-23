@@ -30,20 +30,20 @@
                         <div class="col-8 border-top border-bottom border-dark rightCart position-relative">
                             <div class="d-flex justify-content-between">
                                 <p>{{$value->product_name}}</p>
-                            <p class="itemPrice" value="{{$value->price}}">€ {{$value->price}}</p>
+                                <p class="itemPrice" value="{{$value->price}}">€ {{$value->price}}</p>
                                 <?php $total  += $value->price;?>
                             </div>
                             <div>
                                 <p>{{$value->product_type}}</p>
                             </div>
                             <div class="position-absolute removeButton">
-                                    <form action="" method="POST">
-                                        @csrf
-                                        <input name="removeFromCart" value="{{$value->id}}" type="hidden">
-                                        @if(Auth::check())
-                                            <button class="button1 button2" type="submit">remove</button>
-                                        @endif
-                                    </form>
+                                <form action="" method="POST">
+                                    @csrf
+                                    <input name="removeFromCart" value="{{$value->id}}" type="hidden">
+                                    @if(Auth::check())
+                                        <button class="button1 button2" type="submit">remove</button>
+                                    @endif
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -51,10 +51,8 @@
             @endforeach
             @if ($cart == null)
                 <h2>There is nothing to show</h2>
-            @else
-                <h2 class="cartTotal">TOTAL:<?php echo ' € ' . $total ; ?></h2>
-                <p class="testClass"></p>
             @endif
+            <h3 class="cartTotal">TOTAL: € {{$total}} </h3>
         </div>
     @endif
 
@@ -68,7 +66,7 @@
 
 </div>
 {{-- This is ajax test code do not erase (GOKDAG) --}}
-{{-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> --}}
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 
 // THIS AJAX CALL FOR REMOVE FEATURE IN CART PAGE USED FOR TESTING PLEASE DO NOT ERASE (GOKDAG)
@@ -87,7 +85,7 @@
 //                 console.log(result);
 //                 // $('#resultForm').html('<div class="green">'+result+'</div>');
 //                 e.target.parentElement.closest('div[name="cartItem"]').remove();
-//                 $('.cartTotal').html('<h2 class="cartTotal">TOTAL:<?php echo " € " . $total; ?></h2>');
+//                 $('.cartTotal').html('<h3 class="cartTotal">TOTAL:<?php echo " € " . $total; ?></h3>');
 
 
 //             },

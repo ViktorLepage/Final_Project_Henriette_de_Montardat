@@ -63,11 +63,12 @@ class CartController extends Controller
 
         $cartItems=array();
         $data = $request->session()->get('basket');
+        $total=0;
 
         if ($data !== null) {
             foreach ($data as $key => $value) {
                 $cartItems [] = Product::find($value);
-            }
+                }
             return view('cart', ['cart' => $cartItems]);
         }else{
             return view('cart', ['cart' => $cartItems]);
