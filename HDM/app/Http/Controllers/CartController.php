@@ -63,13 +63,12 @@ class CartController extends Controller
 
         $cartItems=array();
         $data = $request->session()->get('basket');
-        // //then you can redirect or whatever you need
-        // var_dump($newData);
-        // return redirect('/cart');
+        $total=0;
+
         if ($data !== null) {
             foreach ($data as $key => $value) {
                 $cartItems [] = Product::find($value);
-            }
+                }
             return view('cart', ['cart' => $cartItems]);
         }else{
             return view('cart', ['cart' => $cartItems]);
@@ -119,5 +118,32 @@ class CartController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function ajaxCall(Request $request)
+    {
+        // $item = ($request->removeFromCart);
+        // $data = $request->session()->get('basket');
+
+        // foreach ($data as $key => $value)
+        // {
+        //     if ($value == $item)
+        //     {
+        //         $request->session()->pull('basket.'.$key);
+        //         break;
+
+        //     }
+        // }
+
+        // $cartItems=array();
+        // $data = $request->session()->get('basket');
+
+        // if ($data !== null) {
+        //     foreach ($data as $key => $value) {
+        //         $cartItems [] = Product::find($value);
+        //     }
+        //     return view('cart', ['cart' => $cartItems]);
+        // }else{
+        //     return view('cart', ['cart' => $cartItems]);
+        // }
     }
 }
