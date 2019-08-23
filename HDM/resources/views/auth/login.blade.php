@@ -170,7 +170,6 @@ $(function(){
     $("#registerEmail").keyup( function(event) {
 
         event.preventDefault();
-        console.log("click !");
         let mailRegister=$("#registerEmail");
         let mailValue=mailRegister.val();
 
@@ -184,7 +183,7 @@ $(function(){
            }
 
         //checks for special characters injection for email input
-        let specialChars = "<>!#$%^&*()+[]{}?:;|'\"\\,/~`="
+        let specialChars = "<>!#$%^&*()+[]{}?:;|'\"\\,/~`=";
         let check = function(string){
         for(i = 0; i < specialChars.length;i++){
         if(string.indexOf(specialChars[i]) > -1){
@@ -195,14 +194,20 @@ $(function(){
         }
          return false;
         }
-            if(check($('#registerEmail').val()) == false){
+            if(check($('#registerEmail').val()) == true){
              // Code that needs to execute
-             }else{
-
                  let emailDiv = $("#emailDiv");
                  let warningMessage=$("<p></p>").text("Not accepted (<>!#$%^&*()+[]{}?:;|'\"\\,/~`=)");
                 warningMessage.css({color: "red", fontSize: "15px", fontFamily: "calibri" })
                  emailDiv.append(warningMessage);
+                 return;
+             }else{
+
+                let emailDiv = $("#emailDiv");
+
+                emailDiv.removeClass("#emailDiv");
+
+
 
 
 
@@ -212,6 +217,7 @@ $(function(){
        
 
     });
+
 
 
 
@@ -279,8 +285,7 @@ $(function(){
         
         
         
-        console.log(passValue);
-
+        
         
        
 
@@ -309,8 +314,7 @@ $(function(){
         
         
         
-        console.log(passValue);
-
+       
         
        
 
@@ -339,7 +343,7 @@ $(function(){
         
         
         
-        console.log(confirmationValue);
+        
 
            
        
