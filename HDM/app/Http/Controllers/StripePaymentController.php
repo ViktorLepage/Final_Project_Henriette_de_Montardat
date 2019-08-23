@@ -58,7 +58,7 @@ class StripePaymentController extends Controller
 
             "currency" => "usd",
 
-            "source" => $request->stripeToken,
+            "source" => $request->input('stripeToken'),
 
             "description" => "Test payment from itsolutionstuff.com."
 
