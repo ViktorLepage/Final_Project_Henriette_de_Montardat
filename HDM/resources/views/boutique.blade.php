@@ -48,9 +48,9 @@
                             <div id="boutiqueButton">
                                 @if(Auth::check())
                                     <form action="" method="GET">
-                                    @csrf
-                                    <input name="addToCart" value="{{$product->id}}" type="hidden">
-                                    <button class="button1 button2" type="submit">add</button>
+                                        @csrf
+                                        <input name="addToCart" value="{{$product->id}}" type="hidden">
+                                        <button class="button1 button2" type="submit">add</button>
                                     </form>
                                 @endif
                             </div>
@@ -81,6 +81,30 @@
 </div>
 @include('Layouts/footerTemplate')
 </div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+$(function(){
+    $('button[type="submit"]').click(function(e){
+        e.preventDefault();
+        console.log(e.target.parentElement.querySelector('input[name="addToCart"]').value);
+        $.ajax({
+            data:    {
+            "_token": "{{ csrf_token() }}",
+            "addToCart": e.target.parentElement.querySelector('input[name="addToCart"]').value
+            },
+            url: '/boutique',
+            type: 'GET',
+            success: function(result) {
+                console.log(result);
+                // $('#resultForm').html('<div class="green">'+result+'</div>');
+            },
+            error: function(err){
+                // Si une erreur AJAX se produit
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>
 
