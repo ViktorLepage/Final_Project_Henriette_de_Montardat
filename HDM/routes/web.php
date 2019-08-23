@@ -21,6 +21,10 @@ Route::resource('/collection', 'productController');
 Route::resource('/hdmadmin', 'productController');
 Route::resource('/cart', 'CartController');
 
+Route::get('stripe', 'StripePaymentController@stripe');
+
+Route::post('stripe', 'StripePaymentController@stripePost')->name('stripe.post');
+
 Route::get('/mmm', function () {
     //return Response::view('layouts/mainTemplate');
     return Response::view('collection');
