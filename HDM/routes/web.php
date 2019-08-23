@@ -22,6 +22,7 @@ Route::resource('/hdmadmin', 'productController');
 Route::resource('/cart', 'CartController');
 
 Route::get('stripe', 'StripePaymentController@stripe');
+// Route::post('/ajaxcart', 'CartController@ajaxCall');
 
 Route::post('stripe', 'StripePaymentController@stripePost')->name('stripe.post');
 
