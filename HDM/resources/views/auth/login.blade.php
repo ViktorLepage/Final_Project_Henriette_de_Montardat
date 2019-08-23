@@ -4,6 +4,7 @@
 
 <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
 <div id="pageContainer">
     <div id="contentWrap">
@@ -99,7 +100,7 @@
                                         
                                         <div class="form-group row">
 
-                                            <div class="col-md-10">
+                                            <div id="emailDiv" class="col-md-10">
                                             <input id="registerEmail" placeholder="E-Mail Address" type="email" class="form-control border-0 rounded-0 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                             @error('email')
@@ -125,7 +126,7 @@
                                     
                                     <div class="form-group row">
                                         
-                                        <div class="col-md-10">
+                                        <div id="passConfirm" class="col-md-10">
                                             <input id="password-confirm" placeholder="Confirm Password" type="password" class="form-control border-0 rounded-0" name="password_confirmation" required autocomplete="new-password">
                                         </div>
                                     </div>
@@ -150,76 +151,133 @@
 @include('Layouts/footerTemplate')
 </div>
 
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+
+  <script
+  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+  integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+  crossorigin="anonymous"></script>
+  
+
 <script>
+    
 
-    /*
-        let registerName = document.querySelector("#registerEmail");
-        registerName.addEventListener("keyUp", function(){
-           //gather
-           const nomValue = registerName.value;
-           console.log("dawqwqdwdsd")
-           //logic
-           if (nomValue.length >= 4) {
-             console.log("green")
-             //feed back
-             registerName.setAttribute("style","color:red !important;background-color:red !important; ")
-           } else {
-             //feed back
-             console.log("red")
-             registerName.style.border = "1px solid red";
-           }
-        
-        });
-
-*/
-
+/* injection checks for special charachters on registerEmail input*/
 $(function(){
 
     $("#registerEmail").keyup( function(event) {
 
-
         event.preventDefault();
-        console.log("click !");
-
         let mailRegister=$("#registerEmail");
-
         let mailValue=mailRegister.val();
 
+        //applying css styling o inputs through JQuery
         if (mailValue <= 0) {
-            $('#registerEmail').attr('style', 'border: 1px solid red !important');
             //feed back
+            $('#registerEmail').attr('style', 'border: 1px solid red !important');
         } else {
             //feed back
             $('#registerEmail').attr('style', 'border: 1px solid green !important');
            }
-        
-        
-        
-        console.log(mailValue);
 
+        //checks for special characters injection for email input
+        let specialChars = "<>!#$%^&*()+[]{}?:;|'\"\\,/~`=";
+        let check = function(string){
+        for(i = 0; i < specialChars.length;i++){
+        if(string.indexOf(specialChars[i]) > -1){
+            
+            return true        
+            }
         
+        }
+         return false;
+        }
+            if(check($('#registerEmail').val()) == true){
+             // Code that needs to execute
+                 let emailDiv = $("#emailDiv");
+                 let warningMessage=$("<p></p>").text("Not accepted (<>!#$%^&*()+[]{}?:;|'\"\\,/~`=)");
+                warningMessage.css({color: "red", fontSize: "15px", fontFamily: "calibri" })
+                 emailDiv.append(warningMessage);
+                 return;
+             }else{
+
+                let emailDiv = $("#emailDiv");
+
+                emailDiv.removeClass("#emailDiv");
+
+
+
+
+
+
+
+            }
        
 
     });
+
+
+
+
+/* injection checks for special charachters on loginEmail input*/
+
+
+    $("#email").keyup( function(event) {
+
+        event.preventDefault();
+        let loginMail=$("#email");
+        let mailValue=loginMail.val();
+
+        if (mailValue <= 0) {
+            //feed back
+            $('#email').attr('style', 'border: 1px solid red !important');
+        } else {
+            //feed back
+            $('#email').attr('style', 'border: 1px solid green !important');
+           }
+        
+        let specialChars = "<>!#$%^&*()+[]{}?:;|'\"\\,/~`=";
+        let check = function(string){
+        for(i = 0; i < specialChars.length;i++){
+        if(string.indexOf(specialChars[i]) > -1){
+            
+            return true        
+            }
+        
+        }
+         return false;
+        }
+            if(check($('#email').val()) == false){
+             // Code that needs to execute when none of the above is in the string
+             }else{
+
+                 let emailDiv = $("#logInDiv");
+                 let warningMessage=$("<p></p>").text("Not accepted (<>!#$%^&*()+[]{}?:;|'\"\\,/~`=)");
+                warningMessage.css({color: "red", fontSize: "15px", fontFamily: "calibri" })
+                 emailDiv.append(warningMessage);
+
+            }       
+
+    });
+
+
+    //Register Password
 
 
     $("#registerPassword").keyup( function(event) {
 
 
         event.preventDefault();
-        console.log("click !");
 
         let passRegister=$("#registerPassword");
 
         let passValue=passRegister.val();
 
-        if (passValue.length <= 0) {
-            $('#registerPassword').attr('style', 'border: 1px solid red !important');
+        if (passValue <= 0) {
             //feed back
+            $('#registerPassword').attr('style', 'border: 1px solid red !important');
         } else {
             //feed back
             $('#registerPassword').attr('style', 'border: 1px solid green !important');
@@ -227,17 +285,49 @@ $(function(){
         
         
         
-        console.log(passValue);
-
+        
         
        
 
     });
+
+
+
+    //Login-password 
+
+    $("#password").keyup( function(event) {
+
+
+        event.preventDefault();
+
+        let logPass=$("#password");
+
+        let passValue=logPass.val();
+
+        if (passValue <= 0) {
+            //feed back
+            $('#password').attr('style', 'border: 1px solid red !important');
+        } else {
+            //feed back
+            $('#password').attr('style', 'border: 1px solid green !important');
+           }
+        
+        
+        
+       
+        
+       
+
+    });
+
+
+
+    //Register confirmation password
+
     $("#password-confirm").keyup( function(event) {
 
 
         event.preventDefault();
-        console.log("click !");
 
         let passCofirmation=$("#password-confirm");
 
@@ -253,9 +343,9 @@ $(function(){
         
         
         
-        console.log(confirmationValue);
-
         
+
+           
        
 
     });
@@ -267,6 +357,8 @@ $(function(){
         
       
         </script>
+
+        
 @endsection
 
-<script type="text/javascript" src="{{ URL::asset('js/loginScript.js') }}"></script>
+
