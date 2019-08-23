@@ -73,19 +73,7 @@ button:hover {
 }
 
 /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
+
 
   /* Modal Content (image) */
   .modal-content {
@@ -207,6 +195,7 @@ button:hover {
 }
 
 @media screen and (max-width:300px){
+.jquery-modal blocker current{z-index: -1 !important;}
   .modal img{
       height : 300px;
       width : 300px;
@@ -218,7 +207,7 @@ button:hover {
   }
 
   div .p-2{
-    visibility:hidden !important;
+    visibility:hidden;
   }
 }
 
