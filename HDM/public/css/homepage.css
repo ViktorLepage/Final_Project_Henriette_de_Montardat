@@ -47,8 +47,8 @@
 
 @media screen and (max-width: 768px) {
     #photo {
-        width: 99%;
-        height: 99%;
+        width: 90%;
+        height: 90%;
         margin: auto;
     }
 
@@ -56,6 +56,21 @@
         font-size: 15px;
     }
 }
+
+@media screen and (min-width: 2200px) {
+    #photo {
+        width: 70%;
+        height: 70%;
+        margin: auto;
+    }
+
+    .cardtext {
+        font-size: 20px;
+    }
+}
+
+
+
 /* Victor previous code
 
 #style_homepage {
