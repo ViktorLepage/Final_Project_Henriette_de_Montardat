@@ -35,7 +35,9 @@
                             <div class="d-flex justify-content-between">
                                 <p>{{$value->product_name}}</p>
                                 <p class="itemPrice" value="{{$value->price}}">€ {{$value->price}}</p>
-                                <?php $total  += $value->price;?>
+                                <div id="totalPrice">
+                                    <?php $total  += $value->price;?>
+                                </div>
                             </div>
                             <div>
                                 <p>{{$value->product_type}}</p>
@@ -73,31 +75,33 @@ $('img').on('shown.bs.modal', function () {
 })
 
 // THIS AJAX CALL FOR REMOVE FEATURE IN CART PAGE USED FOR TESTING PLEASE DO NOT ERASE (GOKDAG)
-// $(function(){
-//     $('button[type="submit"]').click(function(e){
-//         e.preventDefault();
-//         console.log(e.target.parentElement.querySelector('input[name="removeFromCart"]').value);
-//         $.ajax({
-//             data:    {
-//             "_token": "{{ csrf_token() }}",
-//             "removeFromCart": e.target.parentElement.querySelector('input[name="removeFromCart"]').value
-//             },
-//             url: '/cart',
-//             type: 'POST',
-//             success: function(result) {
-//                 console.log(result);
-//                 // $('#resultForm').html('<div class="green">'+result+'</div>');
-//                 e.target.parentElement.closest('div[name="cartItem"]').remove();
-//                 $('.cartTotal').html('<h3 class="cartTotal">TOTAL:<?php echo " € " . $total; ?></h3>');
+$(function(){
+    $('button[type="submit"]').click(function(e){
+        e.preventDefault();
+        console.log(e.target.parentElement.querySelector('input[name="removeFromCart"]').value);
+        $.ajax({
+            data:    {
+            "_token": "{{ csrf_token() }}",
+            "removeFromCart": e.target.parentElement.querySelector('input[name="removeFromCart"]').value
+            },
+            url: '/cart',
+            type: 'POST',
+            success: function(result) {
+                console.log(result);
+                // $('#resultForm').html('<div class="green">'+result+'</div>');
+                e.target.parentElement.closest('div[name="cartItem"]').remove();
+                $('.cartTotal').html('<h3 class="cartTotal">TOTAL:<?php echo " € " . $total; ?></h3>');
+                // $('#totalPrice').html('<h3 class="cartTotal">TOTAL:<?php echo " € " . $total; ?></h3>');
+                //take the price from controller and substract it from total//
 
 
-//             },
-//             error: function(err){
-//                 // Si une erreur AJAX se produit
-//             }
-//         });
-//     });
-// });
+            },
+            error: function(err){
+                // Si une erreur AJAX se produit
+            }
+        });
+    });
+});
 </script>
 </body>
 

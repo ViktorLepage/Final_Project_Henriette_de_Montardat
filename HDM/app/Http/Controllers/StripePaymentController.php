@@ -17,6 +17,9 @@ use Stripe;
 class StripePaymentController extends Controller
 
 {
+    // public function __construct() {
+    //     Stripe::setApiKey(env('STRIPE_KEY'));
+    // }
     /**
 
      * success response method.
@@ -58,7 +61,7 @@ class StripePaymentController extends Controller
 
             "currency" => "usd",
 
-            "source" => $request->input('stripeToken'),
+            "source" => $request->stripeToken,
 
             "description" => "Test payment from itsolutionstuff.com."
 

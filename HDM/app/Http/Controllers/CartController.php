@@ -49,6 +49,7 @@ class CartController extends Controller
     public function store(Request $request)
     {
         $item = ($request->removeFromCart);
+        //Call the price here//
         $data = $request->session()->get('basket');
 
         foreach ($data as $key => $value)
@@ -73,6 +74,7 @@ class CartController extends Controller
         }else{
             return view('cart', ['cart' => $cartItems]);
         }
+        //return the price of the removed item
     }
 
     /**
