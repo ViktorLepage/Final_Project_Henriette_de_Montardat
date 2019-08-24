@@ -8,7 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet"  href="css/cart.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 </head>
 <body>
 @include('Layouts/headerTemplate')
@@ -22,10 +21,15 @@
         <?php $total=0; ?>
         <div class="container">
             @foreach($cart as $eachCart=>$value)
+            <div id="ex1" class="modal">
+              <p> <img class="modall" data-toggle="modal" id="myImg" height="150px" width="150px" src="{{$value->image}}" alt="product image"></p>
+
+            </div>
                 <div class="container mr-0">
                     <div name="cartItem" class="row">
                         <div class="col-3 shadow  mb-5 bg-white rounded mobilepicturecart">
-                            <img id="myImg" height="150px" width="150px" src="{{$value->image}}" alt="product image">
+                         <!-- Link on the img to open the modal -->
+                        <a href="#ex1" rel="modal:open"><img data-toggle="modal" id="myImg" height="150px" width="150px" src="{{$value->image}}" alt="product image"></a>
                         </div>
                         <div class="col-8 border-top border-bottom border-dark rightCart position-relative">
                             <div class="d-flex justify-content-between">
@@ -59,15 +63,14 @@
 </div>
 @include('Layouts/footerTemplate')
 </div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-
-</div>
 {{-- This is ajax test code do not erase (GOKDAG) --}}
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
 <script>
+$('img').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
 
 // THIS AJAX CALL FOR REMOVE FEATURE IN CART PAGE USED FOR TESTING PLEASE DO NOT ERASE (GOKDAG)
 // $(function(){
@@ -95,24 +98,6 @@
 //         });
 //     });
 // });
-
-// Get the modal
-var modal = document.getElementById("myModal");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-let img = document.getElementById("myImg");
-let modalImg = document.getElementById("img01");
-let captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-
-}
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
 </script>
 </body>
 

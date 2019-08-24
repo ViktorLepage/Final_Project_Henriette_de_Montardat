@@ -26,6 +26,7 @@ Route::get('stripe', 'StripePaymentController@stripe');
 
 Route::post('stripe', 'StripePaymentController@stripePost')->name('stripe.post');
 
+
 Route::get('/mmm', function () {
     //return Response::view('layouts/mainTemplate');
     return Response::view('collection');
