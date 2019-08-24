@@ -52,6 +52,7 @@
                                         <input name="addToCart" value="{{$product->id}}" type="hidden">
                                         <button class="button1 button2" type="submit">add</button>
                                     </form>
+                                    <div id="infoAdded"></div>
                                 @endif
                             </div>
                             <div id="boutiqueDeails">
@@ -96,8 +97,7 @@ $(function(){
             url: '/boutique',
             type: 'GET',
             success: function(result) {
-                console.log(result);
-                // $('#resultForm').html('<div class="green">'+result+'</div>');
+                // $('#infoAdded').html('<div>added</div>');
             },
             error: function(err){
                 // Si une erreur AJAX se produit
