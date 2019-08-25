@@ -23,9 +23,9 @@
                     <form action="/admin/product/{{$product->id}}/edit" method="GET">
                         @csrf
                         <input name="addToCart" value="{{$product->id}}" type="hidden">
-                        @if(Auth::check())
-                          <button class ="button1 button2" type="submit">edit</button>
-                    @endif
+                        @if(backpack_auth()->user())
+                            <button class ="button1 button2" type="submit">edit</button>
+                        @endif
                         </form>
                 </div>
             <div>
