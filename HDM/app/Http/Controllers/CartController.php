@@ -49,6 +49,7 @@ class CartController extends Controller
     public function store(Request $request)
     {
         $item = ($request->removeFromCart);
+        $removedItemPrice = Product::select('price')->where('id', $item)->get();
         //Call the price here//
         $data = $request->session()->get('basket');
 
@@ -64,17 +65,15 @@ class CartController extends Controller
 
         $cartItems=array();
         $data = $request->session()->get('basket');
-        $total=0;
 
         if ($data !== null) {
             foreach ($data as $key => $value) {
                 $cartItems [] = Product::find($value);
                 }
-            return view('cart', ['cart' => $cartItems]);
+            return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
         }else{
-            return view('cart', ['cart' => $cartItems]);
+            return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
         }
-        //return the price of the removed item
     }
 
     /**
