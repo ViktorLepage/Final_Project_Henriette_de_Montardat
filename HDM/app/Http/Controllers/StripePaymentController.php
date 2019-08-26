@@ -63,7 +63,7 @@ class StripePaymentController extends Controller
 
             "source" => $request->stripeToken,
 
-            "description" => "Test payment from itsolutionstuff.com."
+            "description" => "Test payment from Diamonds Team"
 
         ]);
 
