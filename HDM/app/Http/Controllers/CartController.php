@@ -64,17 +64,19 @@ class CartController extends Controller
             }
         }
 
-        // $cartItems = array();
-        // $data = $request->session()->get('basket');
+        $cartItems = array();
+        $data = $request->session()->get('basket');
 
-        // if ($data !== null) {
-        //     foreach ($data as $key => $value) {
-        //         $cartItems[] = Product::find($value);
-        //     }
-        //     // return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
-        // } else {
-        //     // return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
-        // }
+        if ($data !== null) {
+            foreach ($data as $key => $value) {
+                $cartItems[] = Product::select('price')->where('id', $value)->get();
+            }
+            // return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
+        } else {
+            // return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
+        }
+
+        return $cartItems;
 
         return $removedItemPrice;
     }

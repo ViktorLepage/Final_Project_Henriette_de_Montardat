@@ -63,6 +63,7 @@
                 <h2>There is nothing to show</h2>
                 @endif
                 <!--Form to send the ordered items-->
+                @if ($cart != null)
                 <form action="/stripe" method="post">
                     @csrf
                     <h3 class="cartTotal">TOTAL: € {{$total}} </h3>
