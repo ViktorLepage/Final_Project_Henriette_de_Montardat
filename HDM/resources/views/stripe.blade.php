@@ -76,7 +76,7 @@
             </div>
         </nav>
     </header>
-<div class="details">Total Amount : {{ Request()->session()->get('totalAmount') }}</div>
+<?php //<div class="details">Total Amount : {{ Request()->session()->get('totalAmount') }}</div> ?>
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
@@ -103,7 +103,7 @@
 
                             <div class='form-row row'>
                                 <div class='col-xs-12 form-group required'>
-                                    <label class='control-label'>Name on Card</label> <input class='form-control' size='4' type='text'>
+                                    <label class='control-label'>Name on Card</label> <input class='form-control' size='4' type='text' value="{{Auth::user()['name']}}">
                                 </div>
                             </div>
 

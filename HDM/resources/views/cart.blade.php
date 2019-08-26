@@ -36,7 +36,7 @@
                                 <!--Showing the product name, type, price and total price-->
                                 <p>{{$value->product_name}}</p>
                                 <p class="itemPrice" value="{{$value->price}}">€ {{$value->price}}</p>
-                                <div id="totalPrice">
+                               <div id="totalPrice">
                                     <?php $total  += $value->price; ?>
                                 </div>
                             </div>
