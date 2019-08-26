@@ -3,13 +3,17 @@
     margin-left: 10rem !important;
 } */
 
-/* .rightCart
+.rightCart
 {
-    height: 32vh;
-} */
+    height: 32vh !important;
+}
 .cartTotal {
     /* margin-right: 10vh; */
     text-align: end;
+}
+
+.row{
+    margin-bottom: 2rem;
 }
 
 #pay {
@@ -69,8 +73,7 @@ button:hover {
 }
 
 .button2:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .button {
@@ -178,7 +181,7 @@ button:hover {
     display:inline-block;
     height:100%;
     vertical-align:middle;
-    margin-right:-0.05em
+    margin-right:-0.05em;
 }
 .modal img{
     height : 400px;
@@ -223,8 +226,8 @@ button:hover {
   }
   .modal-content {
      width: 100%;
+  }
 }
-
 @media screen and (min-width: 2200px) {
     .jquery-modal blocker current{z-index: -1 !important;}
     .modal img{
