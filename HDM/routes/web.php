@@ -10,9 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return 'Main page';
 });
+
 Route::resource('/home', 'homeController');
 Route::resource('/myaccount', 'myAccountController');
 Route::resource('/contact', 'contactController');
@@ -26,12 +28,12 @@ Route::get('stripe', 'StripePaymentController@stripe');
 
 Route::post('stripe', 'StripePaymentController@stripePost')->name('stripe.post');
 
-
+/*
 Route::get('/mmm', function () {
     //return Response::view('layouts/mainTemplate');
     return Response::view('collection');
 });
-
+*/
 
 Auth::routes();
 

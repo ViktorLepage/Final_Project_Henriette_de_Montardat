@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,18 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-
-
-
-
 <!--extends('header');-->
 <body>
+<!--header.php-->
 @include('Layouts/headerTemplate')
 
            <main>
             <section id="loginForm">
-                <label for="login">Login</label>
-                <form action="" method="post" name="login"><br>
+            <label for="login">Login</label>
+            <form action="" method="post" name="login"><br>
                     @csrf
             <label for="loginPassword">Email</label>
             <input type="email" name="loginEmail" id="loginEmail" value="Email"><br>
@@ -55,6 +50,7 @@
          <a href="">Forget password</a>
         </section>
     </main>
+    <!--footer.php-->
     @include('layouts/footerTemplate')
 </body>
 </html>

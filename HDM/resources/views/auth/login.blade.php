@@ -14,16 +14,16 @@
                     <div id="formDiv"class="col-md-8">
                         <div id="loginCard" class="card">
                             <div id="cardHeader" class="card-header">{{ __('Login') }}</div>
-                            
+
                             <div class="card-body">
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
-                                    
+
                                     <div class="form-group row">
-                                        
+
                                         <div id="logInDiv" class="form-group  col-md-10 ">
                                             <input id="email" placeholder="E-Mail Address"  type="email" class="form-control border-0 rounded-0  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                            
+
                                             @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -31,9 +31,9 @@
                                             @enderror
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group row">
-                                        
+
                                         <div class="col-md-10">
                                             <input id="password" placeholder="Password" type="password" class="form-control border-0 rounded-0 @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
@@ -49,7 +49,7 @@
                                             <div class="col-md-6 offset-md-4">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                                    
+
                                                 <label class="form-check-label" for="remember">
                                                     {{ __('Remember Me') }}
                                                 </label>
@@ -76,28 +76,28 @@
                     </div>
                 </div>
             </div>
-            
 
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
+
             <div id="registerContainer" class="container">
                 <div  id="registerForm" class="row justify-content-center">
                     <div id="formDiv" class="col-md-8">
                         <div id="registerCard" class="card">
                             <div id="cardHeader" class="card-header">{{ __('Register') }}</div>
-                            
+
                             <div class="card-body">
-                                
-                                
+
+
                                 <!-- -----------Register Form-------- -->
                                 <form id="registerForm" method="POST" action="{{ route('register') }}">
                                         @csrf
-                                        
+
                                         <div class="form-group row">
 
                                             <div id="emailDiv" class="col-md-10">
@@ -115,7 +115,7 @@
                                             <!--  registerPassword -->
                                             <div class="col-md-10">
                                             <input id="registerPassword" placeholder="Password" type="password" class="form-control border-0 rounded-0 @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-                                            
+
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -123,9 +123,9 @@
                                             @enderror
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group row">
-                                        
+
                                         <div id="passConfirm" class="col-md-10">
                                             <input id="password-confirm" placeholder="Confirm Password" type="password" class="form-control border-0 rounded-0" name="password_confirmation" required autocomplete="new-password">
                                         </div>
@@ -159,10 +159,10 @@
   src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
   crossorigin="anonymous"></script>
-  
+
 
 <script>
-    
+
 
 /* injection checks for special charachters on registerEmail input*/
 $(function(){
@@ -187,10 +187,10 @@ $(function(){
         let check = function(string){
         for(i = 0; i < specialChars.length;i++){
         if(string.indexOf(specialChars[i]) > -1){
-            
-            return true        
+
+            return true
             }
-        
+
         }
          return false;
         }
@@ -214,7 +214,7 @@ $(function(){
 
 
             }
-       
+
 
     });
 
@@ -237,15 +237,15 @@ $(function(){
             //feed back
             $('#email').attr('style', 'border: 1px solid green !important');
            }
-        
+
         let specialChars = "<>!#$%^&*()+[]{}?:;|'\"\\,/~`=";
         let check = function(string){
         for(i = 0; i < specialChars.length;i++){
         if(string.indexOf(specialChars[i]) > -1){
-            
-            return true        
+
+            return true
             }
-        
+
         }
          return false;
         }
@@ -258,7 +258,7 @@ $(function(){
                 warningMessage.css({color: "red", fontSize: "15px", fontFamily: "calibri" })
                  emailDiv.append(warningMessage);
 
-            }       
+            }
 
     });
 
@@ -282,18 +282,9 @@ $(function(){
             //feed back
             $('#registerPassword').attr('style', 'border: 1px solid green !important');
            }
-        
-        
-        
-        
-        
-       
-
     });
 
-
-
-    //Login-password 
+    //Login-password
 
     $("#password").keyup( function(event) {
 
@@ -311,12 +302,12 @@ $(function(){
             //feed back
             $('#password').attr('style', 'border: 1px solid green !important');
            }
-        
-        
-        
-       
-        
-       
+
+
+
+
+
+
 
     });
 
@@ -340,13 +331,13 @@ $(function(){
             //feed back
             $('#password-confirm').attr('style', 'border: 1px solid green !important');
            }
-        
-        
-        
-        
 
-           
-       
+
+
+
+
+
+
 
     });
 
@@ -354,11 +345,11 @@ $(function(){
 
 
 });
-        
-      
+
+
         </script>
 
-        
+
 @endsection
 
 

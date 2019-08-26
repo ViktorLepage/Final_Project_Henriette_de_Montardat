@@ -12,15 +12,12 @@
             display: inline;
             font-weight: bold;
         }
-
         .display-table {
             display: table;
         }
-
         .display-tr {
             display: table-row;
         }
-
         .display-td {
             display: table-cell;
             vertical-align: middle;
@@ -28,7 +25,6 @@
         }
     </style>
 </head>
-
 <body>
     <header>
         <nav class="d-flex justify-content-between navbar navbar-expand-lg navbar-light wg-light">

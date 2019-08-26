@@ -11,9 +11,6 @@
     height: 380px;
 }
 
-#carouselController {
-}
-
 .carousel-item img {
     height: 200px;
 }
@@ -92,7 +89,7 @@
 #contentWrap {
     padding-bottom: 2.5rem;
 }
-
+/*
 footer {
     position: absolute;
     bottom: 0;
@@ -120,3 +117,4 @@ footer {
         margin-right: 30%;
     }
 }
+*/
