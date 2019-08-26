@@ -98,13 +98,14 @@ img {
     height: 2.5rem;
 }
 */
-
-/*@media only screen and (max-width: 767px) {
+/*
+@media only screen and (max-width: 767px) {
     #cards {
         display: flex;
         flex-direction: column;
-    }
-
+    }}
+*/
+/*
 @media only screen and (min-width: 768px) {
     #cards {
         display: flex;
@@ -117,4 +118,5 @@ img {
         display: flex;
         flex-direction: column;
     }
-}*/
+}
+*/

@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
-            <link rel="stylesheet"  href="css/boutique.css"/>
             <link rel="stylesheet" href="{{asset('css/boutique.css')}}">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
+    <!-- Header.php -->
     @include('Layouts/headerTemplate')
         <div id="pageContainer">
             <div id="contentWrap">
@@ -23,10 +23,6 @@
                     <button type="submit">add</button>
                     </form>
             @endforeach -->
-
-
-
-
                 <!-- Carousel -->
                 <!-- Indicatiors -->
 
@@ -38,7 +34,7 @@
                     @endforeach
                 </ol>
 -->
-                <!-- Content -->
+                <!-- Content: displying the images on bootstrap's carousel -->
                 <div id="carousel-inner" class="carousel-inner" role="listbox">
                 <p>Coup de coeur</p>
                     @foreach($products as $product)
@@ -46,6 +42,7 @@
                         <img   id="carousel-image" src="{{ URL::asset($product->image)}}" >
                         <div id="boutiqueDetailsButton">
                             <div id="boutiqueButton">
+                            <!--If user is not legged in add button is not shown-->
                                 @if(Auth::check())
                                     <form action="" method="GET">
                                         @csrf
@@ -66,7 +63,6 @@
                     </div>
                     @endforeach
                 </div>
-
                 <!-- Left arrow -->
                 <a id="carouselController" class="carousel-control-prev " href="#carouselExampleControls" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon bg-dark round-3" aria-hidden="true"></span>
@@ -80,6 +76,7 @@
             </div>
 
 </div>
+<!--footer.php-->
 @include('Layouts/footerTemplate')
 </div>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

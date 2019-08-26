@@ -228,8 +228,12 @@ button:hover {
      width: 100%;
   }
 }
+}
+
 @media screen and (min-width: 2200px) {
-    .jquery-modal blocker current{z-index: -1 !important;}
+    .jquery-modal blocker current{
+        z-index: -1 !important;
+    }
     .modal img{
         height : 450px;
         width : 450px;

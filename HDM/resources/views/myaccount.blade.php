@@ -2,10 +2,8 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/contact.css')}}">
@@ -13,6 +11,7 @@
     <title>Contact</title>
   </head>
 <body>
+<!--header.php-->
 @include('Layouts/headerTemplate')
 <div id="pageContainer">
     <div id="contentWrap">
@@ -51,8 +50,6 @@
                         <input name="country" type="text" class="form-control border-0 rounded-0" id="inputCountry" placeholder="Country"value="{{Auth::user()['country']}}">
                     </div>
                 </div>
-
-
             </div>
             <div class="form-group col-md-6">
                 <div class="d-flex align-items-center">
@@ -84,14 +81,13 @@
                 </div>
             </div>
         </div>
-
     </form>
     </div>
+    <!--footer.php-->
     @include('Layouts/footerTemplate')
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
 </body>
 </html>
 
