@@ -69,16 +69,12 @@ class CartController extends Controller
 
         if ($data !== null) {
             foreach ($data as $key => $value) {
-                $cartItems[] = Product::select('price')->where('id', $value)->get();
+                $cartItems[] = Product::find($value);
             }
-            // return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
+            return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
         } else {
-            // return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
+            return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
         }
-
-        return $cartItems;
-
-        return $removedItemPrice;
     }
 
     /**
