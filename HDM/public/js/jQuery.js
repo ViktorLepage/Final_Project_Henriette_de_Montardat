@@ -17,33 +17,6 @@ $(function(){
           $('#registerEmail').attr('style', 'border: 1px solid green !important');
          }
 
-        //checks for special characters injection for email input
-        let specialChars = "<>!#$%^&*()+[]{}?:;|'\"\\,/~`=";
-        let check = function(string){
-         for(i = 0; i < specialChars.length;i++){
-         if(string.indexOf(specialChars[i]) > -1){
-          
-           return true        
-          }
-      
-      }
-       return false;
-      }
-          if(check($('#registerEmail').val()) == true){
-           // Code that needs to execute
-               let emailDiv = $("#emailDiv");
-               let warningMessage=$("<p></p>").text("Not accepted (<>!#$%^&*()+[]{}?:;|'\"\\,/~`=)");
-              warningMessage.css({color: "red", fontSize: "15px", fontFamily: "calibri" })
-               emailDiv.append(warningMessage);
-               return;
-           }else{
-
-              let emailDiv = $("#emailDiv");
-
-              emailDiv.removeClass("#emailDiv");
-          }
-     
-
   });
 
 
@@ -65,28 +38,7 @@ $(function(){
           //feed back
           $('#email').attr('style', 'border: 1px solid green !important');
          }
-      
-      let specialChars = "<>!#$%^&*()+[]{}?:;|'\"\\,/~`=";
-      let check = function(string){
-      for(i = 0; i < specialChars.length;i++){
-      if(string.indexOf(specialChars[i]) > -1){
-          
-          return true        
-          }
-      
-      }
-       return false;
-      }
-          if(check($('#email').val()) == false){
-           // Code that needs to execute when none of the above is in the string
-           }else{
-
-               let emailDiv = $("#logInDiv");
-               let warningMessage=$("<p></p>").text("Not accepted (<>!#$%^&*()+[]{}?:;|'\"\\,/~`=)");
-              warningMessage.css({color: "red", fontSize: "15px", fontFamily: "calibri" })
-               emailDiv.append(warningMessage);
-
-          }       
+     
 
   });
 

@@ -161,7 +161,6 @@
   crossorigin="anonymous"></script>
 
 
-<script type="text/javascript" src="{{ URL::asset('js/jQuery.js') }}"></script>
 @endsection
 
 
