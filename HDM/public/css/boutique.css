@@ -1,3 +1,4 @@
+/*setting of carousel*/
 #carousel-image {
     border-style: dotted dashed solid double;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
@@ -18,7 +19,7 @@
 .carousel-control-prev-icon {
     background-color: #403ead;
 }
-
+/* settings of button style*/
 .button1 {
     height: 25px;
     width: 80px;
@@ -43,7 +44,7 @@
 .button {
     display: inline-flex;
 }
-
+/**/
 #boutiqueDetailsButton {
     margin-left: 40%;
     margin-right: 40%;
@@ -61,13 +62,13 @@
     border-bottom: 1px solid #403ead;
     text-transform: uppercase;
 }
-
+/*coloring the price*/
 #productnameprice {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #403ead;
 }
-
+/*carousel controls' color changes for black from white*/
 .carousel-control-prev-icon {
     color: black;
     border-radius: 50%;
@@ -82,39 +83,9 @@
 
 #pageContainer {
     position: relative;
-
     min-height: 100vh;
 }
 
 #contentWrap {
     padding-bottom: 2.5rem;
 }
-/*
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-}
-
-@media screen and (max-width: 768px) {
-    #photo {
-        width: 100%;
-        height: 100%;
-        margin: auto;
-    }
-
-    .carousel-control-prev-icon {
-        padding: 20px;
-    }
-
-    .carousel-control-next-icon {
-        padding: 20px;
-    }
-
-    #boutiqueDetailsButton {
-        margin-left: 30%;
-        margin-right: 30%;
-    }
-}
-*/
