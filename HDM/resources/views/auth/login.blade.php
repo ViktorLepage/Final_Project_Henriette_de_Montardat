@@ -161,7 +161,6 @@
   crossorigin="anonymous"></script>
 
 
-<<<<<<< HEAD
 <script>
 
 
@@ -351,9 +350,6 @@ $(function(){
         </script>
 
 
-=======
-<script type="text/javascript" src="{{ URL::asset('js/jQuery.js') }}"></script>
->>>>>>> 587e5d4b3e229d0e67e329148d692bc55c1a1e1d
 @endsection
 
 
