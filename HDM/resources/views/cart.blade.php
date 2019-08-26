@@ -72,10 +72,7 @@
                 </form>
                 @endif
             </div>
-            <input type="submit" id="pay" name="pay" value="PAY">
-            </form>
-            @endif
-        </div>
+
         <!--include the footer.php-->
         @include('Layouts/footerTemplate')
     </div>
