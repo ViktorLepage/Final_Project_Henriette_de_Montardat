@@ -53,7 +53,7 @@ class CartController extends Controller
     public function store(Request $request)
     {
         $item = ($request->removeFromCart);
-        $removedItemPrice = Product::select('price')->where('id', $item)->get();
+        // $removedItemPrice = Product::select('price')->where('id', $item)->get();
         //Call the price here//
         $data = $request->session()->get('basket');
 
@@ -71,11 +71,11 @@ class CartController extends Controller
             foreach ($data as $key => $value) {
                 $cartItems[] = Product::find($value);
             }
-            // return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
+            return view('cart', ['cart' => $cartItems]);
         } else {
-            // return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
+            return view('cart', ['cart' => $cartItems]);
         }
-    return $removedItemPrice;
+    // return $removedItemPrice;
     }
 
     /**

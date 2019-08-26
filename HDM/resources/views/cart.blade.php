@@ -66,7 +66,7 @@
                 @if ($cart != null)
                 <form action="/stripe" method="get">
                     @csrf
-                    <h3 class="cartTotal">TOTAL: € {{$total}} </h3>
+                    <h3 class="cartTotal">{{$total}}</h3>
                     {{-- Ajax remove functionality test(GOKDAG) --}}
                     {{-- <h3 class="cartTotal">Removed Price: € {{$itemPrice[0]->price ?? "0"}} </h3> --}}
                     <input type="submit" id="pay" value="PAY">
@@ -91,36 +91,38 @@
         })
 
         // THIS AJAX CALL IS FOR REMOVE FEATURE IN CART PAGE (GOKDAG)
-        $(function(){
-            $('button[type="submit"]').click(function(e){
-                e.preventDefault();
-                console.log(e.target.parentElement.querySelector('input[name="removeFromCart"]').value);
-                $.ajax({
-                    data:    {
-                    "_token": "{{ csrf_token() }}",
-                    "removeFromCart": e.target.parentElement.querySelector('input[name="removeFromCart"]').value
-                    },
-                    url: '/cart',
-                    type: 'POST',
-                    success: function(result) {
-                        // console.log(result[0].price);
-                        console.log(result[0].price);
-                        let $x = <?php echo $total;?>-result[0].price;
-                        // console.log("result" +$x);
+//         $(function(){
+//             $('button[type="submit"]').click(function(e){
+//                 e.preventDefault();
+//                 console.log(e.target.parentElement.querySelector('input[name="removeFromCart"]').value);
+//                 $.ajax({
+//                     data:    {
+//                     "_token": "{{ csrf_token() }}",
+//                     "removeFromCart": e.target.parentElement.querySelector('input[name="removeFromCart"]').value
+//                     },
+//                     url: '/cart',
+//                     type: 'POST',
+//                     success: function(result) {
+//                         // console.log(result[0].price);
+//                         console.log(result[0].price);
+//                         let $x = {{Request()->session()->get('totalAmount')}};
+//                         let $y = result[0].price;
+//                         let $currentAmount = $x-$y;
+//                         // console.log("result" +$x);
 
-                        // $('#resultForm').html('<div class="green">'+result+'</div>');
-                        e.target.parentElement.closest('div[name="cartItem"]').remove();
-                        $('.cartTotal').html('<h3 class="cartTotal">TOTAL:'+ $x+'</h3>');
-                        // $('#totalPrice').html('<h3 class="cartTotal">TOTAL:<?php echo " € " . $total; ?></h3>');
-                        //take the price from controller and substract it from total//
+//                         // $('#resultForm').html('<div class="green">'+result+'</div>');
+//                         e.target.parentElement.closest('div[name="cartItem"]').remove();
+//                         $('.cartTotal').html('<h3 class="cartTotal">TOTAL:'+ $currentAmount+'</h3>');
+//                         // $('#totalPrice').html('<h3 class="cartTotal">TOTAL:<?php echo " € " . $total; ?></h3>');
+//                         //take the price from controller and substract it from total//
 
 
-            },
-            error: function(err){
-                // If there is any error...
-            }
-        });
-    });
-});
+//             },
+//             error: function(err){
+//                 // If there is any error...
+//             }
+//         });
+//     });
+// });
     </script>
 </body>
