@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\Product;
+//use Stripe;
 
 class CartController extends Controller
 {
@@ -13,19 +15,21 @@ class CartController extends Controller
      */
     public function index()
     {
+        //TRYING TO SET TE STRIPE KEY TO LINK THE BUTTON
+        //Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         //*---RETRIEVES "THE ADD BUTTON INFO" THROUGH SESSION AND STORES IT TO A VARIABLE---//(GOKDAG)
         $data = Request()->session()->get('basket');
 
         //*---LOOPS THROUGH SESSION CART INFO (WHICH IS ONLY PRODUCT IDs...) FINDS THEM IN DB AND SENDS THEM TO THE VIEW---//(GOKDAG)
-        $cartItems=array();
+        $cartItems = array();
         //*---If Statement checks if the data value is not empty if so proceeds accordingly (GOKDAG)
         //* var_dump($data);
         if ($data !== null) {
             foreach ($data as $key => $value) {
-                $cartItems [] = Product::find($value);
+                $cartItems[] = Product::find($value);
             }
             return view('cart', ['cart' => $cartItems]);
-        }else{
+        } else {
             return view('cart', ['cart' => $cartItems]);
         }
     }
@@ -53,25 +57,22 @@ class CartController extends Controller
         //Call the price here//
         $data = $request->session()->get('basket');
 
-        foreach ($data as $key => $value)
-        {
-            if ($value == $item)
-            {
-                $request->session()->pull('basket.'.$key);
+        foreach ($data as $key => $value) {
+            if ($value == $item) {
+                $request->session()->pull('basket.' . $key);
                 break;
-
             }
         }
 
-        $cartItems=array();
+        $cartItems = array();
         $data = $request->session()->get('basket');
 
         if ($data !== null) {
             foreach ($data as $key => $value) {
-                $cartItems [] = Product::find($value);
-                }
+                $cartItems[] = Product::find($value);
+            }
             return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
-        }else{
+        } else {
             return view('cart', ['cart' => $cartItems])->with('itemPrice', $removedItemPrice);
         }
     }
