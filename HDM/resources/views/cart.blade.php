@@ -109,12 +109,12 @@
         //                 //take the price from controller and substract it from total//
 
 
-        //             },
-        //             error: function(err){
-        //                 // Si une erreur AJAX se produit
-        //             }
-        //         });
-        //     });
-        // });
+//             },
+//             error: function(err){
+//                 // If there is any error...
+//             }
+//         });
+//     });
+// });
     </script>
 </body>
