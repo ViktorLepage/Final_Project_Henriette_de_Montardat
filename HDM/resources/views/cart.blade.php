@@ -68,6 +68,9 @@
                     <h3 class="cartTotal">TOTAL: € {{$total}} </h3>
                     {{-- Ajax remove functionality test(GOKDAG) --}}
                     {{-- <h3 class="cartTotal">Removed Price: € {{$itemPrice[0]->price ?? "0"}} </h3> --}}
+                    <input type="submit" id="pay" value="PAY">
+                </form>
+                @endif
             </div>
             <input type="submit" id="pay" name="pay" value="PAY">
             </form>
