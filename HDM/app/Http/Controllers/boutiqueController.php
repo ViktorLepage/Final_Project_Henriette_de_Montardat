@@ -32,7 +32,7 @@ class boutiqueController extends Controller
             return redirect('/boutique');
         }
 
-        $products = Product::All();
+        $products = Product::All()->where('product_type', 'boutique');
         return view('boutique', ['products' => $products]);
     }
 

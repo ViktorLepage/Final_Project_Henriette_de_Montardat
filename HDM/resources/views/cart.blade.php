@@ -99,7 +99,7 @@ $('img').on('shown.bs.modal', function () {
 
 //             },
 //             error: function(err){
-//                 // Si une erreur AJAX se produit
+//                 // If there is any error...
 //             }
 //         });
 //     });
