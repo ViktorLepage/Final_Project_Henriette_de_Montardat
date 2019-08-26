@@ -63,6 +63,7 @@
                 <h2>There is nothing to show</h2>
                 @endif
                 <!--Form to send the ordered items-->
+                @if ($cart != null)
                 <form action="/stripe" method="get">
                     @csrf
                     <h3 class="cartTotal">TOTAL: € {{$total}} </h3>
@@ -72,8 +73,6 @@
                 </form>
                 @endif
             </div>
-            <input type="submit" id="pay" name="pay" value="PAY">
-            </form>
             @endif
         </div>
         <!--include the footer.php-->
@@ -91,7 +90,7 @@
             $('#myInput').trigger('focus')
         })
 
-        //THIS AJAX CALL IS FOR REMOVE FEATURE IN CART PAGE (GOKDAG)
+        // THIS AJAX CALL IS FOR REMOVE FEATURE IN CART PAGE (GOKDAG)
         $(function(){
             $('button[type="submit"]').click(function(e){
                 e.preventDefault();
@@ -104,10 +103,14 @@
                     url: '/cart',
                     type: 'POST',
                     success: function(result) {
-                        console.log(result);
+                        // console.log(result[0].price);
+                        console.log(result[0].price);
+                        let $x = <?php echo $total;?>-result[0].price;
+                        // console.log("result" +$x);
+
                         // $('#resultForm').html('<div class="green">'+result+'</div>');
                         e.target.parentElement.closest('div[name="cartItem"]').remove();
-                        $('.cartTotal').html('<h3 class="cartTotal">TOTAL:<?php echo " € " . $total = $total - ($itemPrice[0]->price ?? "0"); ?></h3>');
+                        $('.cartTotal').html('<h3 class="cartTotal">TOTAL:'+ $x+'</h3>');
                         // $('#totalPrice').html('<h3 class="cartTotal">TOTAL:<?php echo " € " . $total; ?></h3>');
                         //take the price from controller and substract it from total//
 
@@ -118,10 +121,6 @@
             }
         });
     });
-});$(function(){
-    $('#pay').on("click", function(event){
-        paymentRequest.show()
-    }
-    });
+});
     </script>
 </body>
