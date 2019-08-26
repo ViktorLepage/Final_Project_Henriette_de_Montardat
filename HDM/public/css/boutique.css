@@ -1,3 +1,4 @@
+/*setting of carousel*/
 #carousel-image {
     border-style: dotted dashed solid double;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
@@ -14,11 +15,18 @@
 .carousel-item img {
     height: 200px;
 }
-
+/*Left and right arrow*/
 .carousel-control-prev-icon {
     background-color: #403ead;
 }
 
+.carousel-control-next-icon {
+    color: black;
+    border-radius: 50%;
+    padding: 25px;
+}
+
+/* settings of button style*/
 .button1 {
     height: 25px;
     width: 80px;
@@ -43,7 +51,7 @@
 .button {
     display: inline-flex;
 }
-
+/*Arranging the box under the picture */
 #boutiqueDetailsButton {
     margin-left: 40%;
     margin-right: 40%;
@@ -67,14 +75,8 @@
     justify-content: space-between;
     border-bottom: 1px solid #403ead;
 }
-
+/*carousel controls' color changes for black from white*/
 .carousel-control-prev-icon {
-    color: black;
-    border-radius: 50%;
-    padding: 25px;
-}
-
-.carousel-control-next-icon {
     color: black;
     border-radius: 50%;
     padding: 25px;
@@ -89,32 +91,3 @@
 #contentWrap {
     padding-bottom: 2.5rem;
 }
-/*
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-}
-
-@media screen and (max-width: 768px) {
-    #photo {
-        width: 100%;
-        height: 100%;
-        margin: auto;
-    }
-
-    .carousel-control-prev-icon {
-        padding: 20px;
-    }
-
-    .carousel-control-next-icon {
-        padding: 20px;
-    }
-
-    #boutiqueDetailsButton {
-        margin-left: 30%;
-        margin-right: 30%;
-    }
-}
-*/

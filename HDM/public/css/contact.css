@@ -1,3 +1,4 @@
+/*Styling the input fields*/
 #inputFirstName {
     border-bottom: 1px solid black !important;
 }
@@ -47,6 +48,7 @@ input {
     /*font-family: Arial, Helvetica, sans-serif !important;*/
     font-size: 14px !important;
 }
+/*Hihlighting the input fields at clicking*/
 .form-control:focus {
     box-shadow: none;
     -webkit-box-shadow: none;

@@ -25,6 +25,7 @@
                     <form action="/admin/product/{{$product->id}}/edit" method="GET">
                         @csrf
                         <input name="addToCart" value="{{$product->id}}" type="hidden">
+                        <!--Button is visible only for logged in members-->
                         @if(backpack_auth()->user())
                             <button class ="button1 button2" type="submit">edit</button>
                         @endif
@@ -34,12 +35,10 @@
               <p>{{$product->product_name}}</p>
             </div>
         </div>
-
     </div>
     @endforeach
     </div>
 </div>
-
 </div>
 <!--footer.php-->
 @include('layouts/footerTemplate')
