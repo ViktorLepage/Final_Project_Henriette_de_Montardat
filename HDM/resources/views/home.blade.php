@@ -10,12 +10,16 @@
     <title>homepage</title>
 </head>
 <body>
+<!--header-->
     @include('layouts/headerTemplate')
     <div id="pageContainer">
         <div id="contentWrap">
+            <!--Main content on the page-->
             <div class="card mx-auto mb-5" id="photo">
+                <!--Background image-->
                 <img class="card-img-top" src="/images/homepagebackground4.jpg" alt="Card image">
                 <div class="card-img-overlay">
+                    <!--text on the image-->
                     <section id="photoText">
                         <div class="cardtitle">
                             <p class="card-text font-italic mb-3">Le petit monde d'Henriette de Montardat</p>
@@ -40,6 +44,7 @@
             </div>
 </div>
 </div>
+<!--footer.php-->
 @include('layouts/footerTemplate')
 </body>
 </html>

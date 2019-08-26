@@ -3,7 +3,7 @@
     box-sizing: border-box;
     transition-duration: 0.3s;
 }
-
+/*use font google family as default font*/
 @font-face {
     font-family: MyFontFamilyContainer;
     src: url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
@@ -14,10 +14,11 @@
     src: url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 }
 
+/*set the size of the first text*/
 .cardtitle {
     font-size: 25px;
 }
-
+/*set the values of the header*/
 .cardheader {
     text-transform: uppercase;
     font-size: 30px;
@@ -25,7 +26,7 @@
     text-align: center;
     font-family: 'MyFontFamilyCardheadr';
 }
-
+/*set the main content */
 #pageContainer {
     position: relative;
     min-height: 100vh;
@@ -44,7 +45,7 @@
 #photo {
     width: 450px;
 }
-
+/*Animatate the image and text loading*/
 .card{
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -81,11 +82,7 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-
-
-
-
+/*On mobile device the image size is bigger and the font is smaller*/
 @media only screen and (max-width: 400px) {
     #photo {
         width: 90%;
@@ -97,20 +94,7 @@
         font-size: 14px;
     }
 }
-
-/*
-@media screen and (max-width: 768px) {
-    #photo {
-        width: 75%;
-        height: 75%;
-        margin: auto;
-    }
-
-    .cardtext {
-        font-size: 14px;
-    }
-}
-*/
+/*Image and text settings over 2200px */
 @media screen and (min-width: 2200px) {
     #photo {
         width: 70%;
@@ -122,54 +106,3 @@
         font-size: 20px;
     }
 }
-
-
-
-/* Victor previous code
-
-#style_homepage {
-    height: 68vh;
-    width: 650px;
-    background-image: url('/images/homepagebackground4.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    margin: auto;
-    margin-bottom: 5vh;
-    background: url('/images/homepagebackground4.jpg')no-repeat center center;
-    background-size: contain;
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
-.titre_homepage,
-.paragraphe_homepage,
-.signature_homepage {
-    text-align: center;
-    width: 550px;
-    margin: 20px auto;
-    font-size: 25px;
-}
-
-.titre_homepage {
-    text-transform: uppercase;
-    font-family: 'Ubuntu', cursive;
-}
-.paragraphe_homepage {
-    font-family: 'Lora', serif;
-}
-.signature_homepage {
-    font-family: 'Ubuntu', cursive;
-}
-
-#style_homepage p {
-    color: #000000;
-}
-
-    div:first-child{
-    font-size: 27px;
-}
-*/
