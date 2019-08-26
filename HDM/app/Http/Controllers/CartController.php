@@ -60,6 +60,8 @@ class CartController extends Controller
         foreach ($data as $key => $value) {
             if ($value == $item) {
                 $request->session()->pull('basket.' . $key);
+                $price = Request()->session()->get('totalAmount') - $removedItemPrice;
+                Request()->session()->put('totalAmount', $price);
                 break;
             }
         }

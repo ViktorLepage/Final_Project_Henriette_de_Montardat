@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+
 class boutiqueController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class boutiqueController extends Controller
      */
     public function index()
     {
-         //---CHECKS IF THE USER IS LOGGED IN IF SO RETURNS THE VIEW---//(GOKDAG)
+        //---CHECKS IF THE USER IS LOGGED IN IF SO RETURNS THE VIEW---//(GOKDAG)
         /*if (Auth::check()) {
             $products = Product::All();
             return view('collection', ['products' => $products]);
@@ -27,8 +28,19 @@ class boutiqueController extends Controller
 
         //---WHEN THE ADD BUTTON IS CLICKED, IT SAVES THE PRODUCT ID INTO THE SESSION---//(GOKDAG)
         $itemToCart = (Request()->addToCart);
-        if ($itemToCart ==! null) {
-            Request()->session()->push('basket', $itemToCart );
+        if ($itemToCart == !null) {
+            Request()->session()->push('basket', $itemToCart);
+            $product = Product::select('price')->where('id', $itemToCart)->first();
+            $price = $product->price;
+
+            if (!Request()->session()->has('totalAmount')) {
+                Request()->session()->put('totalAmount', $price);
+                //$value = $request->session()->get('key');
+            } else {
+                $price = $price + Request()->session()->get('totalAmount');
+                Request()->session()->put('totalAmount', $price);
+            }
+
             return redirect('/boutique');
         }
 

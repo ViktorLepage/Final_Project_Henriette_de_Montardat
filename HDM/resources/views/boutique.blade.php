@@ -1,3 +1,8 @@
+<?php
+echo '<pre>';
+var_dump(Request()->session());
+echo '</pre>';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
