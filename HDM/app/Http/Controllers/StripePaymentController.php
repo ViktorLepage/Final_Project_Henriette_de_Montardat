@@ -59,7 +59,7 @@ class StripePaymentController extends Controller
 
             "amount" => 100 * 100,
 
-            "currency" => "usd",
+            "currency" => "eur",
 
             "source" => $request->stripeToken,
 
