@@ -12,6 +12,11 @@
     text-align: end;
 }
 
+#pay {
+float: right;
+margin-right: 20rem;
+}
+
 #pageContainer {
     position: relative;
     min-height: 100vh;
