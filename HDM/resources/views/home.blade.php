@@ -19,7 +19,7 @@
                 <!--Background image-->
                 <img class="card-img-top" src="/images/homepagebackground4.jpg" alt="Card image">
                 <div class="card-img-overlay">
-                    <!--text on the image-->
+                    <!--Main content-->
                     <section id="photoText">
                         <div class="cardtitle">
                             <p class="card-text font-italic mb-3">Le petit monde d'Henriette de Montardat</p>
