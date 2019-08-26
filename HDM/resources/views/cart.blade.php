@@ -64,12 +64,12 @@
                 @endif
                 <!--Form to send the ordered items-->
                 @if ($cart != null)
-                <form action="/stripe" method="get">
+                <form class="validerForm" action="/stripe" method="get">
                     @csrf
-                    <h3 class="cartTotal">{{$total}}</h3>
+                    <h3 class="cartTotal">TOTAL € {{$total}}</h3>
                     {{-- Ajax remove functionality test(GOKDAG) --}}
                     {{-- <h3 class="cartTotal">Removed Price: € {{$itemPrice[0]->price ?? "0"}} </h3> --}}
-                    <input type="submit" id="pay" value="PAY">
+                    <input class=" btn btn-outline-dark btn-lg validerButton" type="submit" id="pay" value="VALIDER">
                 </form>
                 @endif
             </div>
@@ -90,7 +90,7 @@
             $('#myInput').trigger('focus')
         })
 
-        // THIS AJAX CALL IS FOR REMOVE FEATURE IN CART PAGE (GOKDAG)
+        // THIS AJAX CALL IS FOR REMOVE FEATURE IN CART PAGE FOR THE MOMENT DOESN'T WORK AS EXPECTED (GOKDAG)
 //         $(function(){
 //             $('button[type="submit"]').click(function(e){
 //                 e.preventDefault();

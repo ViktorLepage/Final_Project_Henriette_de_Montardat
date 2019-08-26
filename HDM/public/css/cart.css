@@ -5,11 +5,12 @@
 
 .rightCart
 {
-    height: 32vh !important;
+    height: 18vh !important;
 }
 .cartTotal {
     /* margin-right: 10vh; */
     text-align: end;
+    margin-bottom: 2rem !important;
 }
 
 .row{
@@ -40,9 +41,12 @@ footer {
     padding: 1vh;
 }
 
-.rightCart
-{
-    height: 25vh;
+.validerButton{
+    margin-right: 0 !important;
+    z-index: 2;
+}
+.validerForm{
+    margin-bottom: 10rem !important;
 }
 /*
 button
@@ -223,11 +227,10 @@ button:hover {
   .container {
       width: auto ;
       margin-left: 1px ;
-  }
+    }
   .modal-content {
      width: 100%;
-  }
-}
+    }
 }
 
 @media screen and (min-width: 2200px) {

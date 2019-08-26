@@ -12,6 +12,7 @@
 <body>
 <!--header.php-->
 @include('Layouts/headerTemplate')
+
 <div id="pageContainer">
     <div id="contentWrap">
 <div id="container-fluid" class="container-fluid">
